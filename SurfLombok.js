@@ -1,13 +1,13 @@
 // Variables used by Scriptable.
 // icon-color: deep-blue; icon-glyph: water;
-// EasySurf — widget Scriptable (Lombok Sud)
+// EasySurf — Scriptable widget (South Lombok)
 const DATA_URL = "https://jeanglt.github.io/surf-lombok/surf.json";
 const REPORT_URL = "https://jeanglt.github.io/surf-lombok/";
 
 const C = {
   bg1: [2, 20, 40], bg2: [7, 90, 128],
   text: "#ffffff", soft: "#e6f4ff", sub: "#bfdcec", accent: "#5eead4", wave: "#22d3ee",
-  go: "#2ecc71", moyen: "#f1c40f", skip: "#e74c3c"
+  go: "#2ecc71", fair: "#f1c40f", moyen: "#f1c40f", skip: "#e74c3c"
 };
 const family = config.widgetFamily || "large";
 
@@ -39,7 +39,7 @@ function getPicks(d) {
   if (d.top) out.push({ name: d.top.spot, verdict: d.top.verdict || "go", rating: d.top.rating,
     window: d.top.window, swell: d.swell, wind: d.wind });
   (d.spots || []).forEach(s => {
-    if (s.name !== topName) out.push({ name: s.name, verdict: s.verdict, rating: s.rating,
+    if (s.name !== topName && s.verdict !== "skip") out.push({ name: s.name, verdict: s.verdict, rating: s.rating,
       swell: d.swell, wind: d.wind });
   });
   return out;
@@ -70,19 +70,32 @@ function icon(stack, name, size, color) {
   } catch (e) { return false; }
 }
 const stars = n => "★".repeat(Math.round(n || 0)) + "☆".repeat(5 - Math.round(n || 0));
-const hhmm = iso => { const d = new Date(iso); return isNaN(d) ? "--:--" :
-  String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0"); };
+// Time as written in the data (Lombok time), whatever the phone's time zone.
+const hhmm = iso => { const m = String(iso || "").match(/T(\d{2}:\d{2})/); return m ? m[1] : "--:--"; };
+const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function fmtDate(iso, add) {
+  const d = new Date(String(iso || "").slice(0, 10) + "T12:00:00Z");
+  if (isNaN(d)) return String(iso || "");
+  d.setUTCDate(d.getUTCDate() + (add || 0));
+  return `${DAYS[d.getUTCDay()]} ${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`;
+}
 const list = a => [].concat(a || []).join(" · ");
 
 const swellTxt = s => s ? `${s.m} m · ${s.s} s${s.dir ? " · " + s.dir : ""}` : null;
-const windTxt = w => w ? `${w.dir || ""} ${w.kt} nds`.trim() : null;
+const windTxt = w => w ? `${w.dir || ""} ${w.kt} kts`.trim() : null;
 
+// The report is updated at 06:00, 10:00 and 14:00. Ask iOS to refresh just after
+// each update, retrying every 15 min for 40 min, then wait for the next one.
+// (iOS decides the exact time.)
 function nextRefresh() {
-  const now = new Date(), n = new Date(now);
-  if (now.getHours() < 6) n.setHours(6, 0, 0, 0);
-  else if (now.getHours() < 8 || (now.getHours() === 8 && now.getMinutes() < 30))
-    n.setTime(now.getTime() + 30 * 60 * 1000);
-  else { n.setDate(n.getDate() + 1); n.setHours(6, 0, 0, 0); }
+  const now = new Date();
+  for (const h of [6, 10, 14]) {
+    const start = new Date(now); start.setHours(h, 10, 0, 0);
+    if (now < start) return start;
+    if (now.getTime() < start.getTime() + 40 * 60 * 1000) return new Date(now.getTime() + 15 * 60 * 1000);
+  }
+  const n = new Date(now); n.setDate(n.getDate() + 1); n.setHours(6, 10, 0, 0);
   return n;
 }
 
@@ -148,7 +161,7 @@ function titleRow(w, s) {
   t(w, s.toUpperCase(), 10, C.sub, "bold");
   w.addSpacer(4);
 }
-function updatedTxt(d, offline) { return (offline ? "⚠︎ hors ligne · " : "") + "mis à jour " + hhmm(d.updated); }
+function updatedTxt(d, offline) { return (offline ? "⚠︎ offline · " : "") + "updated " + hhmm(d.updated); }
 
 // ---------- Build ----------
 async function build() {
@@ -163,8 +176,8 @@ async function build() {
   if (!d) {
     headerRow(w);
     w.addSpacer(8);
-    t(w, "Hors ligne / données indisponibles", 12, C.moyen, "bold");
-    t(w, "Nouvel essai bientôt", 11, C.sub, "demi");
+    t(w, "Offline / data unavailable", 12, C.fair, "bold");
+    t(w, "Retrying soon", 11, C.sub, "demi");
     return w;
   }
 
@@ -185,12 +198,12 @@ async function build() {
     t(w, "▼ " + list(tide.low), 9, C.soft, "demi");
     t(w, "▲ " + list(tide.high), 9, C.soft, "demi");
     w.addSpacer(2);
-    t(w, updatedTxt(d, offline), 8, offline ? C.moyen : C.sub, "demi");
+    t(w, updatedTxt(d, offline), 8, offline ? C.fair : C.sub, "demi");
     return w;
   }
 
   if (family === "medium") {
-    headerRow(w, d.date || "");
+    headerRow(w, fmtDate(d.date));
     titleRow(w, "Top picks");
     picks.slice(0, 2).forEach(p => {
       nameRow(w, p, 16, true);
@@ -199,16 +212,16 @@ async function build() {
     });
     w.addSpacer();
     const f = w.addStack(); f.centerAlignContent();
-    t(f, updatedTxt(d, offline), 8, offline ? C.moyen : C.sub, "demi");
+    t(f, updatedTxt(d, offline), 8, offline ? C.fair : C.sub, "demi");
     f.addSpacer();
     t(f, "▼ " + list(tide.low) + "   ▲ " + list(tide.high), 9, C.soft, "bold");
     return w;
   }
 
   // large
-  headerRow(w, d.date || "");
+  headerRow(w, fmtDate(d.date));
   titleRow(w, "Top picks");
-  picks.slice(0, 5).forEach(p => {
+  picks.slice(0, d.tomorrow ? 4 : 5).forEach(p => {
     nameRow(w, p, 17, true);
     dataRow(w, p, 11, 15);
     w.addSpacer(8);
@@ -216,11 +229,17 @@ async function build() {
   w.addSpacer();
   if (d.headline) { const h = t(w, d.headline, 11, C.text, "demi"); h.lineLimit = 2; w.addSpacer(6); }
   const tr = w.addStack(); tr.centerAlignContent();
-  t(tr, "▼ Basse  " + list(tide.low), 10.5, C.soft, "bold");
+  t(tr, "▼ Low  " + list(tide.low), 10.5, C.soft, "bold");
   tr.addSpacer();
-  t(tr, "▲ Haute  " + list(tide.high), 10.5, C.soft, "bold");
+  t(tr, "▲ High  " + list(tide.high), 10.5, C.soft, "bold");
+  if (d.tomorrow) {
+    const tm = d.tomorrow;
+    const bits = [tm.best, swellTxt(tm.swell), windTxt(tm.wind)].filter(Boolean).join(" · ");
+    w.addSpacer(5);
+    t(w, "TOMORROW  " + bits, 9.5, C.soft, "bold");
+  }
   w.addSpacer(3);
-  t(w, updatedTxt(d, offline), 8, offline ? C.moyen : C.sub, "demi");
+  t(w, updatedTxt(d, offline), 8, offline ? C.fair : C.sub, "demi");
   return w;
 }
 

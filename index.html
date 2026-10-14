@@ -1,45 +1,92 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Surf Lombok Sud</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#021428">
+<title>EasySurf · Best spots today</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
 <style>
-body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:linear-gradient(#06233a,#020d17);color:#e6f1f8;min-height:100vh}
-main{max-width:640px;margin:auto;padding:20px}
-h1{font-size:1.1rem;color:#7fc8e8;margin:0 0 4px}.loc{color:#8aa9bd;font-size:.85rem}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(127,200,232,.15);border-radius:14px;padding:16px;margin:14px 0}
-.head{font-size:1.25rem;font-weight:600;line-height:1.4}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.k{color:#8aa9bd;font-size:.75rem;text-transform:uppercase}.v{font-size:1rem;font-weight:600}
-.spot{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07)}.spot:last-child{border:0}
-.dot{width:12px;height:12px;border-radius:50%;margin-top:5px;flex:none}.go{background:#2ecc71}.moyen{background:#f1c40f}.skip{background:#e74c3c}
-.n{font-weight:600}.note{color:#a9c3d3;font-size:.9rem}.stars{color:#f5c542;margin-left:auto;white-space:nowrap}
-h2{font-size:.95rem;color:#7fc8e8;margin:0 0 8px}ol{padding-left:20px;line-height:1.6}a{color:#7fc8e8}.upd{color:#6f8fa3;font-size:.8rem;text-align:center}
-</style></head><body><main>
-<h1>Surf Lombok Sud</h1><div class="loc" id="loc">Chargement…</div>
-<div class="card"><div class="head" id="headline">…</div></div>
-<div class="card"><h2>Conditions</h2><div class="grid" id="cond"></div></div>
-<div class="card"><h2>Classement des spots</h2><div id="spots"></div></div>
-<div class="card" id="planb" hidden><h2>Plan B</h2><div id="planbtxt"></div></div>
-<div class="upd" id="upd"></div>
-<div class="card"><h2>Installer le widget</h2><ol>
-<li>Installe l'app <b>Scriptable</b> (App Store, gratuite).</li>
-<li>Ouvre <a href="https://github.com/JeanGLT/surf-lombok/blob/main/SurfLombok.js">SurfLombok.js</a> (<a href="https://raw.githubusercontent.com/JeanGLT/surf-lombok/main/SurfLombok.js">version brute</a>) et copie tout le code.</li>
-<li>Dans Scriptable, touche <b>+</b>, colle le code, nomme le script « SurfLombok ».</li>
-<li>Sur l'écran d'accueil, appui long → <b>+</b> → Scriptable → choisis une taille de widget.</li>
-<li>Appui long sur le widget → <b>Modifier le widget</b> → Script : <b>SurfLombok</b>.</li>
-</ol></div>
-</main><script>
-const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const st=n=>'★'.repeat(n||0)+'☆'.repeat(5-(n||0));
-fetch('surf.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{
- document.getElementById('loc').textContent=(d.location||'')+' · '+new Date(d.date+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
- document.getElementById('headline').textContent=d.headline;
- const c=[['Meilleur créneau',d.top?`${d.top.spot}<br>${d.top.window}`:'-'],['Houle',`${d.swell.m} m · ${d.swell.range||d.swell.s+' s'} · ${d.swell.dir}`],
- ['Vent',`${d.wind.dir} ${d.wind.kt} nds${d.wind.day?'<br><small>'+esc(d.wind.day)+'</small>':''}`],['Marée',`Basse ${(d.tide.low||[]).join(', ')}<br>Haute ${(d.tide.high||[]).join(', ')}`]];
- if(d.water)c.push(['Eau',d.water+' °C']);
- document.getElementById('cond').innerHTML=c.map(([k,v])=>`<div><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
- const sp=[...d.spots].sort((a,b)=>b.rating-a.rating);
- document.getElementById('spots').innerHTML=sp.map(s=>`<div class="spot"><span class="dot ${esc(s.verdict)}"></span><div><div class="n">${esc(s.name)}</div><div class="note">${esc(s.note)}</div></div><span class="stars">${st(s.rating)}</span></div>`).join('');
- const pb=sp.find(s=>/plan b/i.test(s.note))||sp.find(s=>s.verdict==='moyen');
- if(pb){document.getElementById('planb').hidden=false;document.getElementById('planbtxt').innerHTML=`<b>${esc(pb.name)}</b> — ${esc(pb.note)}`}
- document.getElementById('upd').textContent='Mis à jour : '+new Date(d.updated).toLocaleString('fr-FR',{timeZone:'Asia/Makassar',dateStyle:'medium',timeStyle:'short'})+' (heure de Lombok)';
-}).catch(e=>{document.getElementById('headline').textContent='Données indisponibles.'});
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#fff;font-family:"Avenir Next","Nunito","SF Pro Rounded",system-ui,-apple-system,sans-serif;background:linear-gradient(170deg,#021428 0%,#04294a 55%,#075a80 100%) fixed}
+.waves{position:fixed;left:0;right:0;bottom:0;height:240px;z-index:0;pointer-events:none}
+.waves svg{width:100%;height:100%;display:block}
+main{position:relative;z-index:1;max-width:440px;margin:0 auto;padding:22px 18px 48px}
+.hd{display:flex;justify-content:space-between;align-items:center}
+.br{font-size:15px;font-weight:800;letter-spacing:.04em;color:#5eead4}
+.dt{font-size:12px;font-weight:600;color:#cfe8f5}
+h1{font-size:13px;font-weight:700;color:#cfe8f5;text-transform:uppercase;letter-spacing:.08em;margin:22px 0 2px}
+.sb{font-size:12px;font-weight:600;color:#bfdcec;margin:0 0 18px}
+.row{margin-bottom:16px}
+.nm{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:800;line-height:1.25}
+.dot{width:10px;height:10px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.18);flex:none}
+.go{background:#2ecc71}.fair{background:#f1c40f}.skip{background:#e74c3c}
+.sc{font-size:12px;font-weight:600;color:#bfdcec;white-space:nowrap}
+.stars{margin-left:auto;font-size:13px;color:#5eead4;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+.dd{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;font-weight:600;color:#e6f4fb;margin:3px 0 0 18px}
+.i{font-size:14px;color:#5eead4;vertical-align:-2px;margin-right:4px}
+.strip{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;font-weight:600;color:#e6f4fb;border-top:0.5px solid rgba(255,255,255,.22);padding-top:14px;margin-top:4px}
+.skipl{font-size:12px;font-weight:600;color:#bfdcec;margin-top:12px}
+.tm{margin-top:22px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.08)}
+.tm .l{font-size:11px;font-weight:700;color:#cfe8f5;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.tm .t{font-size:13px;font-weight:600;color:#e6f4fb;line-height:1.5}
+.src{font-size:11px;font-weight:600;color:#bfdcec;margin-top:22px;line-height:1.6}
+.src a{color:#e6f4fb;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35)}
+details{margin-top:22px;font-size:12px;color:#bfdcec}
+summary{cursor:pointer;font-weight:700;color:#cfe8f5}
+details ol{padding-left:18px;line-height:1.7;margin:8px 0 0}
+details a{color:#5eead4}
+.err{font-size:14px;font-weight:600;color:#f1c40f;margin-top:24px}
+</style></head><body>
+<div class="waves" aria-hidden="true"><svg viewBox="0 0 440 240" preserveAspectRatio="none"><path d="M0 110 C60 88 120 134 200 112 S350 88 440 108 V240 H0Z" fill="#22d3ee" fill-opacity=".09"/><path d="M0 150 C70 128 140 168 230 148 S380 130 440 146 V240 H0Z" fill="#22d3ee" fill-opacity=".12"/><path d="M0 194 C80 176 150 208 240 192 S390 176 440 190 V240 H0Z" fill="#22d3ee" fill-opacity=".15"/></svg></div>
+<main>
+<div class="hd"><span class="br">EasySurf</span><span class="dt" id="date"></span></div>
+<h1>Best spots today</h1>
+<p class="sb" id="sub">South Lombok · within 35 min of Kuta</p>
+<div id="picks"></div>
+<div class="strip" id="strip"></div>
+<div class="skipl" id="skip" hidden></div>
+<div class="tm" id="tm" hidden></div>
+<div class="src" id="src"></div>
+<div class="err" id="err" hidden>Data unavailable. Try again in a few minutes.</div>
+<details><summary>Add the iPhone widget</summary><ol>
+<li>Install the free <b>Scriptable</b> app from the App Store.</li>
+<li>Open <a href="https://raw.githubusercontent.com/JeanGLT/surf-lombok/main/SurfLombok.js">SurfLombok.js</a> and copy all the code.</li>
+<li>In Scriptable, tap <b>+</b>, paste the code and name the script "Surf Lombok".</li>
+<li>On your home screen, long-press, tap <b>+</b>, choose Scriptable and pick a size.</li>
+<li>Long-press the widget, tap <b>Edit Widget</b>, set Script to "Surf Lombok" and When Interacting to "Open URL".</li>
+</ol></details>
+</main>
+<script>
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const stars=n=>{n=Math.max(0,Math.min(5,Math.round(n||0)));return '★'.repeat(n)+'☆'.repeat(5-n)};
+const verdict=v=>{v=String(v||'').toLowerCase();return v==='moyen'?'fair':(['go','fair','skip'].includes(v)?v:'fair')};
+const hhmm=iso=>{const m=String(iso||'').match(/T(\d{2}:\d{2})/);return m?m[1]:'--:--'};
+const swellTxt=s=>s?`${esc(s.m)} m · ${esc(s.s)} s${s.dir?' · '+esc(s.dir):''}`:'';
+const windTxt=w=>w?`${esc(w.dir||'')} ${esc(w.kt)} kts`.trim():'';
+const list=a=>[].concat(a||[]).map(esc).join(' · ');
+const fmtDate=(iso,add)=>{const d=new Date(String(iso).slice(0,10)+'T12:00:00Z');if(isNaN(d))return '';d.setUTCDate(d.getUTCDate()+(add||0));return d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short',timeZone:'UTC'})};
+function getPicks(d){
+ if(Array.isArray(d.picks)&&d.picks.length)return d.picks.map(p=>Object.assign({swell:d.swell,wind:d.wind},p));
+ const out=[],top=d.top&&d.top.spot;
+ if(d.top)out.push({name:d.top.spot,verdict:d.top.verdict||'go',rating:d.top.rating,window:d.top.window,swell:d.swell,wind:d.wind});
+ (d.spots||[]).forEach(s=>{if(s.name!==top&&verdict(s.verdict)!=='skip')out.push({name:s.name,verdict:s.verdict,rating:s.rating,swell:d.swell,wind:d.wind})});
+ return out;
+}
+function render(d){
+ document.getElementById('date').textContent=fmtDate(d.date)+' · updated '+hhmm(d.updated);
+ const item=(ic,t)=>t?`<span><i class="ti ti-${ic} i"></i>${t}</span>`:'';
+ document.getElementById('picks').innerHTML=getPicks(d).slice(0,3).map(p=>`<div class="row"><div class="nm"><span class="dot ${verdict(p.verdict)}"></span><span>${esc(p.name)}</span>${p.scooter?`<span class="sc"><i class="ti ti-motorbike i"></i>${esc(p.scooter)} min</span>`:''}<span class="stars">${stars(p.rating)}</span></div><div class="dd">${item('clock',esc(p.window))}${item('wave-sine',swellTxt(p.swell))}${item('wind',windTxt(p.wind))}</div></div>`).join('');
+ const t=d.tide||{},s=[];
+ if((t.low||[]).length)s.push(`<span><i class="ti ti-arrow-down i"></i>Low ${list(t.low)}</span>`);
+ if((t.high||[]).length)s.push(`<span><i class="ti ti-arrow-up i"></i>High ${list(t.high)}</span>`);
+ if(d.water)s.push(`<span><i class="ti ti-temperature i"></i>${esc(d.water)}°C</span>`);
+ const st=document.getElementById('strip');st.innerHTML=s.join('');st.hidden=!s.length;
+ let sk=Array.isArray(d.skip)?d.skip:(d.spots||[]).filter(x=>verdict(x.verdict)==='skip').map(x=>({name:x.name}));
+ const sl=document.getElementById('skip');
+ if(sk.length){sl.hidden=false;sl.textContent='Skip today: '+sk.map(x=>x.name+(x.reason?' ('+x.reason+')':'')).join(', ')}
+ const tm=d.tomorrow,tb=document.getElementById('tm');
+ if(tm){const bits=[tm.best,swellTxt(tm.swell),windTxt(tm.wind)].filter(Boolean);
+  tb.hidden=false;tb.innerHTML=`<div class="l">Tomorrow · ${esc(fmtDate(tm.date||d.date,tm.date?0:1))}</div><div class="t">${bits.map(x=>x===tm.best?esc(x):x).join(' · ')}${tm.outlook?'<br>'+esc(tm.outlook):''}</div>`}
+ const src=(d.sources&&d.sources.length?d.sources:[{name:'Surf-Forecast',url:'https://www.surf-forecast.com'},{name:'Windfinder',url:'https://www.windfinder.com'},{name:'Surfline',url:'https://www.surfline.com'}]);
+ document.getElementById('src').innerHTML='Source: '+src.map(x=>x.url&&/^https?:\/\//.test(x.url)?`<a href="${esc(x.url)}">${esc(x.name)}</a>`:esc(x.name)).join(' · ')+'<br>Forecast models, check conditions on site. Refreshed at 06:00, 10:00 and 14:00.';
+}
+fetch('surf.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(render).catch(()=>{document.getElementById('err').hidden=false;document.getElementById('sub').hidden=true});
 </script></body></html>

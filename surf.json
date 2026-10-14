@@ -1,20 +1,123 @@
 {
-  "schema": 1,
+  "schema": 2,
   "date": "2026-10-14",
   "updated": "2026-10-14T16:30:00+08:00",
-  "location": "Kuta / Pujut, Lombok Sud",
-  "headline": "Are Guling / Mawun · 6h–8h30 · 1,6 m @11s · SE 11 nds · ★ 4/5",
-  "top": { "spot": "Are Guling / Mawun", "window": "06:00–08:30", "rating": 4 },
-  "swell": { "m": 1.6, "s": 11, "dir": "SSO", "range": "11–15 s" },
-  "wind": { "dir": "ESE/SE", "kt": 11, "day": "13–15 nds en journée" },
-  "tide": { "low": ["05:45"], "high": ["11:50"] },
+  "location": "Kuta / Pujut, South Lombok",
+  "headline": "Are Guling / Mawun · 06:00–08:30 · 1.6 m @ 11 s · SE 11 kts · ★ 4/5",
+  "top": {
+    "spot": "Are Guling / Mawun",
+    "window": "06:00–08:30",
+    "rating": 4
+  },
+  "swell": {
+    "m": 1.6,
+    "s": 11,
+    "dir": "SSW"
+  },
+  "wind": {
+    "dir": "ESE/SE",
+    "kt": 11
+  },
+  "tide": {
+    "low": [
+      "05:45"
+    ],
+    "high": [
+      "11:50"
+    ]
+  },
   "water": 27,
+  "picks": [
+    {
+      "name": "Are Guling / Mawun",
+      "verdict": "go",
+      "rating": 4,
+      "window": "06:00–08:30",
+      "swell": {
+        "m": 1.6,
+        "s": 11,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "ESE/SE",
+        "kt": 11
+      }
+    },
+    {
+      "name": "Gerupuk",
+      "verdict": "go",
+      "rating": 4,
+      "swell": {
+        "m": 1.6,
+        "s": 11,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "ESE/SE",
+        "kt": 11
+      }
+    },
+    {
+      "name": "Ekas Inside",
+      "verdict": "fair",
+      "rating": 3,
+      "swell": {
+        "m": 1.6,
+        "s": 11,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "ESE/SE",
+        "kt": 11
+      }
+    }
+  ],
+  "skip": [
+    {
+      "name": "Tanjung Aan",
+      "reason": "exposed to SE"
+    }
+  ],
   "spots": [
-    { "name": "Are Guling / Mawun", "rating": 4, "verdict": "go", "note": "Cross léger tôt, reef, 15–25 min" },
-    { "name": "Gerupuk", "rating": 4, "verdict": "go", "note": "Baie tient le SE, bateau, 15–20 min" },
-    { "name": "Ekas Inside", "rating": 3, "verdict": "moyen", "note": "Plan B abrité, 30–35 min" },
-    { "name": "Seger", "rating": 2, "verdict": "moyen", "note": "Exposé au SE, avant 8h seulement" },
-    { "name": "Tanjung Aan", "rating": 1, "verdict": "skip", "note": "Exposé SE" }
+    {
+      "name": "Are Guling / Mawun",
+      "rating": 4,
+      "verdict": "go"
+    },
+    {
+      "name": "Gerupuk",
+      "rating": 4,
+      "verdict": "go"
+    },
+    {
+      "name": "Ekas Inside",
+      "rating": 3,
+      "verdict": "fair"
+    },
+    {
+      "name": "Seger",
+      "rating": 2,
+      "verdict": "fair"
+    },
+    {
+      "name": "Tanjung Aan",
+      "rating": 1,
+      "verdict": "skip"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Surf-Forecast",
+      "url": "https://www.surf-forecast.com"
+    },
+    {
+      "name": "Windfinder",
+      "url": "https://www.windfinder.com"
+    },
+    {
+      "name": "Surfline",
+      "url": "https://www.surfline.com"
+    }
   ],
   "reportUrl": "https://jeanglt.github.io/surf-lombok/"
 }
