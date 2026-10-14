@@ -36,6 +36,15 @@ summary{cursor:pointer;font-weight:700;color:#cfe8f5}
 details ol{padding-left:18px;line-height:1.7;margin:8px 0 0}
 details a{color:#5eead4}
 .err{font-size:14px;font-weight:600;color:#f1c40f;margin-top:24px}
+.inst{margin-top:26px;padding-top:18px;border-top:0.5px solid rgba(255,255,255,.22)}
+.inst h2{font-size:13px;font-weight:700;color:#cfe8f5;text-transform:uppercase;letter-spacing:.08em;margin:0 0 14px}
+.stp{display:flex;gap:12px;margin-bottom:16px;font-size:13px;font-weight:600;color:#e6f4fb;line-height:1.5}
+.stp>b{flex:none;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.14);color:#5eead4;display:flex;align-items:center;justify-content:center;font-size:12px}
+.stp a{color:#5eead4}
+.btn{display:block;width:100%;margin-top:10px;padding:12px;border:0;border-radius:14px;background:#5eead4;color:#04294a!important;font:inherit;font-size:14px;font-weight:800;text-align:center;text-decoration:none;cursor:pointer}
+.btn2{background:rgba(255,255,255,.14);color:#fff!important}
+.msg{font-size:12px;font-weight:600;color:#bfdcec;margin-top:6px}
+.msg a{color:#5eead4}
 </style></head><body>
 <div class="waves" aria-hidden="true"><svg viewBox="0 0 440 240" preserveAspectRatio="none"><path d="M0 110 C60 88 120 134 200 112 S350 88 440 108 V240 H0Z" fill="#22d3ee" fill-opacity=".09"/><path d="M0 150 C70 128 140 168 230 148 S380 130 440 146 V240 H0Z" fill="#22d3ee" fill-opacity=".12"/><path d="M0 194 C80 176 150 208 240 192 S390 176 440 190 V240 H0Z" fill="#22d3ee" fill-opacity=".15"/></svg></div>
 <main>
@@ -48,13 +57,13 @@ details a{color:#5eead4}
 <div class="tm" id="tm" hidden></div>
 <div class="src" id="src"></div>
 <div class="err" id="err" hidden>Data unavailable. Try again in a few minutes.</div>
-<details><summary>Add the iPhone widget</summary><ol>
-<li>Install the free <b>Scriptable</b> app from the App Store.</li>
-<li>Open <a href="https://raw.githubusercontent.com/JeanGLT/surf-lombok/main/SurfLombok.js">SurfLombok.js</a> and copy all the code.</li>
-<li>In Scriptable, tap <b>+</b>, paste the code and name the script "Surf Lombok".</li>
-<li>On your home screen, long-press, tap <b>+</b>, choose Scriptable and pick a size.</li>
-<li>Long-press the widget, tap <b>Edit Widget</b>, set Script to "Surf Lombok" and When Interacting to "Open URL".</li>
-</ol></details>
+<section class="inst">
+<h2>Add the iPhone widget</h2>
+<div class="stp"><b>1</b><div>Install the free <a href="https://apps.apple.com/app/scriptable/id1405459188">Scriptable</a> app, then copy the widget script.<button class="btn" id="copy" type="button">Copy script</button><div class="msg" id="copymsg"></div></div></div>
+<div class="stp"><b>2</b><div>Create a new script in Scriptable, paste the code, tap the title to rename it "EasySurf", then tap Done.<a class="btn btn2" href="scriptable:///add">Open Scriptable</a></div></div>
+<div class="stp"><b>3</b><div>On your home screen, long-press, tap <b>+</b>, choose Scriptable and pick a size. Long-press the widget, tap <b>Edit Widget</b>, set Script to "EasySurf" and When Interacting to "Open URL".</div></div>
+<div class="msg">The script updates itself, so you only install it once.</div>
+</section>
 </main>
 <script>
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -91,4 +100,20 @@ function render(d){
  document.getElementById('src').innerHTML='Source: '+src.map(x=>x.url&&/^https?:\/\//.test(x.url)?`<a href="${esc(x.url)}">${esc(x.name)}</a>`:esc(x.name)).join(' · ');
 }
 fetch('surf.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(render).catch(()=>{document.getElementById('err').hidden=false;document.getElementById('sub').hidden=true});
+
+const RAW='https://raw.githubusercontent.com/JeanGLT/surf-lombok/main/SurfLombok.js';
+(function(){
+ const cb=document.getElementById('copy'),cm=document.getElementById('copymsg');
+ cb.addEventListener('click',async()=>{
+  const url=RAW+'?t='+Date.now();
+  try{
+   if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write){
+    await navigator.clipboard.write([new ClipboardItem({'text/plain':fetch(url).then(r=>{if(!r.ok)throw 0;return r.text()}).then(t=>new Blob([t],{type:'text/plain'}))})]);
+   }else{
+    const t=await(await fetch(url)).text();await navigator.clipboard.writeText(t);
+   }
+   cb.textContent='Copied';cm.textContent='Script copied. Now tap "Open Scriptable" and paste it.';
+  }catch(e){cm.innerHTML='Could not copy automatically. <a href="'+RAW+'">Open the script</a>, select all and copy.'}
+ });
+})();
 </script></body></html>

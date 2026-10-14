@@ -3,6 +3,8 @@
 // EasySurf — Scriptable widget (South Lombok)
 const DATA_URL = "https://jeanglt.github.io/surf-lombok/surf.json";
 const REPORT_URL = "https://jeanglt.github.io/surf-lombok/";
+const SCRIPT_URL = "https://raw.githubusercontent.com/JeanGLT/surf-lombok/main/SurfLombok.js";
+const VERSION = "2026-10-14.2"; // bumped on every change; the widget updates itself when this differs
 
 const C = {
   bg1: [2, 20, 40], bg2: [7, 90, 128],
@@ -243,7 +245,30 @@ async function build() {
   return w;
 }
 
+// ---------- Auto-update ----------
+// Replaces this script with the latest version from GitHub (checked at most every 6 h).
+// The new version runs the next time the widget refreshes.
+async function selfUpdate() {
+  try {
+    const path = (typeof module !== "undefined" && module.filename) ? module.filename : null;
+    if (!path) return;
+    const local = FileManager.local();
+    const fm = path.includes("Mobile Documents") ? FileManager.iCloud() : local;
+    const stamp = local.joinPath(local.cacheDirectory(), "easysurf-update-check");
+    if (local.fileExists(stamp) && Date.now() - Number(local.readString(stamp)) < 6 * 3600 * 1000) return;
+    local.writeString(stamp, String(Date.now()));
+    const r = new Request(SCRIPT_URL + "?t=" + Date.now());
+    r.timeoutInterval = 10;
+    const code = await r.loadString();
+    const m = code.match(/const VERSION = "([^"]+)"/);
+    if (!m || m[1] === VERSION) return;
+    if (!code.startsWith("// Variables used by Scriptable") || !code.includes("Script.complete();")) return;
+    fm.writeString(path, code);
+  } catch (e) {}
+}
+
 const widget = await build();
 if (config.runsInWidget) Script.setWidget(widget);
 else if (config.runsInApp) await widget.presentMedium();
+await selfUpdate();
 Script.complete();
