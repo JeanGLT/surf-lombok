@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Surf Lombok Sud</title>
+<style>
+body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:linear-gradient(#06233a,#020d17);color:#e6f1f8;min-height:100vh}
+main{max-width:640px;margin:auto;padding:20px}
+h1{font-size:1.1rem;color:#7fc8e8;margin:0 0 4px}.loc{color:#8aa9bd;font-size:.85rem}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(127,200,232,.15);border-radius:14px;padding:16px;margin:14px 0}
+.head{font-size:1.25rem;font-weight:600;line-height:1.4}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.k{color:#8aa9bd;font-size:.75rem;text-transform:uppercase}.v{font-size:1rem;font-weight:600}
+.spot{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07)}.spot:last-child{border:0}
+.dot{width:12px;height:12px;border-radius:50%;margin-top:5px;flex:none}.go{background:#2ecc71}.moyen{background:#f1c40f}.skip{background:#e74c3c}
+.n{font-weight:600}.note{color:#a9c3d3;font-size:.9rem}.stars{color:#f5c542;margin-left:auto;white-space:nowrap}
+h2{font-size:.95rem;color:#7fc8e8;margin:0 0 8px}ol{padding-left:20px;line-height:1.6}a{color:#7fc8e8}.upd{color:#6f8fa3;font-size:.8rem;text-align:center}
+</style></head><body><main>
+<h1>Surf Lombok Sud</h1><div class="loc" id="loc">Chargement…</div>
+<div class="card"><div class="head" id="headline">…</div></div>
+<div class="card"><h2>Conditions</h2><div class="grid" id="cond"></div></div>
+<div class="card"><h2>Classement des spots</h2><div id="spots"></div></div>
+<div class="card" id="planb" hidden><h2>Plan B</h2><div id="planbtxt"></div></div>
+<div class="upd" id="upd"></div>
+<div class="card"><h2>Installer le widget</h2><ol>
+<li>Installe l'app <b>Scriptable</b> (App Store, gratuite).</li>
+<li>Ouvre <a href="https://github.com/JeanGLT/surf-lombok/blob/main/SurfLombok.js">SurfLombok.js</a> (<a href="https://raw.githubusercontent.com/JeanGLT/surf-lombok/main/SurfLombok.js">version brute</a>) et copie tout le code.</li>
+<li>Dans Scriptable, touche <b>+</b>, colle le code, nomme le script « SurfLombok ».</li>
+<li>Sur l'écran d'accueil, appui long → <b>+</b> → Scriptable → choisis une taille de widget.</li>
+<li>Appui long sur le widget → <b>Modifier le widget</b> → Script : <b>SurfLombok</b>.</li>
+</ol></div>
+</main><script>
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const st=n=>'★'.repeat(n||0)+'☆'.repeat(5-(n||0));
+fetch('surf.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{
+ document.getElementById('loc').textContent=(d.location||'')+' · '+new Date(d.date+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
+ document.getElementById('headline').textContent=d.headline;
+ const c=[['Meilleur créneau',d.top?`${d.top.spot}<br>${d.top.window}`:'-'],['Houle',`${d.swell.m} m · ${d.swell.range||d.swell.s+' s'} · ${d.swell.dir}`],
+ ['Vent',`${d.wind.dir} ${d.wind.kt} nds${d.wind.day?'<br><small>'+esc(d.wind.day)+'</small>':''}`],['Marée',`Basse ${(d.tide.low||[]).join(', ')}<br>Haute ${(d.tide.high||[]).join(', ')}`]];
+ if(d.water)c.push(['Eau',d.water+' °C']);
+ document.getElementById('cond').innerHTML=c.map(([k,v])=>`<div><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
+ const sp=[...d.spots].sort((a,b)=>b.rating-a.rating);
+ document.getElementById('spots').innerHTML=sp.map(s=>`<div class="spot"><span class="dot ${esc(s.verdict)}"></span><div><div class="n">${esc(s.name)}</div><div class="note">${esc(s.note)}</div></div><span class="stars">${st(s.rating)}</span></div>`).join('');
+ const pb=sp.find(s=>/plan b/i.test(s.note))||sp.find(s=>s.verdict==='moyen');
+ if(pb){document.getElementById('planb').hidden=false;document.getElementById('planbtxt').innerHTML=`<b>${esc(pb.name)}</b> — ${esc(pb.note)}`}
+ document.getElementById('upd').textContent='Mis à jour : '+new Date(d.updated).toLocaleString('fr-FR',{timeZone:'Asia/Makassar',dateStyle:'medium',timeStyle:'short'})+' (heure de Lombok)';
+}).catch(e=>{document.getElementById('headline').textContent='Données indisponibles.'});
+</script></body></html>
