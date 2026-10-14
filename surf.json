@@ -1,33 +1,208 @@
 {
   "schema": 2,
   "date": "2026-10-14",
-  "updated": "2026-10-14T18:50:00+08:00",
-  "headline": "Morning windows are over; tomorrow brings 1.7 m @14s SSW with fresh SSE wind, so Gerupuk is the early bet.",
+  "updated": "2026-10-14T18:56:00+08:00",
+  "headline": "Pumping 2 m SSW swell but SE wind rules: dawn patrol Gerupuk tomorrow.",
   "location": "Kuta / Pujut, South Lombok",
-  "tide": { "low": ["05:45"], "high": ["11:50"] },
+  "tide": {
+    "low": [
+      "17:33"
+    ],
+    "high": [
+      "23:44"
+    ]
+  },
   "water": 27,
   "picks": [
-    { "name": "Gerupuk", "verdict": "skip", "rating": 1, "window": "No good window left today", "scooter": 20, "swell": { "m": 1.6, "s": 11, "dir": "SSW" }, "wind": { "dir": "ESE/SE", "kt": 13 } },
-    { "name": "Are Guling / Mawun", "verdict": "skip", "rating": 1, "window": "No good window left today", "scooter": 25, "swell": { "m": 1.6, "s": 11, "dir": "SSW" }, "wind": { "dir": "ESE/SE", "kt": 13 } }
+    {
+      "name": "Gerupuk Inside",
+      "verdict": "skip",
+      "rating": 1,
+      "window": "No good window left today",
+      "scooter": 20,
+      "swell": {
+        "m": 2.0,
+        "s": 15,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SE",
+        "kt": 11
+      },
+      "chips": [
+        "Reef",
+        "Right",
+        "Mid tide",
+        "Boat"
+      ],
+      "tip": "Best SE-wind shelter; go early tomorrow."
+    },
+    {
+      "name": "Ekas Inside",
+      "verdict": "skip",
+      "rating": 1,
+      "window": "No good window left today",
+      "scooter": 35,
+      "swell": {
+        "m": 2.0,
+        "s": 15,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SE",
+        "kt": 11
+      },
+      "chips": [
+        "Reef",
+        "Left",
+        "Mid tide",
+        "Boat"
+      ],
+      "tip": "Plan B if Gerupuk is blown out."
+    },
+    {
+      "name": "Are Guling",
+      "verdict": "skip",
+      "rating": 1,
+      "window": "No good window left today",
+      "scooter": 25,
+      "swell": {
+        "m": 2.0,
+        "s": 15,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SE",
+        "kt": 11
+      },
+      "chips": [
+        "Reef",
+        "Right",
+        "Mid tide",
+        "Boat"
+      ],
+      "tip": "Big swell suits it; needs calm early wind."
+    },
+    {
+      "name": "Mawi",
+      "verdict": "skip",
+      "rating": 1,
+      "window": "No good window left today",
+      "scooter": 30,
+      "swell": {
+        "m": 2.0,
+        "s": 15,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SE",
+        "kt": 11
+      },
+      "chips": [
+        "Reef",
+        "Left",
+        "Mid tide",
+        "Busy"
+      ],
+      "tip": "Powerful at 2 m; advanced only, dawn only."
+    },
+    {
+      "name": "Seger",
+      "verdict": "skip",
+      "rating": 1,
+      "window": "No good window left today",
+      "scooter": 10,
+      "swell": {
+        "m": 2.0,
+        "s": 15,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SE",
+        "kt": 11
+      },
+      "chips": [
+        "Reef",
+        "Peaks",
+        "Mid tide",
+        "Busy"
+      ],
+      "tip": "Closest option; only before wind fills in."
+    }
   ],
   "skip": [
-    { "name": "Ekas Inside", "reason": "Sheltered plan B, but the day window is over" },
-    { "name": "Seger", "reason": "Exposed to SE wind, only good before 08:00" },
-    { "name": "Tanjung Aan", "reason": "Exposed to SE wind" }
+    {
+      "name": "Tanjung Aan",
+      "reason": "Exposed to SE wind"
+    },
+    {
+      "name": "Selong Belanak",
+      "reason": "Too small, beginner beach"
+    },
+    {
+      "name": "Mawun",
+      "reason": "Shorebreak in big swell"
+    }
   ],
-  "tomorrow": { "best": "Gerupuk", "swell": { "m": 1.7, "s": 14, "dir": "SSW" }, "wind": { "dir": "SSE", "kt": 13 }, "outlook": "Solid SSW swell, fresh SSE wind; surf sheltered spots early." },
+  "tomorrow": {
+    "best": "Gerupuk Inside",
+    "swell": {
+      "m": 1.7,
+      "s": 14,
+      "dir": "SSW"
+    },
+    "wind": {
+      "dir": "SSE",
+      "kt": 13
+    },
+    "outlook": "Solid swell, fresh SSE wind; surf sheltered spots early."
+  },
   "sources": [
-    { "name": "Surf-Forecast Kuta Bay-Lombok", "url": "https://www.surf-forecast.com/breaks/Kuta-Bay-Lombok/forecasts/latest/six_day" }
+    {
+      "name": "Surf-Forecast Kuta Bay-Lombok",
+      "url": "https://www.surf-forecast.com/breaks/Kuta-Bay-Lombok/forecasts/latest/six_day"
+    }
   ],
-  "top": { "spot": "Gerupuk", "window": "No good window left today", "rating": 1 },
-  "swell": { "m": 1.6, "s": 11, "dir": "SSW" },
-  "wind": { "dir": "ESE/SE", "kt": 13 },
+  "top": {
+    "spot": "Gerupuk Inside",
+    "window": "No good window left today",
+    "rating": 1
+  },
+  "swell": {
+    "m": 2.0,
+    "s": 15,
+    "dir": "SSW"
+  },
+  "wind": {
+    "dir": "SE",
+    "kt": 11
+  },
   "spots": [
-    { "name": "Gerupuk", "rating": 1, "verdict": "skip" },
-    { "name": "Are Guling / Mawun", "rating": 1, "verdict": "skip" },
-    { "name": "Ekas Inside", "rating": 1, "verdict": "skip" },
-    { "name": "Seger", "rating": 1, "verdict": "skip" },
-    { "name": "Tanjung Aan", "rating": 1, "verdict": "skip" }
+    {
+      "name": "Gerupuk Inside",
+      "rating": 1,
+      "verdict": "skip"
+    },
+    {
+      "name": "Ekas Inside",
+      "rating": 1,
+      "verdict": "skip"
+    },
+    {
+      "name": "Are Guling",
+      "rating": 1,
+      "verdict": "skip"
+    },
+    {
+      "name": "Mawi",
+      "rating": 1,
+      "verdict": "skip"
+    },
+    {
+      "name": "Seger",
+      "rating": 1,
+      "verdict": "skip"
+    }
   ],
   "reportUrl": "https://jeanglt.github.io/surf-lombok/"
 }
