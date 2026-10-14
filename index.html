@@ -1,57 +1,94 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Surf South Lombok</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#021428">
+<title>EasySurf · Best spots today</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
 <style>
-body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:linear-gradient(#03132b,#0a3d62);color:#e8f4ff;min-height:100vh}
-main{max-width:680px;margin:auto;padding:20px}h1{color:#4fd1c5;margin:0 0 4px}h2{color:#4fd1c5;font-size:1.1em;margin:22px 0 8px}
-.sub{color:#8fb8d8;font-size:.9em}.card{background:rgba(255,255,255,.06);border-radius:12px;padding:12px 14px;margin:8px 0}
-.dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px}.stars{color:#4fd1c5}
-a{color:#4fd1c5}.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}code{background:rgba(255,255,255,.1);padding:1px 4px;border-radius:4px}
-</style></head><body><main>
-<h1>🌊 Surf South Lombok</h1><div class="sub" id="loc"></div>
-<p id="headline" style="font-size:1.15em"></p>
-<h2>Conditions</h2><div class="grid" id="cond"></div>
-<h2>Best spots today</h2><div id="picks"></div>
-<div id="skipw"><h2>Skip today</h2><div id="skip"></div></div>
-<div id="tomw"><h2>Tomorrow</h2><div id="tom" class="card"></div></div>
-<div id="srcw"><h2>Sources</h2><ul id="src"></ul></div>
-<p class="sub" id="upd"></p>
-<h2>Install the widget</h2>
-<ol>
-<li>Install <b>Scriptable</b> from the App Store.</li>
-<li>Open the <a href="https://raw.githubusercontent.com/JeanGLT/surf-lombok/main/SurfLombok.js">raw script SurfLombok.js</a>, copy all the code.</li>
-<li>In Scriptable tap <b>+</b>, paste, name it <code>SurfLombok</code>, tap Done.</li>
-<li>Long-press the Home Screen → <b>+</b> → Scriptable → pick Small, Medium or Large → Add Widget.</li>
-<li>Long-press the widget → <b>Edit Widget</b>: Script = SurfLombok, <b>When Interacting = Open URL</b>, URL = <code>https://jeanglt.github.io/surf-lombok/</code>.</li>
-</ol>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#fff;font-family:"Avenir Next","Nunito","SF Pro Rounded",system-ui,-apple-system,sans-serif;background:linear-gradient(170deg,#021428 0%,#04294a 55%,#075a80 100%) fixed}
+.waves{position:fixed;left:0;right:0;bottom:0;height:240px;z-index:0;pointer-events:none}
+.waves svg{width:100%;height:100%;display:block}
+main{position:relative;z-index:1;max-width:440px;margin:0 auto;padding:22px 18px 48px}
+.hd{display:flex;justify-content:space-between;align-items:center}
+.br{font-size:15px;font-weight:800;letter-spacing:.04em;color:#5eead4}
+.dt{font-size:12px;font-weight:600;color:#cfe8f5}
+h1{font-size:13px;font-weight:700;color:#cfe8f5;text-transform:uppercase;letter-spacing:.08em;margin:22px 0 2px}
+.sb{font-size:12px;font-weight:600;color:#bfdcec;margin:0 0 18px}
+.row{padding:14px 0;border-top:0.5px solid rgba(255,255,255,.18)}.row:first-child{border-top:0;padding-top:0}
+.nm{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:800;line-height:1.25}
+.dot{width:10px;height:10px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.18);flex:none}
+.go{background:#2ecc71}.fair{background:#f1c40f}.skip{background:#e74c3c}
+.sc{font-size:12px;font-weight:600;color:#bfdcec;white-space:nowrap}
+.stars{margin-left:auto;font-size:13px;color:#5eead4;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+.dd{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;font-weight:600;color:#e6f4fb;margin:3px 0 0 18px}
+.i{font-size:14px;color:#5eead4;vertical-align:-2px;margin-right:4px}
+.ch{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0 18px}.ch span{font-size:11px;font-weight:700;color:#e6f4fb;background:rgba(255,255,255,.12);border-radius:20px;padding:2px 10px}
+.tp{font-size:12.5px;font-weight:600;color:#cfe8f5;margin:8px 0 0 18px;line-height:1.45}
+.strip{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;font-weight:600;color:#e6f4fb;border-top:0.5px solid rgba(255,255,255,.22);padding-top:14px;margin-top:4px}
+.skipl{font-size:12px;font-weight:600;color:#bfdcec;margin-top:12px}
+.tm{margin-top:22px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.08)}
+.tm .l{font-size:11px;font-weight:700;color:#cfe8f5;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.tm .t{font-size:13px;font-weight:600;color:#e6f4fb;line-height:1.5}
+.src{font-size:11px;font-weight:600;color:#bfdcec;margin-top:22px;line-height:1.6}
+.src a{color:#e6f4fb;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35)}
+details{margin-top:22px;font-size:12px;color:#bfdcec}
+summary{cursor:pointer;font-weight:700;color:#cfe8f5}
+details ol{padding-left:18px;line-height:1.7;margin:8px 0 0}
+details a{color:#5eead4}
+.err{font-size:14px;font-weight:600;color:#f1c40f;margin-top:24px}
+</style></head><body>
+<div class="waves" aria-hidden="true"><svg viewBox="0 0 440 240" preserveAspectRatio="none"><path d="M0 110 C60 88 120 134 200 112 S350 88 440 108 V240 H0Z" fill="#22d3ee" fill-opacity=".09"/><path d="M0 150 C70 128 140 168 230 148 S380 130 440 146 V240 H0Z" fill="#22d3ee" fill-opacity=".12"/><path d="M0 194 C80 176 150 208 240 192 S390 176 440 190 V240 H0Z" fill="#22d3ee" fill-opacity=".15"/></svg></div>
+<main>
+<div class="hd"><span class="br">EasySurf</span><span class="dt" id="date"></span></div>
+<h1>Best spots today</h1>
+<p class="sb" id="sub">South Lombok · within 35 min of Kuta</p>
+<div id="picks"></div>
+<div class="strip" id="strip"></div>
+<div class="skipl" id="skip" hidden></div>
+<div class="tm" id="tm" hidden></div>
+<div class="src" id="src"></div>
+<div class="err" id="err" hidden>Data unavailable. Try again in a few minutes.</div>
+<details><summary>Add the iPhone widget</summary><ol>
+<li>Install the free <b>Scriptable</b> app from the App Store.</li>
+<li>Open <a href="https://raw.githubusercontent.com/JeanGLT/surf-lombok/main/SurfLombok.js">SurfLombok.js</a> and copy all the code.</li>
+<li>In Scriptable, tap <b>+</b>, paste the code and name the script "Surf Lombok".</li>
+<li>On your home screen, long-press, tap <b>+</b>, choose Scriptable and pick a size.</li>
+<li>Long-press the widget, tap <b>Edit Widget</b>, set Script to "Surf Lombok" and When Interacting to "Open URL".</li>
+</ol></details>
 </main>
 <script>
-const COL={go:"#2ecc71",fair:"#f1c40f",moyen:"#f1c40f",skip:"#e74c3c"};
-const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const stars=n=>{const k=Math.max(0,Math.min(5,Math.round(n||0)));return "★".repeat(k)+"☆".repeat(5-k)};
-const sw=s=>s?`${s.m} m · ${s.s} s${s.dir?" · "+esc(s.dir):""}`:"";
-const wd=w=>w?`${esc(w.dir)} ${w.kt} kt`:"";
-const $=id=>document.getElementById(id);
-function picksOf(d){
-  if(Array.isArray(d.picks)&&d.picks.length)return d.picks;
-  const sp=(d.spots||[]).map(s=>({...s}));
-  if(d.top){const i=sp.findIndex(s=>s.name===d.top.spot);
-    const t={name:d.top.spot,rating:d.top.rating,window:d.top.window,verdict:i>=0?sp[i].verdict:"go",swell:d.swell,wind:d.wind};
-    if(i>=0)sp.splice(i,1);sp.unshift(t);}
-  return sp;
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const stars=n=>{n=Math.max(0,Math.min(5,Math.round(n||0)));return '★'.repeat(n)+'☆'.repeat(5-n)};
+const verdict=v=>{v=String(v||'').toLowerCase();return v==='moyen'?'fair':(['go','fair','skip'].includes(v)?v:'fair')};
+const hhmm=iso=>{const m=String(iso||'').match(/T(\d{2}:\d{2})/);return m?m[1]:'--:--'};
+const swellTxt=s=>s?`${esc(s.m)} m · ${esc(s.s)} s${s.dir?' · '+esc(s.dir):''}`:'';
+const windTxt=w=>w?`${esc(w.dir||'')} ${esc(w.kt)} kts`.trim():'';
+const list=a=>[].concat(a||[]).map(esc).join(' · ');
+const fmtDate=(iso,add)=>{const d=new Date(String(iso).slice(0,10)+'T12:00:00Z');if(isNaN(d))return '';d.setUTCDate(d.getUTCDate()+(add||0));return d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short',timeZone:'UTC'})};
+function getPicks(d){
+ if(Array.isArray(d.picks)&&d.picks.length)return d.picks.map(p=>Object.assign({swell:d.swell,wind:d.wind},p));
+ const out=[],top=d.top&&d.top.spot;
+ if(d.top)out.push({name:d.top.spot,verdict:d.top.verdict||'go',rating:d.top.rating,window:d.top.window,swell:d.swell,wind:d.wind});
+ (d.spots||[]).forEach(s=>{if(s.name!==top&&verdict(s.verdict)!=='skip')out.push({name:s.name,verdict:s.verdict,rating:s.rating,swell:d.swell,wind:d.wind})});
+ return out;
 }
-fetch("surf.json?t="+Date.now()).then(r=>r.json()).then(d=>{
-  $("loc").textContent=(d.location||"")+(d.date?" · "+d.date:"");
-  $("headline").textContent=d.headline||"";
-  const c=[["Swell",sw(d.swell||(d.picks&&d.picks[0]&&d.picks[0].swell))],["Wind",wd(d.wind||(d.picks&&d.picks[0]&&d.picks[0].wind))]];
-  if(d.tide)c.push(["Tides","Low "+esc([].concat(d.tide.low||[]).join(", "))+"<br>High "+esc([].concat(d.tide.high||[]).join(", "))]);
-  if(d.water!=null)c.push(["Water",d.water+" °C"]);
-  $("cond").innerHTML=c.map(([k,v])=>`<div class="card"><div class="sub">${k}</div>${v}</div>`).join("");
-  $("picks").innerHTML=picksOf(d).map(p=>`<div class="card"><span class="dot" style="background:${COL[p.verdict]||"#8fb8d8"}"></span><b>${esc(p.name)}</b> <span class="stars">${stars(p.rating)}</span>
-    <div class="sub">${[p.window&&"⏱ "+esc(p.window),p.scooter!=null&&"🛵 "+p.scooter+" min",p.swell&&"〰 "+sw(p.swell),p.wind&&"💨 "+wd(p.wind),p.note&&esc(p.note)].filter(Boolean).join(" · ")}</div></div>`).join("");
-  if(Array.isArray(d.skip)&&d.skip.length)$("skip").innerHTML=d.skip.map(s=>`<div class="card"><span class="dot" style="background:#e74c3c"></span><b>${esc(s.name)}</b> <span class="sub">— ${esc(s.reason)}</span></div>`).join("");else $("skipw").hidden=true;
-  if(d.tomorrow){const t=d.tomorrow;$("tom").innerHTML=`<b>${esc(t.best||"")}</b><div class="sub">${[sw(t.swell),wd(t.wind)].filter(Boolean).join(" · ")}</div>${esc(t.outlook||"")}`}else $("tomw").hidden=true;
-  if(Array.isArray(d.sources)&&d.sources.length)$("src").innerHTML=d.sources.map(s=>`<li><a href="${esc(s.url)}">${esc(s.name)}</a></li>`).join("");else $("srcw").hidden=true;
-  const u=new Date(d.updated);$("upd").textContent="Updated "+(isNaN(u)?"—":u.toLocaleString("en-GB",{timeZone:"Asia/Makassar",dateStyle:"medium",timeStyle:"short"})+" (UTC+8)");
-}).catch(()=>{$("headline").textContent="Offline / no data";});
+function render(d){
+ document.getElementById('date').textContent=fmtDate(d.date)+' · updated '+hhmm(d.updated);
+ const item=(ic,t)=>t?`<span><i class="ti ti-${ic} i"></i>${t}</span>`:'';
+ document.getElementById('picks').innerHTML=getPicks(d).slice(0,5).map(p=>`<div class="row"><div class="nm"><span class="dot ${verdict(p.verdict)}"></span><span>${esc(p.name)}</span>${p.scooter?`<span class="sc"><i class="ti ti-motorbike i"></i>${esc(p.scooter)} min</span>`:''}<span class="stars">${stars(p.rating)}</span></div><div class="dd">${item('clock',esc(p.window))}${item('wave-sine',swellTxt(p.swell))}${item('wind',windTxt(p.wind))}</div>${(p.chips&&p.chips.length)?`<div class="ch">${p.chips.slice(0,4).map(c=>`<span>${esc(c)}</span>`).join('')}</div>`:''}${p.tip?`<div class="tp">${esc(p.tip)}</div>`:''}</div>`).join('');
+ const t=d.tide||{},s=[];
+ if((t.low||[]).length)s.push(`<span><i class="ti ti-arrow-down i"></i>Low ${list(t.low)}</span>`);
+ if((t.high||[]).length)s.push(`<span><i class="ti ti-arrow-up i"></i>High ${list(t.high)}</span>`);
+ if(d.water)s.push(`<span><i class="ti ti-temperature i"></i>${esc(d.water)}°C</span>`);
+ const st=document.getElementById('strip');st.innerHTML=s.join('');st.hidden=!s.length;
+ let sk=Array.isArray(d.skip)?d.skip:(d.spots||[]).filter(x=>verdict(x.verdict)==='skip').map(x=>({name:x.name}));
+ const sl=document.getElementById('skip');
+ if(sk.length){sl.hidden=false;sl.textContent='Skip today: '+sk.map(x=>x.name+(x.reason?' ('+x.reason+')':'')).join(', ')}
+ const tm=d.tomorrow,tb=document.getElementById('tm');
+ if(tm){const bits=[tm.best,swellTxt(tm.swell),windTxt(tm.wind)].filter(Boolean);
+  tb.hidden=false;tb.innerHTML=`<div class="l">Tomorrow · ${esc(fmtDate(tm.date||d.date,tm.date?0:1))}</div><div class="t">${bits.map(x=>x===tm.best?esc(x):x).join(' · ')}${tm.outlook?'<br>'+esc(tm.outlook):''}</div>`}
+ const src=(d.sources&&d.sources.length?d.sources:[{name:'Surf-Forecast',url:'https://www.surf-forecast.com'},{name:'Windfinder',url:'https://www.windfinder.com'},{name:'Surfline',url:'https://www.surfline.com'}]);
+ document.getElementById('src').innerHTML='Source: '+src.map(x=>x.url&&/^https?:\/\//.test(x.url)?`<a href="${esc(x.url)}">${esc(x.name)}</a>`:esc(x.name)).join(' · ');
+}
+fetch('surf.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(render).catch(()=>{document.getElementById('err').hidden=false;document.getElementById('sub').hidden=true});
 </script></body></html>
