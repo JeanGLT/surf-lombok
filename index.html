@@ -45,12 +45,36 @@ details a{color:#5eead4}
 .btn2{background:rgba(255,255,255,.14);color:#fff!important}
 .msg{font-size:12px;font-weight:600;color:#bfdcec;margin-top:6px}
 .msg a{color:#5eead4}
+.rec{margin:0 0 14px;padding:12px 14px;border-radius:14px;background:rgba(94,234,212,.14);border:0.5px solid rgba(94,234,212,.35)}
+.lb{font-size:11px;font-weight:700;color:#cfe8f5;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.rec .rn{font-size:16px;font-weight:800;line-height:1.3}
+.rec .rt{font-size:13px;font-weight:600;color:#e6f4fb;line-height:1.5;margin-top:3px}
+.hint{font-size:11px;font-weight:600;color:#bfdcec;margin:0 0 14px}
+.sum{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.sum:focus-visible{outline:2px solid #5eead4;outline-offset:6px;border-radius:8px}
+.chev{flex:none;width:7px;height:7px;border-right:2px solid #5eead4;border-bottom:2px solid #5eead4;transform:rotate(45deg);margin:-3px 3px 0 8px;transition:transform .15s}
+.sum[aria-expanded=true] .chev{transform:rotate(-135deg);margin-top:4px}
+.det{margin:14px 0 0 18px}
+.adv{font-size:13px;font-weight:600;color:#e6f4fb;line-height:1.5;background:rgba(255,255,255,.1);border-radius:12px;padding:10px 12px}
+.tl{margin-top:12px}
+.hr{display:grid;grid-template-columns:38px 44px minmax(0,1fr) minmax(0,1fr) 42px;gap:6px;align-items:center;font-size:11.5px;font-weight:600;color:#e6f4fb;padding:5px 6px;border-radius:8px;white-space:nowrap}
+.hr>span{overflow:hidden;text-overflow:ellipsis}
+.hr.hh{color:#bfdcec;font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding-top:0;padding-bottom:2px}
+.hr.best{background:rgba(94,234,212,.14)}
+.hr.now{outline:1px solid #5eead4}
+.bar{height:6px;border-radius:3px;background:rgba(255,255,255,.16);overflow:hidden}
+.bar b{display:block;height:100%;border-radius:3px}
+.fb{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin-top:12px;font-size:12.5px;font-weight:600;color:#e6f4fb}
+@media(max-width:380px){.nm{font-size:18px;gap:6px}.stars{font-size:12px;letter-spacing:.02em}.sc{font-size:11px}}
+.fb span{display:block;font-size:10px;font-weight:700;color:#bfdcec;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1px}
 </style></head><body>
 <div class="waves" aria-hidden="true"><svg viewBox="0 0 440 240" preserveAspectRatio="none"><path d="M0 110 C60 88 120 134 200 112 S350 88 440 108 V240 H0Z" fill="#22d3ee" fill-opacity=".09"/><path d="M0 150 C70 128 140 168 230 148 S380 130 440 146 V240 H0Z" fill="#22d3ee" fill-opacity=".12"/><path d="M0 194 C80 176 150 208 240 192 S390 176 440 190 V240 H0Z" fill="#22d3ee" fill-opacity=".15"/></svg></div>
 <main>
 <div class="hd"><span class="br">EasySurf</span><span class="dt" id="date"></span></div>
 <h1>Best spots today</h1>
 <p class="sb" id="sub">South Lombok · within 35 min of Kuta</p>
+<div class="rec" id="rec" hidden></div>
+<p class="hint" id="hint" hidden>Tap a spot to see the whole day</p>
 <div id="picks"></div>
 <div class="strip" id="strip"></div>
 <div class="skipl" id="skip" hidden></div>
@@ -81,10 +105,45 @@ function getPicks(d){
  (d.spots||[]).forEach(s=>{if(s.name!==top&&verdict(s.verdict)!=='skip')out.push({name:s.name,verdict:s.verdict,rating:s.rating,swell:d.swell,wind:d.wind})});
  return out;
 }
+const tideCell=t=>{if(t==null)return '';if(typeof t==='object')return t.m==null?'':`${t.trend==='falling'?'↓':t.trend==='rising'?'↑':''} ${esc(t.m)}`.trim();return esc(t)};
+const mins=t=>{const m=String(t||'').match(/(\d{1,2}):(\d{2})/);return m?(+m[1])*60+(+m[2]):null};
+function nowIdx(hrs,d){
+ const n=new Date(Date.now()+8*3600e3),today=n.toISOString().slice(0,10);
+ if(String(d.date).slice(0,10)!==today)return -1;
+ const cur=n.getUTCHours()*60+n.getUTCMinutes();let k=-1;
+ hrs.forEach((x,i)=>{const m=mins(x.t);if(m!=null&&m<=cur)k=i});
+ return k>=0&&k<hrs.length-1?k:(k===hrs.length-1&&cur-mins(hrs[k].t)<120?k:-1);
+}
+function dayPanel(p,d){
+ const hrs=(Array.isArray(p.hours)&&p.hours.length)?p.hours:(Array.isArray(d.hours)?d.hours:[]);
+ const rt=Array.isArray(p.ratings)?p.ratings:[];
+ let h='';
+ if(p.advice)h+=`<div class="adv"><div class="lb">Recommendation</div>${esc(p.advice)}</div>`;
+ if(hrs.length){
+  const ni=nowIdx(hrs,d);
+  h+='<div class="tl"><div class="hr hh"><span>Time</span><span>Score</span><span>Swell</span><span>Wind</span><span>Tide</span></div>'+hrs.map((x,i)=>{
+   const r=rt[i]==null?null:Math.max(0,Math.min(5,Math.round(rt[i])));
+   const c=r==null?'':(r>=4?'go':r===3?'fair':'skip');
+   const sw=x.swell?`${esc(x.swell.m)}m · ${esc(x.swell.s)}s`:'';
+   const wd=x.wind?`${esc(x.wind.dir||'')} ${esc(x.wind.kt)}`.trim():'';
+   return `<div class="hr${r!=null&&r>=4?' best':''}${i===ni?' now':''}"><span>${esc(x.t)}</span><span class="bar" title="${r==null?'':r+'/5'}">${r==null?'':`<b class="${c}" style="width:${r*20}%"></b>`}</span><span>${sw}</span><span>${wd}</span><span>${tideCell(x.tide)}</span></div>`}).join('')+'</div>';
+ }else{
+  const t=d.tide||{},f=[['Best window',p.window],['Swell',swellTxt(p.swell)],['Wind',windTxt(p.wind)],['Tides',[(t.low||[]).length?'Low '+list(t.low):'',(t.high||[]).length?'High '+list(t.high):''].filter(Boolean).join(' · ')]].filter(x=>x[1]);
+  h+='<div class="fb">'+f.map(x=>`<div><span>${x[0]}</span>${x[0]==='Best window'?esc(x[1]):x[1]}</div>`).join('')+'</div>';
+ }
+ return h;
+}
+function rowHtml(p,i,d){
+ const item=(ic,t)=>t?`<span><i class="ti ti-${ic} i"></i>${t}</span>`:'';
+ return `<div class="row"><div class="sum" role="button" tabindex="0" aria-expanded="false" aria-controls="det${i}"><div class="nm"><span class="dot ${verdict(p.verdict)}"></span><span>${esc(p.name)}</span>${p.scooter?`<span class="sc"><i class="ti ti-motorbike i"></i>${esc(p.scooter)} min</span>`:''}<span class="stars">${stars(p.rating)}</span><span class="chev" aria-hidden="true"></span></div><div class="dd">${item('clock',esc(p.window))}${item('wave-sine',swellTxt(p.swell))}${item('wind',windTxt(p.wind))}</div>${(p.chips&&p.chips.length)?`<div class="ch">${p.chips.slice(0,4).map(c=>`<span>${esc(c)}</span>`).join('')}</div>`:''}${p.tip?`<div class="tp">${esc(p.tip)}</div>`:''}</div><div class="det" id="det${i}" hidden>${dayPanel(p,d)}</div></div>`;
+}
 function render(d){
  document.getElementById('date').textContent=fmtDate(d.date)+' · updated '+hhmm(d.updated);
- const item=(ic,t)=>t?`<span><i class="ti ti-${ic} i"></i>${t}</span>`:'';
- document.getElementById('picks').innerHTML=getPicks(d).slice(0,5).map(p=>`<div class="row"><div class="nm"><span class="dot ${verdict(p.verdict)}"></span><span>${esc(p.name)}</span>${p.scooter?`<span class="sc"><i class="ti ti-motorbike i"></i>${esc(p.scooter)} min</span>`:''}<span class="stars">${stars(p.rating)}</span></div><div class="dd">${item('clock',esc(p.window))}${item('wave-sine',swellTxt(p.swell))}${item('wind',windTxt(p.wind))}</div>${(p.chips&&p.chips.length)?`<div class="ch">${p.chips.slice(0,4).map(c=>`<span>${esc(c)}</span>`).join('')}</div>`:''}${p.tip?`<div class="tp">${esc(p.tip)}</div>`:''}</div>`).join('');
+ const picks=getPicks(d).slice(0,5);
+ document.getElementById('picks').innerHTML=picks.map((p,i)=>rowHtml(p,i,d)).join('');
+ document.getElementById('hint').hidden=!picks.length;
+ const rc=d.recommendation,rb=document.getElementById('rec');
+ if(rc&&(rc.text||rc.spot)){rb.hidden=false;rb.innerHTML=`<div class="lb">Today's recommendation</div>${rc.spot?`<div class="rn">${esc(rc.spot)}${rc.when?' · '+esc(rc.when):''}</div>`:''}${rc.text?`<div class="rt">${esc(rc.text)}</div>`:''}`}
  const t=d.tide||{},s=[];
  if((t.low||[]).length)s.push(`<span><i class="ti ti-arrow-down i"></i>Low ${list(t.low)}</span>`);
  if((t.high||[]).length)s.push(`<span><i class="ti ti-arrow-up i"></i>High ${list(t.high)}</span>`);
@@ -99,6 +158,12 @@ function render(d){
  const src=(d.sources&&d.sources.length?d.sources:[{name:'Surf-Forecast',url:'https://www.surf-forecast.com'},{name:'Windfinder',url:'https://www.windfinder.com'},{name:'Surfline',url:'https://www.surfline.com'}]);
  document.getElementById('src').innerHTML='Source: '+src.map(x=>x.url&&/^https?:\/\//.test(x.url)?`<a href="${esc(x.url)}">${esc(x.name)}</a>`:esc(x.name)).join(' · ');
 }
+(function(){
+ const pk=document.getElementById('picks');
+ const tog=el=>{const o=el.getAttribute('aria-expanded')==='true';el.setAttribute('aria-expanded',String(!o));const t=document.getElementById(el.getAttribute('aria-controls'));if(t)t.hidden=o};
+ pk.addEventListener('click',e=>{const el=e.target.closest&&e.target.closest('.sum');if(el)tog(el)});
+ pk.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('sum')){e.preventDefault();tog(e.target)}});
+})();
 fetch('surf.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(render).catch(()=>{document.getElementById('err').hidden=false;document.getElementById('sub').hidden=true});
 
 const RAW='https://raw.githubusercontent.com/JeanGLT/surf-lombok/main/SurfLombok.js';
