@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "date": "2026-10-15",
-  "updated": "2026-10-15T10:55:00+08:00",
+  "updated": "2026-10-15T11:00:00+08:00",
   "headline": "SE trades build to 13 kt: grab sheltered Ekas Inside around the 12:19 high, then call it.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
@@ -128,7 +128,7 @@
         "kt": 10
       },
       "tide": {
-        "m": 0.35,
+        "m": 0.62,
         "trend": "rising"
       }
     }
