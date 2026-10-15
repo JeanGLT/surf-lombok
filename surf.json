@@ -1,54 +1,55 @@
 {
   "schema": 2,
   "date": "2026-10-15",
-  "updated": "2026-10-15T11:00:00+08:00",
-  "headline": "SE trades build to 13 kt: grab sheltered Ekas Inside around the 12:19 high, then call it.",
+  "updated": "2026-10-15T14:10:00+08:00",
+  "headline": "Skip the rest of today: 14 kt SE and a falling tide leave little clean water.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
-      "05:50",
+      "06:15",
       "17:58"
     ],
     "high": [
-      "12:19"
+      "12:19",
+      "00:10"
     ]
   },
   "water": 27,
   "recommendation": {
     "spot": "Ekas Inside",
-    "when": "11:00–14:00",
-    "text": "Best shelter from SE trades, peaking with the 12:19 high. If it's bumpy, try Gerupuk Inside; skip late afternoon (low tide, 12 kt wind)."
+    "when": "tomorrow 07:00\u201310:00",
+    "text": "Nothing left today worth the scooter. Rest; aim Ekas early tomorrow on the rising tide."
   },
   "hours": [
     {
       "t": "06:00",
       "swell": {
-        "m": 1.6,
-        "s": 14,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "ESE",
-        "kt": 8
-      },
-      "tide": {
-        "m": 0.35,
-        "trend": "rising"
-      }
-    },
-    {
-      "t": "08:00",
-      "swell": {
-        "m": 1.6,
+        "m": 1.7,
         "s": 14,
         "dir": "SSW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 10
+        "kt": 9
       },
       "tide": {
-        "m": 0.81,
+        "m": 0.22,
+        "trend": "falling"
+      }
+    },
+    {
+      "t": "08:00",
+      "swell": {
+        "m": 1.7,
+        "s": 14,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SE",
+        "kt": 11
+      },
+      "tide": {
+        "m": 0.56,
         "trend": "rising"
       }
     },
@@ -64,39 +65,39 @@
         "kt": 12
       },
       "tide": {
-        "m": 1.65,
+        "m": 1.54,
         "trend": "rising"
       }
     },
     {
       "t": "12:00",
       "swell": {
-        "m": 1.5,
+        "m": 1.6,
         "s": 14,
         "dir": "SSW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 12
+        "kt": 13
       },
       "tide": {
-        "m": 2.16,
+        "m": 2.15,
         "trend": "rising"
       }
     },
     {
       "t": "14:00",
       "swell": {
-        "m": 1.5,
+        "m": 1.6,
         "s": 14,
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SE",
+        "dir": "SSE",
         "kt": 14
       },
       "tide": {
-        "m": 1.86,
+        "m": 1.85,
         "trend": "falling"
       }
     },
@@ -104,7 +105,7 @@
       "t": "16:00",
       "swell": {
         "m": 1.5,
-        "s": 13,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
@@ -119,26 +120,26 @@
     {
       "t": "18:00",
       "swell": {
-        "m": 1.4,
+        "m": 1.3,
         "s": 13,
         "dir": "SSW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 10
+        "kt": 12
       },
       "tide": {
         "m": 0.62,
-        "trend": "rising"
+        "trend": "falling"
       }
     }
   ],
   "picks": [
     {
       "name": "Ekas Inside",
-      "verdict": "go",
-      "rating": 3,
-      "window": "11:00–14:00",
+      "verdict": "fair",
+      "rating": 1.5,
+      "window": "14:00\u201315:30",
       "scooter": 35,
       "swell": {
         "m": 1.5,
@@ -146,8 +147,8 @@
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 13
+        "dir": "SSE",
+        "kt": 14
       },
       "chips": [
         "Reef",
@@ -155,32 +156,32 @@
         "Mid tide",
         "Boat"
       ],
-      "tip": "Best trade-wind shelter; surf around the 12:19 high.",
+      "tip": "Only late shot left; boat in before tide drops.",
       "ratings": [
-        0,
-        0,
-        2.5,
         3,
         3,
-        1.5,
-        0.5
+        2,
+        2,
+        1,
+        1,
+        0
       ],
-      "advice": "Go now and surf through high tide at 12:19. Leave by 14:30 as the tide drops and SE wind peaks near 14 kt."
+      "advice": "Go now only if already nearby. Leave by 15:30 as the reef shallows into the 17:58 low."
     },
     {
       "name": "Gerupuk Inside",
-      "verdict": "fair",
-      "rating": 2.5,
-      "window": "11:00–13:30",
+      "verdict": "skip",
+      "rating": 1,
+      "window": "none left",
       "scooter": 20,
       "swell": {
-        "m": 1.5,
+        "m": 1.6,
         "s": 14,
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 12
+        "dir": "SSE",
+        "kt": 14
       },
       "chips": [
         "Reef",
@@ -188,201 +189,183 @@
         "Mid tide",
         "Boat"
       ],
-      "tip": "Needs the high tide; gets bumpy as trades build.",
+      "tip": "Cross-on SE and dropping tide; save it for tomorrow.",
       "ratings": [
-        0,
-        0,
         2,
-        2.5,
+        2,
+        2,
         2,
         1,
-        0.5
-      ],
-      "advice": "Paddle out around 11:00 on the push to high. Wind chop builds after 13:30, so head in before the tide drains."
-    },
-    {
-      "name": "Are Guling",
-      "verdict": "fair",
-      "rating": 2,
-      "window": "11:00–13:00",
-      "scooter": 25,
-      "swell": {
-        "m": 1.5,
-        "s": 14,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "SE",
-        "kt": 12
-      },
-      "chips": [
-        "Reef",
-        "Right",
-        "Mid tide",
-        "Boat"
-      ],
-      "tip": "Short high-tide window before wind and falling tide.",
-      "ratings": [
         0,
-        0,
-        2,
-        2,
-        1.5,
-        0.5,
         0
       ],
-      "advice": "Only worth it around high tide 11:30–13:00. Watch SE wind chop and the dropping tide; leave early if it gets bumpy."
+      "advice": "Skip this afternoon. Cross-on trades plus falling tide make the bay messy and then skinny."
     },
     {
       "name": "Mawi",
-      "verdict": "fair",
-      "rating": 2,
-      "window": "11:00–13:30",
+      "verdict": "skip",
+      "rating": 1,
+      "window": "none left",
       "scooter": 30,
       "swell": {
-        "m": 1.5,
+        "m": 1.6,
         "s": 14,
         "dir": "SSW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 13
+        "kt": 14
       },
       "chips": [
         "Reef",
         "Left",
-        "Mid tide",
+        "Low to mid",
         "Busy"
       ],
-      "tip": "Heavy at 1.5 m; advanced only, leave before low.",
+      "tip": "SE is clean wind but low-tide reef is too shallow.",
       "ratings": [
-        0,
-        0,
-        1.5,
+        3,
+        3,
         2,
         2,
         1,
-        0.5
+        0,
+        0
       ],
-      "advice": "Advanced only and likely crowded. Surf the high tide; SE is cross-onshore here, so leave once wind passes 13 kt."
+      "advice": "Do not paddle out into the drop. Advanced only earlier; now the reef is dangerously dry."
     },
     {
-      "name": "Selong Belanak",
+      "name": "Are Guling",
       "verdict": "skip",
-      "rating": 1,
-      "window": "None today",
-      "scooter": 40,
+      "rating": 0.5,
+      "window": "none left",
+      "scooter": 25,
       "swell": {
-        "m": 1.5,
+        "m": 1.6,
         "s": 14,
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 12
+        "dir": "SSE",
+        "kt": 14
       },
       "chips": [
-        "Beach",
-        "Peaks",
-        "High tide",
-        "Quiet"
+        "Reef",
+        "Right",
+        "Mid tide",
+        "Boat"
       ],
-      "tip": "Mostly beginner waves; swell too weak and bumpy.",
+      "tip": "High-tide window already gone; now blown and draining.",
       "ratings": [
+        2,
+        2,
+        2,
+        1,
         0,
         0,
-        1,
-        1,
-        1,
-        0.5,
-        0.5
+        0
       ],
-      "advice": "Not worth the ride today: small, mushy and wind-affected. Better to save the scooter trip for a bigger swell day."
+      "advice": "Skip. The mid-to-high window closed after noon; wait for tomorrow morning."
     }
   ],
   "skip": [
     {
       "name": "Tanjung Aan",
-      "reason": "Onshore SE trades, blown out"
+      "reason": "Blown out by SE trades"
     },
     {
       "name": "Seger",
-      "reason": "Exposed, choppy in 13 kt SE"
+      "reason": "Exposed, choppy in 14 kt SSE"
+    },
+    {
+      "name": "Kuta Beach",
+      "reason": "Onshore SE, soft beachbreak"
+    },
+    {
+      "name": "Selong Belanak",
+      "reason": "Too small, beginner beach"
     },
     {
       "name": "Mawun",
-      "reason": "Shorebreak, onshore wind"
+      "reason": "Shorebreak on draining tide"
     },
     {
       "name": "Late afternoon",
-      "reason": "Low tide at 17:58 plus 12 kt SE"
+      "reason": "Low tide plus 12\u201314 kt SE"
     }
   ],
   "tomorrow": {
-    "best": "Gerupuk Inside",
+    "best": "Ekas Inside",
     "swell": {
       "m": 1.3,
-      "s": 12,
+      "s": 13,
       "dir": "SSW"
     },
     "wind": {
       "dir": "SE",
-      "kt": 9
+      "kt": 10
     },
-    "outlook": "Smaller swell; surf rising tide mid-morning."
+    "outlook": "Smaller swell; surf rising tide early at Ekas."
   },
   "sources": [
     {
       "name": "Surf-Forecast Kuta Bay-Lombok",
-      "url": "https://www.surf-forecast.com/breaks/Kuta-Bay-Lombok/forecasts/latest/six_day"
+      "url": "https://www.surf-forecast.com/breaks/Kuta-Bay-Lombok/forecasts/latest"
+    },
+    {
+      "name": "Surf-Forecast Ekas-Inside",
+      "url": "https://www.surf-forecast.com/breaks/Ekas-Inside/forecasts/latest"
+    },
+    {
+      "name": "Surf-Forecast Gerpuk Inside",
+      "url": "https://www.surf-forecast.com/breaks/Grupuk/forecasts/latest"
+    },
+    {
+      "name": "Windfinder Lombok Kuta",
+      "url": "https://www.windfinder.com/forecast/lombok_kuta"
     },
     {
       "name": "Open-Meteo Marine",
       "url": "https://open-meteo.com/en/docs/marine-weather-api"
     },
     {
-      "name": "Open-Meteo Wind",
-      "url": "https://open-meteo.com/en/docs"
+      "name": "PeakWave Kuta Lombok",
+      "url": "https://peakwave.co/conditions/lombok-kuta"
     }
   ],
   "top": {
     "spot": "Ekas Inside",
-    "window": "11:00–14:00",
-    "rating": 3
+    "window": "14:00\u201315:30",
+    "rating": 1.5
   },
   "swell": {
-    "m": 1.5,
+    "m": 1.6,
     "s": 14,
     "dir": "SSW"
   },
   "wind": {
-    "dir": "SE",
-    "kt": 13
+    "dir": "SSE",
+    "kt": 14
   },
   "spots": [
     {
       "name": "Ekas Inside",
-      "rating": 3,
-      "verdict": "go"
+      "rating": 1.5,
+      "verdict": "fair"
     },
     {
       "name": "Gerupuk Inside",
-      "rating": 2.5,
-      "verdict": "fair"
-    },
-    {
-      "name": "Are Guling",
-      "rating": 2,
-      "verdict": "fair"
+      "rating": 1,
+      "verdict": "skip"
     },
     {
       "name": "Mawi",
-      "rating": 2,
-      "verdict": "fair"
+      "rating": 1,
+      "verdict": "skip"
     },
     {
-      "name": "Selong Belanak",
-      "rating": 1,
+      "name": "Are Guling",
+      "rating": 0.5,
       "verdict": "skip"
     }
   ],
