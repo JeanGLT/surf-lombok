@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-16",
-  "updated": "2026-10-16T10:10:00+08:00",
-  "headline": "Mid-morning trades are up: save it for a late Mawi session as the wind eases.",
+  "updated": "2026-10-16T14:10:00+08:00",
+  "headline": "SSE still humming: the only play left is a late Mawi drop on the falling mid tide.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -17,8 +17,8 @@
   "water": 27,
   "recommendation": {
     "spot": "Mawi",
-    "when": "15:30\u201317:30",
-    "text": "SSE eases toward 11 kt as the tide falls to mid, SW 0.9 m 14 s. Can't wait? Boat Gerupuk Inside before 12:30."
+    "when": "15:30–17:30",
+    "text": "Cross-offshore left with SW 0.8 m 15 s as SSE eases toward 11 kt on the falling mid tide."
   },
   "hours": [
     {
@@ -30,10 +30,10 @@
       },
       "wind": {
         "dir": "SE",
-        "kt": 9
+        "kt": 7
       },
       "tide": {
-        "m": 0.41,
+        "m": 0.42,
         "trend": "falling"
       }
     },
@@ -46,34 +46,34 @@
       },
       "wind": {
         "dir": "SE",
-        "kt": 10
+        "kt": 9
       },
       "tide": {
-        "m": 0.51,
+        "m": 0.52,
         "trend": "rising"
       }
     },
     {
       "t": "10:00",
       "swell": {
-        "m": 1.0,
-        "s": 15,
+        "m": 0.9,
+        "s": 16,
         "dir": "SW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 11
+        "kt": 10
       },
       "tide": {
-        "m": 1.26,
+        "m": 1.28,
         "trend": "rising"
       }
     },
     {
       "t": "12:00",
       "swell": {
-        "m": 1.0,
-        "s": 15,
+        "m": 0.9,
+        "s": 16,
         "dir": "SW"
       },
       "wind": {
@@ -104,32 +104,32 @@
     {
       "t": "16:00",
       "swell": {
-        "m": 0.9,
-        "s": 14,
+        "m": 0.8,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
         "dir": "SSE",
-        "kt": 12
+        "kt": 11
       },
       "tide": {
-        "m": 1.22,
+        "m": 1.23,
         "trend": "falling"
       }
     },
     {
       "t": "18:00",
       "swell": {
-        "m": 0.9,
+        "m": 0.8,
         "s": 15,
         "dir": "SW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 11
+        "kt": 9
       },
       "tide": {
-        "m": 0.77,
+        "m": 0.78,
         "trend": "falling"
       }
     }
@@ -139,11 +139,11 @@
       "name": "Mawi",
       "verdict": "go",
       "rating": 2.5,
-      "window": "15:30\u201317:30",
+      "window": "15:30–17:30",
       "scooter": 30,
       "swell": {
-        "m": 0.9,
-        "s": 14,
+        "m": 0.8,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
@@ -156,7 +156,7 @@
         "Low to mid",
         "Busy"
       ],
-      "tip": "Cross-offshore all day; falling tide and easing wind late.",
+      "tip": "Cross-offshore; catch the falling mid before dusk.",
       "ratings": [
         2,
         3,
@@ -166,22 +166,22 @@
         3,
         1
       ],
-      "advice": "Best remaining session: paddle out around 15:30 as the tide drops toward mid and the SSE eases. Leave by 17:30 before low tide and dusk. Advanced reef, strong current."
+      "advice": "Best remaining session: paddle around 15:30 as the tide drops toward mid and SSE eases. Out by 17:30 before low tide and dusk. Sharp reef."
     },
     {
       "name": "Ekas Inside",
       "verdict": "fair",
       "rating": 1.5,
-      "window": "15:30\u201317:30",
+      "window": "15:30–17:30",
       "scooter": 35,
       "swell": {
-        "m": 0.9,
-        "s": 14,
-        "dir": "SW"
+        "m": 1.0,
+        "s": 13,
+        "dir": "SSW"
       },
       "wind": {
         "dir": "SSE",
-        "kt": 12
+        "kt": 11
       },
       "chips": [
         "Reef",
@@ -189,32 +189,65 @@
         "Mid tide",
         "Boat"
       ],
-      "tip": "Bumpy at midday; late falling mid tide is the only chance.",
+      "tip": "Sheltered from SE; only the late mid tide works.",
       "ratings": [
         1,
         2,
-        2,
         1,
-        1,
+        0,
+        0,
         2,
         1
       ],
-      "advice": "Skip the midday SSE chop. If Mawi is packed, take a boat around 15:30 for the falling mid tide and be back before dark."
+      "advice": "If Mawi is packed, boat out around 15:30 for the falling mid. Soft walls expected under 11 kt SSE. Be back before dark."
+    },
+    {
+      "name": "Ekas Outside",
+      "verdict": "skip",
+      "rating": 1,
+      "window": "16:00–17:30",
+      "scooter": 35,
+      "swell": {
+        "m": 1.0,
+        "s": 13,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SSE",
+        "kt": 11
+      },
+      "chips": [
+        "Reef",
+        "Right",
+        "Mid tide",
+        "Boat"
+      ],
+      "tip": "Exposed right; SSE keeps it textured all afternoon.",
+      "ratings": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "advice": "Not worth the boat this afternoon. Surf-Forecast shows zero at 2 PM and 5 PM under SSE trades. Save it for a lighter-wind morning."
     },
     {
       "name": "Gerupuk Inside",
-      "verdict": "fair",
-      "rating": 1.5,
-      "window": "10:30\u201312:30",
+      "verdict": "skip",
+      "rating": 0.5,
+      "window": "15:00–17:00",
       "scooter": 20,
       "swell": {
-        "m": 1.0,
-        "s": 15,
+        "m": 0.8,
+        "s": 14,
         "dir": "SW"
       },
       "wind": {
         "dir": "SSE",
-        "kt": 12
+        "kt": 11
       },
       "chips": [
         "Reef",
@@ -222,32 +255,32 @@
         "High tide",
         "Boat"
       ],
-      "tip": "Closest option now, soft and textured by cross-on SE.",
+      "tip": "High-tide window already gone; cross-on now.",
       "ratings": [
         1,
-        2,
-        2,
         1,
         1,
         1,
+        0,
+        0,
         0
       ],
-      "advice": "Only if you want to surf right now: boat out on the rising tide from 10:30 and head back by 12:30. Expect choppy, softer walls."
+      "advice": "Inside wants high tide and cleaner wind. Both are done for today. Cross-on SSE and a falling tide make this a miss."
     },
     {
-      "name": "Ekas Outside",
+      "name": "Are Guling",
       "verdict": "skip",
-      "rating": 1,
-      "window": "16:00\u201317:30",
-      "scooter": 35,
+      "rating": 0.5,
+      "window": "15:00–17:00",
+      "scooter": 25,
       "swell": {
-        "m": 0.9,
+        "m": 0.8,
         "s": 14,
         "dir": "SW"
       },
       "wind": {
         "dir": "SSE",
-        "kt": 12
+        "kt": 11
       },
       "chips": [
         "Reef",
@@ -255,50 +288,17 @@
         "Mid tide",
         "Boat"
       ],
-      "tip": "Morning window gone; blown out by SSE until late.",
-      "ratings": [
-        2,
-        2,
-        1,
-        0,
-        0,
-        1,
-        1
-      ],
-      "advice": "Not worth the boat this afternoon. Exposed to SSE 12 kt with a fading swell; save it for an early session on a lighter-wind day."
-    },
-    {
-      "name": "Are Guling",
-      "verdict": "skip",
-      "rating": 1,
-      "window": "10:30\u201312:30",
-      "scooter": 25,
-      "swell": {
-        "m": 1.0,
-        "s": 15,
-        "dir": "SW"
-      },
-      "wind": {
-        "dir": "SSE",
-        "kt": 12
-      },
-      "chips": [
-        "Reef",
-        "Right",
-        "Mid tide",
-        "Boat"
-      ],
-      "tip": "Cross-on all day; not worth the drive.",
+      "tip": "Cross-on all day; not worth the scooter.",
       "ratings": [
         1,
         1,
-        1,
-        1,
         0,
-        1,
+        0,
+        0,
+        0,
         0
       ],
-      "advice": "Cross-on SE and SSE spoil it all day. Choose Mawi this afternoon instead."
+      "advice": "Cross-on SE and SSE spoil it. Choose Mawi on the falling tide instead if you still want a session."
     }
   ],
   "skip": [
@@ -323,8 +323,8 @@
       "reason": "Shorebreak, cross-on"
     },
     {
-      "name": "Midday",
-      "reason": "SSE 12\u201313 kt near high tide"
+      "name": "Morning high tide",
+      "reason": "Window already passed"
     }
   ],
   "tomorrow": {
@@ -338,7 +338,7 @@
       "dir": "ESE",
       "kt": 5
     },
-    "outlook": "Small SW swell, light ESE dawn: early boat to Ekas."
+    "outlook": "Small SW swell, light ESE dawn: early boat."
   },
   "sources": [
     {
@@ -366,6 +366,10 @@
       "url": "https://www.surf-forecast.com/breaks/Kuta-Bay-Lombok/forecasts/latest"
     },
     {
+      "name": "Surf-Forecast Mawi Tides",
+      "url": "https://www.surf-forecast.com/breaks/Mawi/tides/latest"
+    },
+    {
       "name": "Open-Meteo Marine",
       "url": "https://open-meteo.com/en/docs/marine-weather-api"
     },
@@ -376,17 +380,17 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "15:30\u201317:30",
+    "window": "15:30–17:30",
     "rating": 2.5
   },
   "swell": {
-    "m": 1.0,
-    "s": 15,
-    "dir": "SW"
+    "m": 1.1,
+    "s": 12,
+    "dir": "SSW"
   },
   "wind": {
-    "dir": "SE",
-    "kt": 11
+    "dir": "SSE",
+    "kt": 12
   },
   "spots": [
     {
@@ -400,18 +404,18 @@
       "verdict": "fair"
     },
     {
-      "name": "Gerupuk Inside",
-      "rating": 1.5,
-      "verdict": "fair"
-    },
-    {
       "name": "Ekas Outside",
       "rating": 1,
       "verdict": "skip"
     },
     {
+      "name": "Gerupuk Inside",
+      "rating": 0.5,
+      "verdict": "skip"
+    },
+    {
       "name": "Are Guling",
-      "rating": 1,
+      "rating": 0.5,
       "verdict": "skip"
     }
   ],
