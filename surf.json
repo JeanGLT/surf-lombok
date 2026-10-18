@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-18",
-  "updated": "2026-10-18T06:02:00+08:00",
-  "headline": "SW swell builds all day: small morning, Mawi lights up late as wind eases.",
+  "updated": "2026-10-18T10:15:00+08:00",
+  "headline": "Morning stayed small; SW swell builds for a late Mawi session as wind eases.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "13:51"
     ]
   },
-  "water": 27.5,
+  "water": 27.6,
   "recommendation": {
     "spot": "Mawi",
     "when": "16:00–18:00",
-    "text": "Swell builds to 1.5 m as SE eases to 8 kt on a falling mid tide. If it fails, Ekas Outside Monday dawn."
+    "text": "Swell builds to 1.5 m at 16 s while SE drops to 8 kt, cross-off. Showers likely. If it fails, Ekas Outside Monday dawn."
   },
   "hours": [
     {
@@ -110,7 +110,7 @@
       },
       "wind": {
         "dir": "SE",
-        "kt": 9
+        "kt": 8
       },
       "tide": {
         "m": 1.44,
@@ -120,13 +120,13 @@
     {
       "t": "18:00",
       "swell": {
-        "m": 1.5,
+        "m": 1.6,
         "s": 16,
         "dir": "SW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 7
+        "kt": 6
       },
       "tide": {
         "m": 1.17,
@@ -147,7 +147,7 @@
         "dir": "SW"
       },
       "wind": {
-        "dir": "SE",
+        "dir": "SSE",
         "kt": 8
       },
       "chips": [
@@ -162,26 +162,26 @@
         2,
         2,
         2,
-        1,
+        2,
         3,
         3
       ],
-      "advice": "Paddle out around 16:00 as SE eases to 8 kt and the 16 s swell fills in. Leave by 18:00, sunset 18:09. Showers possible, expect a crowd."
+      "advice": "Paddle out around 16:00 as wind eases to 8 kt and the 16 s swell fills in. Leave by 18:00, sunset 18:09. Showers likely, expect a crowd."
     },
     {
       "name": "Ekas Outside",
       "verdict": "fair",
-      "rating": 2,
-      "window": "06:30–09:00",
+      "rating": 1.5,
+      "window": "16:30–18:00",
       "scooter": 35,
       "swell": {
-        "m": 0.9,
+        "m": 1.4,
         "s": 16,
         "dir": "SW"
       },
       "wind": {
-        "dir": "ESE",
-        "kt": 7
+        "dir": "SSE",
+        "kt": 8
       },
       "chips": [
         "Reef",
@@ -189,7 +189,7 @@
         "Mid tide",
         "Boat"
       ],
-      "tip": "Early light ESE is offshore; ragged by late morning.",
+      "tip": "Morning window gone; small late option, much better Monday.",
       "ratings": [
         3,
         2,
@@ -199,22 +199,22 @@
         2,
         2
       ],
-      "advice": "Only if you go now: boat out by 06:30 while ESE stays near 7 kt, back by 09:00 before SE reaches 11 kt. Small today, much better Monday."
+      "advice": "Only a backup if Mawi is packed: boat out around 16:30 as SSE eases, back before dark. Save the trip for Monday dawn's bigger swell."
     },
     {
       "name": "Ekas Inside",
       "verdict": "skip",
       "rating": 1,
-      "window": "06:30–09:00",
+      "window": "16:30–18:00",
       "scooter": 35,
       "swell": {
-        "m": 0.9,
+        "m": 1.4,
         "s": 16,
         "dir": "SW"
       },
       "wind": {
-        "dir": "ESE",
-        "kt": 7
+        "dir": "SSE",
+        "kt": 8
       },
       "chips": [
         "Reef",
@@ -222,7 +222,7 @@
         "Mid tide",
         "Boat"
       ],
-      "tip": "Too small on 0.9 m; not worth the boat.",
+      "tip": "Too small today; not worth the boat.",
       "ratings": [
         2,
         2,
@@ -232,7 +232,7 @@
         1,
         1
       ],
-      "advice": "Surf-Forecast has it at 2/10 at best this morning and 0 by 14:00. Save the boat for Monday's bigger swell."
+      "advice": "Small and wind-affected for the rest of today. Save the boat for Monday's bigger swell."
     },
     {
       "name": "Gerupuk Inside",
@@ -246,8 +246,8 @@
         "dir": "SW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 9
+        "dir": "SSE",
+        "kt": 8
       },
       "chips": [
         "Reef",
@@ -265,7 +265,7 @@
         0,
         1
       ],
-      "advice": "Surf-Forecast rates it 0/10 for most of today with onshore ESE then cross-on SSE. Go to Mawi instead."
+      "advice": "Surf-Forecast rates it 0 to 1/10 for the rest of today with cross-on SE. Go to Mawi instead."
     },
     {
       "name": "Are Guling",
@@ -279,8 +279,8 @@
         "dir": "SW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 9
+        "dir": "SSE",
+        "kt": 8
       },
       "chips": [
         "Reef",
@@ -326,24 +326,20 @@
   "tomorrow": {
     "best": "Ekas Outside",
     "swell": {
-      "m": 2.0,
+      "m": 2.1,
       "s": 15,
       "dir": "SW"
     },
     "wind": {
       "dir": "SE",
-      "kt": 6
+      "kt": 5
     },
-    "outlook": "Bigger 2 m swell, light dawn wind: Ekas Outside early."
+    "outlook": "Swell doubles, light SE dawn: Ekas Outside early."
   },
   "sources": [
     {
       "name": "Surf-Forecast Mawi",
       "url": "https://www.surf-forecast.com/breaks/Mawi/forecasts/latest"
-    },
-    {
-      "name": "Surf-Forecast Ekas-Inside",
-      "url": "https://www.surf-forecast.com/breaks/Ekas-Inside/forecasts/latest"
     },
     {
       "name": "Surf-Forecast Ekas-Outside",
@@ -356,10 +352,6 @@
     {
       "name": "Surf-Forecast Air Guling",
       "url": "https://www.surf-forecast.com/breaks/Air-Guling/forecasts/latest"
-    },
-    {
-      "name": "Surf-Forecast Kuta Bay-Lombok",
-      "url": "https://www.surf-forecast.com/breaks/Kuta-Bay-Lombok/forecasts/latest"
     },
     {
       "name": "Open-Meteo Marine",
@@ -381,7 +373,7 @@
     "dir": "SW"
   },
   "wind": {
-    "dir": "SE",
+    "dir": "SSE",
     "kt": 8
   },
   "spots": [
@@ -392,7 +384,7 @@
     },
     {
       "name": "Ekas Outside",
-      "rating": 2,
+      "rating": 1.5,
       "verdict": "fair"
     },
     {
