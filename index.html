@@ -25,6 +25,7 @@ h1{font-size:13px;font-weight:700;color:#cfe8f5;text-transform:uppercase;letter-
 .ch{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0 18px}.ch span{font-size:11px;font-weight:700;color:#e6f4fb;background:rgba(255,255,255,.12);border-radius:20px;padding:2px 10px}
 .tp{font-size:12.5px;font-weight:600;color:#cfe8f5;margin:8px 0 0 18px;line-height:1.45}
 .strip{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;font-weight:600;color:#e6f4fb;border-top:0.5px solid rgba(255,255,255,.22);padding-top:14px;margin-top:4px}
+.tmw{margin-top:26px;padding-top:18px;border-top:0.5px solid rgba(255,255,255,.22)}.tmw h1{margin-top:0}
 .skipl{font-size:12px;font-weight:600;color:#bfdcec;margin-top:12px}
 .tm{margin-top:22px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.08)}
 .tm .l{font-size:11px;font-weight:700;color:#cfe8f5;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
@@ -78,6 +79,14 @@ details a{color:#5eead4}
 <div id="picks"></div>
 <div class="strip" id="strip"></div>
 <div class="skipl" id="skip" hidden></div>
+<section class="tmw" id="tmw" hidden>
+<h1 id="tmh">Tomorrow</h1>
+<div class="rec" id="trec" hidden></div>
+<p class="hint" id="thint" hidden>Tap a spot to see the whole day</p>
+<div id="tpicks"></div>
+<div class="strip" id="tstrip"></div>
+<div class="skipl" id="tskip" hidden></div>
+</section>
 <div class="tm" id="tm" hidden></div>
 <div class="src" id="src"></div>
 <div class="err" id="err" hidden>Data unavailable. Try again in a few minutes.</div>
@@ -114,13 +123,13 @@ function nowIdx(hrs,d){
  hrs.forEach((x,i)=>{const m=mins(x.t);if(m!=null&&m<=cur)k=i});
  return k>=0&&k<hrs.length-1?k:(k===hrs.length-1&&cur-mins(hrs[k].t)<120?k:-1);
 }
-function dayPanel(p,d){
+function dayPanel(p,d,noNow){
  const hrs=(Array.isArray(p.hours)&&p.hours.length)?p.hours:(Array.isArray(d.hours)?d.hours:[]);
  const rt=Array.isArray(p.ratings)?p.ratings:[];
  let h='';
  if(p.advice)h+=`<div class="adv"><div class="lb">Recommendation</div>${esc(p.advice)}</div>`;
  if(hrs.length){
-  const ni=nowIdx(hrs,d);
+  const ni=noNow?-1:nowIdx(hrs,d);
   h+='<div class="tl"><div class="hr hh"><span>Time</span><span>Score</span><span>Swell</span><span>Wind</span><span>Tide</span></div>'+hrs.map((x,i)=>{
    const r=rt[i]==null?null:Math.max(0,Math.min(5,Math.round(rt[i])));
    const c=r==null?'':(r>=4?'go':r===3?'fair':'skip');
@@ -133,36 +142,48 @@ function dayPanel(p,d){
  }
  return h;
 }
-function rowHtml(p,i,d){
+function rowHtml(p,i,d,pre,noNow){pre=pre||'';
  const item=(ic,t)=>t?`<span><i class="ti ti-${ic} i"></i>${t}</span>`:'';
- return `<div class="row"><div class="sum" role="button" tabindex="0" aria-expanded="false" aria-controls="det${i}"><div class="nm"><span class="dot ${verdict(p.verdict)}"></span><span>${esc(p.name)}</span>${p.scooter?`<span class="sc"><i class="ti ti-motorbike i"></i>${esc(p.scooter)} min</span>`:''}<span class="stars">${stars(p.rating)}</span><span class="chev" aria-hidden="true"></span></div><div class="dd">${item('clock',esc(p.window))}${item('wave-sine',swellTxt(p.swell))}${item('wind',windTxt(p.wind))}</div>${(p.chips&&p.chips.length)?`<div class="ch">${p.chips.slice(0,4).map(c=>`<span>${esc(c)}</span>`).join('')}</div>`:''}${p.tip?`<div class="tp">${esc(p.tip)}</div>`:''}</div><div class="det" id="det${i}" hidden>${dayPanel(p,d)}</div></div>`;
+ return `<div class="row"><div class="sum" role="button" tabindex="0" aria-expanded="false" aria-controls="${pre}det${i}"><div class="nm"><span class="dot ${verdict(p.verdict)}"></span><span>${esc(p.name)}</span>${p.scooter?`<span class="sc"><i class="ti ti-motorbike i"></i>${esc(p.scooter)} min</span>`:''}<span class="stars">${stars(p.rating)}</span><span class="chev" aria-hidden="true"></span></div><div class="dd">${item('clock',esc(p.window))}${item('wave-sine',swellTxt(p.swell))}${item('wind',windTxt(p.wind))}</div>${(p.chips&&p.chips.length)?`<div class="ch">${p.chips.slice(0,4).map(c=>`<span>${esc(c)}</span>`).join('')}</div>`:''}${p.tip?`<div class="tp">${esc(p.tip)}</div>`:''}</div><div class="det" id="${pre}det${i}" hidden>${dayPanel(p,d,noNow)}</div></div>`;
 }
 function render(d){
  document.getElementById('date').textContent=fmtDate(d.date)+' · updated '+hhmm(d.updated);
  const picks=getPicks(d).slice(0,5);
  document.getElementById('picks').innerHTML=picks.map((p,i)=>rowHtml(p,i,d)).join('');
  document.getElementById('hint').hidden=!picks.length;
- const rc=d.recommendation,rb=document.getElementById('rec');
- if(rc&&(rc.text||rc.spot)){rb.hidden=false;rb.innerHTML=`<div class="lb">Today's recommendation</div>${rc.spot?`<div class="rn">${esc(rc.spot)}${rc.when?' · '+esc(rc.when):''}</div>`:''}${rc.text?`<div class="rt">${esc(rc.text)}</div>`:''}`}
- const t=d.tide||{},s=[];
- if((t.low||[]).length)s.push(`<span><i class="ti ti-arrow-down i"></i>Low ${list(t.low)}</span>`);
- if((t.high||[]).length)s.push(`<span><i class="ti ti-arrow-up i"></i>High ${list(t.high)}</span>`);
- if(d.water)s.push(`<span><i class="ti ti-temperature i"></i>${esc(d.water)}°C</span>`);
- const st=document.getElementById('strip');st.innerHTML=s.join('');st.hidden=!s.length;
+ const recBox=(rc,rb,lab)=>{if(rc&&(rc.text||rc.spot)){rb.hidden=false;rb.innerHTML=`<div class="lb">${lab}</div>${rc.spot?`<div class="rn">${esc(rc.spot)}${rc.when?' · '+esc(rc.when):''}</div>`:''}${rc.text?`<div class="rt">${esc(rc.text)}</div>`:''}`}else rb.hidden=true};
+ const stripBox=(t,water,st)=>{t=t||{};const s=[];
+  if((t.low||[]).length)s.push(`<span><i class="ti ti-arrow-down i"></i>Low ${list(t.low)}</span>`);
+  if((t.high||[]).length)s.push(`<span><i class="ti ti-arrow-up i"></i>High ${list(t.high)}</span>`);
+  if(water)s.push(`<span><i class="ti ti-temperature i"></i>${esc(water)}°C</span>`);
+  st.innerHTML=s.join('');st.hidden=!s.length};
+ recBox(d.recommendation,document.getElementById('rec'),"Today's recommendation");
+ stripBox(d.tide,d.water,document.getElementById('strip'));
  let sk=Array.isArray(d.skip)?d.skip:(d.spots||[]).filter(x=>verdict(x.verdict)==='skip').map(x=>({name:x.name}));
  const sl=document.getElementById('skip');
  if(sk.length){sl.hidden=false;sl.textContent='Skip today: '+sk.map(x=>x.name+(x.reason?' ('+x.reason+')':'')).join(', ')}
  const tm=d.tomorrow,tb=document.getElementById('tm');
- if(tm){const bits=[tm.best,swellTxt(tm.swell),windTxt(tm.wind)].filter(Boolean);
+ const tw=document.getElementById('tmw'),tpk=tm&&getPicks(tm).slice(0,5);
+ if(tm&&Array.isArray(tm.picks)&&tm.picks.length){
+  tw.hidden=false;tb.hidden=true;
+  document.getElementById('tmh').textContent='Tomorrow'+(tm.date?' · '+fmtDate(tm.date):'');
+  recBox(tm.recommendation,document.getElementById('trec'),"Tomorrow's recommendation");
+  document.getElementById('tpicks').innerHTML=tpk.map((p,i)=>rowHtml(p,i,tm,'t-',true)).join('');
+  document.getElementById('thint').hidden=!tpk.length;
+  stripBox(tm.tide,null,document.getElementById('tstrip'));
+  const ts=document.getElementById('tskip'),tsk=Array.isArray(tm.skip)?tm.skip:[];
+  if(tsk.length){ts.hidden=false;ts.textContent='Skip tomorrow: '+tsk.map(x=>x.name+(x.reason?' ('+x.reason+')':'')).join(', ')}else ts.hidden=true;
+ }else if(tm){tw.hidden=true;const bits=[tm.best,swellTxt(tm.swell),windTxt(tm.wind)].filter(Boolean);
   tb.hidden=false;tb.innerHTML=`<div class="l">Tomorrow · ${esc(fmtDate(tm.date||d.date,tm.date?0:1))}</div><div class="t">${bits.map(x=>x===tm.best?esc(x):x).join(' · ')}${tm.outlook?'<br>'+esc(tm.outlook):''}</div>`}
  const src=(d.sources&&d.sources.length?d.sources:[{name:'Surf-Forecast',url:'https://www.surf-forecast.com'},{name:'Windfinder',url:'https://www.windfinder.com'},{name:'Surfline',url:'https://www.surfline.com'}]);
  document.getElementById('src').innerHTML='Source: '+src.map(x=>x.url&&/^https?:\/\//.test(x.url)?`<a href="${esc(x.url)}">${esc(x.name)}</a>`:esc(x.name)).join(' · ');
 }
 (function(){
- const pk=document.getElementById('picks');
  const tog=el=>{const o=el.getAttribute('aria-expanded')==='true';el.setAttribute('aria-expanded',String(!o));const t=document.getElementById(el.getAttribute('aria-controls'));if(t)t.hidden=o};
- pk.addEventListener('click',e=>{const el=e.target.closest&&e.target.closest('.sum');if(el)tog(el)});
- pk.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('sum')){e.preventDefault();tog(e.target)}});
+ ['picks','tpicks'].forEach(id=>{const pk=document.getElementById(id);
+  pk.addEventListener('click',e=>{const el=e.target.closest&&e.target.closest('.sum');if(el)tog(el)});
+  pk.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('sum')){e.preventDefault();tog(e.target)}});
+ });
 })();
 fetch('surf.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(render).catch(()=>{document.getElementById('err').hidden=false;document.getElementById('sub').hidden=true});
 
