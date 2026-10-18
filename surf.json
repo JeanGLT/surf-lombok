@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "date": "2026-10-18",
-  "updated": "2026-10-18T19:45:27+08:00",
+  "updated": "2026-10-18T21:16:01+08:00",
   "headline": "Midday blown out; SW swell builds to 1.5 m for a late Mawi session.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
@@ -564,16 +564,72 @@
           3
         ],
         "advice": "Backup if Ekas Outside is crowded: rated 3 all day with light ESE to SE wind. Swell near 2 m at 15 s. Best before 10:00 while wind stays under 10 kt."
-      }
-    ],
-    "skip": [
+      },
       {
         "name": "Gerupuk Inside",
-        "reason": "Cross-on SE"
+        "verdict": "skip",
+        "rating": 1,
+        "window": "06:00–08:00",
+        "scooter": 20,
+        "swell": {
+          "m": 2.0,
+          "s": 15,
+          "dir": "SW"
+        },
+        "wind": {
+          "dir": "SE",
+          "kt": 6
+        },
+        "chips": [
+          "Reef",
+          "Right",
+          "High tide",
+          "Boat"
+        ],
+        "tip": "Onshore SE even at dawn; skip the boat.",
+        "ratings": [
+          2,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "advice": "Surf-Forecast rates it 2 at dawn, then 1 to 0 as onshore SE reaches 10 kt. Swell 2.0 m at 15 s is wasted. Choose Ekas Outside."
       },
       {
         "name": "Are Guling",
-        "reason": "Cross-on SE"
+        "verdict": "skip",
+        "rating": 1,
+        "window": "06:00–08:00",
+        "scooter": 25,
+        "swell": {
+          "m": 2.0,
+          "s": 15,
+          "dir": "SW"
+        },
+        "wind": {
+          "dir": "SE",
+          "kt": 6
+        },
+        "chips": [
+          "Reef",
+          "Right",
+          "Mid tide",
+          "Boat"
+        ],
+        "tip": "Cross-on all day; rated 1 at best.",
+        "ratings": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "advice": "Cross-on SE all day, Surf-Forecast rates it 1 from dawn to dusk. Not worth the boat with Ekas and Mawi cross-off nearby."
       }
     ]
   },
