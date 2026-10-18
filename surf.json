@@ -1,67 +1,67 @@
 {
   "schema": 2,
-  "date": "2026-10-18",
-  "updated": "2026-10-18T21:16:01+08:00",
-  "headline": "Midday blown out; SW swell builds to 1.5 m for a late Mawi session.",
+  "date": "2026-10-19",
+  "updated": "2026-10-19T06:06:35+08:00",
+  "headline": "Solid 2.2 m SW groundswell with light SE at dawn: Ekas Outside early.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
-      "07:54",
-      "19:04"
+      "08:48",
+      "19:28"
     ],
     "high": [
-      "01:03",
-      "13:51"
+      "01:33",
+      "15:03"
     ]
   },
-  "water": 27.7,
+  "water": 27.6,
   "recommendation": {
-    "spot": "Mawi",
-    "when": "16:00–18:00",
-    "text": "Swell builds to 1.5 m at 16 s as SE eases to 8 kt, cross-off. Showers possible. If it fails, Ekas Outside Monday dawn."
+    "spot": "Ekas Outside",
+    "when": "06:30–09:30",
+    "text": "2.2 m at 15 s SW with SE cross-off under 9 kt until 09:00. If the boat line is long, Ekas Inside works all day."
   },
   "hours": [
     {
       "t": "06:00",
       "swell": {
-        "m": 0.9,
-        "s": 16,
+        "m": 1.9,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
-        "dir": "ESE",
-        "kt": 7
+        "dir": "SE",
+        "kt": 5
       },
       "tide": {
-        "m": 1.03,
+        "m": 1.31,
         "trend": "falling"
       }
     },
     {
       "t": "08:00",
       "swell": {
-        "m": 0.9,
-        "s": 16,
+        "m": 2.2,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
-        "dir": "ESE",
-        "kt": 9
+        "dir": "SE",
+        "kt": 8
       },
       "tide": {
-        "m": 0.76,
-        "trend": "rising"
+        "m": 0.99,
+        "trend": "falling"
       }
     },
     {
       "t": "10:00",
       "swell": {
-        "m": 1.0,
-        "s": 16,
+        "m": 2.3,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
-        "dir": "SE",
+        "dir": "SSE",
         "kt": 10
       },
       "tide": {
@@ -72,83 +72,116 @@
     {
       "t": "12:00",
       "swell": {
-        "m": 1.1,
-        "s": 16,
+        "m": 2.3,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 10
+        "dir": "SSE",
+        "kt": 11
       },
       "tide": {
-        "m": 1.43,
+        "m": 1.22,
         "trend": "rising"
       }
     },
     {
       "t": "14:00",
       "swell": {
-        "m": 1.2,
+        "m": 2.3,
         "s": 16,
         "dir": "SW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 11
+        "dir": "SSE",
+        "kt": 10
       },
       "tide": {
-        "m": 1.62,
-        "trend": "falling"
+        "m": 1.44,
+        "trend": "rising"
       }
     },
     {
       "t": "16:00",
       "swell": {
-        "m": 1.4,
+        "m": 2.4,
         "s": 16,
-        "dir": "SW"
+        "dir": "SSW"
       },
       "wind": {
-        "dir": "SE",
+        "dir": "SSE",
         "kt": 8
       },
       "tide": {
-        "m": 1.44,
+        "m": 1.45,
         "trend": "falling"
       }
     },
     {
       "t": "18:00",
       "swell": {
-        "m": 1.6,
-        "s": 16,
-        "dir": "SW"
+        "m": 2.4,
+        "s": 15,
+        "dir": "SSW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 6
+        "kt": 7
       },
       "tide": {
-        "m": 1.17,
+        "m": 1.36,
         "trend": "falling"
       }
     }
   ],
   "picks": [
     {
-      "name": "Mawi",
+      "name": "Ekas Outside",
       "verdict": "go",
-      "rating": 3,
-      "window": "16:00–18:00",
-      "scooter": 30,
+      "rating": 4,
+      "window": "06:30–09:30",
+      "scooter": 35,
       "swell": {
-        "m": 1.5,
-        "s": 16,
+        "m": 2.2,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
-        "dir": "SSE",
-        "kt": 8
+        "dir": "SE",
+        "kt": 7
+      },
+      "chips": [
+        "Reef",
+        "Right",
+        "Mid tide",
+        "Boat"
+      ],
+      "tip": "Solid swell and SE cross-off: go now, beat the wind.",
+      "ratings": [
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "advice": "Boat out by 06:45. Surf-Forecast rates it 4 until 08:00 with 2.2 m at 15 s. Wind tops 10 kt around 10:00, then it gets bumpy. Heavy on sets, advanced only."
+    },
+    {
+      "name": "Mawi",
+      "verdict": "go",
+      "rating": 3.5,
+      "window": "06:30–09:00",
+      "scooter": 30,
+      "swell": {
+        "m": 2.2,
+        "s": 15,
+        "dir": "SW"
+      },
+      "wind": {
+        "dir": "SE",
+        "kt": 7
       },
       "chips": [
         "Reef",
@@ -156,65 +189,32 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Go late: swell builds while SE wind fades.",
+      "tip": "Big and powerful; watch the rip and the crowd.",
       "ratings": [
-        2,
-        2,
-        2,
-        2,
-        2,
+        4,
+        3,
+        3,
+        3,
+        3,
         3,
         3
       ],
-      "advice": "Paddle out around 16:00 as wind drops to 8 kt and the 16 s swell fills in. Leave by 18:00, sunset 18:09. Showers possible, expect a crowd."
-    },
-    {
-      "name": "Ekas Outside",
-      "verdict": "fair",
-      "rating": 1.5,
-      "window": "16:30–18:00",
-      "scooter": 35,
-      "swell": {
-        "m": 1.4,
-        "s": 16,
-        "dir": "SW"
-      },
-      "wind": {
-        "dir": "SSE",
-        "kt": 8
-      },
-      "chips": [
-        "Reef",
-        "Right",
-        "Mid tide",
-        "Boat"
-      ],
-      "tip": "Morning window gone; small late option, much better Monday.",
-      "ratings": [
-        3,
-        2,
-        2,
-        1,
-        1,
-        2,
-        2
-      ],
-      "advice": "Only a backup if Mawi is packed: boat out around 16:30 as SSE eases, back before dark. Save the trip for Monday dawn's bigger swell."
+      "advice": "Paddle out early while wind is under 8 kt. 2.2 m at 15 s will be heavy with strong rips. Low tide 08:48 is a neap 0.96 m, reef stays covered."
     },
     {
       "name": "Ekas Inside",
-      "verdict": "skip",
-      "rating": 1,
-      "window": "16:30–18:00",
+      "verdict": "fair",
+      "rating": 3,
+      "window": "07:00–10:00",
       "scooter": 35,
       "swell": {
-        "m": 1.4,
-        "s": 16,
+        "m": 2.2,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
-        "dir": "SSE",
-        "kt": 8
+        "dir": "SE",
+        "kt": 7
       },
       "chips": [
         "Reef",
@@ -222,32 +222,32 @@
         "Mid tide",
         "Boat"
       ],
-      "tip": "Too small today; not worth the boat.",
+      "tip": "Sheltered, rated 3 all day; best backup on this swell.",
       "ratings": [
-        2,
-        2,
-        2,
-        1,
-        0,
-        1,
-        1
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
       ],
-      "advice": "Small and wind-affected for the rest of today. Save the boat for Monday's bigger swell."
+      "advice": "Good plan B if Outside is too big or crowded. Rated 3 all day, cleaner before 10:00. Also an option 16:00–18:00 as wind drops to 8 kt."
     },
     {
       "name": "Gerupuk Inside",
       "verdict": "skip",
-      "rating": 0.5,
-      "window": "16:00–18:00",
+      "rating": 1.5,
+      "window": "06:00–07:30",
       "scooter": 20,
       "swell": {
-        "m": 1.4,
-        "s": 16,
+        "m": 2.2,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
-        "dir": "SSE",
-        "kt": 8
+        "dir": "SE",
+        "kt": 7
       },
       "chips": [
         "Reef",
@@ -255,32 +255,32 @@
         "High tide",
         "Boat"
       ],
-      "tip": "Onshore to cross-on all day; skip the boat.",
+      "tip": "Cross-on SE all day; not worth the boat.",
       "ratings": [
+        2,
         1,
         0,
         0,
         0,
-        0,
-        0,
+        1,
         1
       ],
-      "advice": "Surf-Forecast rates it 0 to 1/10 for the rest of today with cross-on SE. Go to Mawi instead."
+      "advice": "Surf-Forecast rates it 0 to 1 after dawn with cross-on SE. Only if you are already there at first light."
     },
     {
       "name": "Are Guling",
       "verdict": "skip",
-      "rating": 0.5,
-      "window": "16:00–18:00",
+      "rating": 1,
+      "window": "06:00–07:30",
       "scooter": 25,
       "swell": {
-        "m": 1.4,
-        "s": 16,
+        "m": 2.2,
+        "s": 15,
         "dir": "SW"
       },
       "wind": {
-        "dir": "SSE",
-        "kt": 8
+        "dir": "SE",
+        "kt": 7
       },
       "chips": [
         "Reef",
@@ -288,23 +288,23 @@
         "Mid tide",
         "Boat"
       ],
-      "tip": "Cross-on all day; save the ride.",
+      "tip": "Cross-on wind kills it; head east to Ekas.",
       "ratings": [
+        1,
+        1,
         1,
         0,
         0,
-        0,
-        0,
-        0,
+        1,
         1
       ],
-      "advice": "Cross-on SE all day, Surf-Forecast rates it 0/10 until evening. Choose Mawi for the late session."
+      "advice": "Rated 0 to 1 all day with cross-on SE. Skip it and choose Ekas or Mawi."
     }
   ],
   "skip": [
     {
       "name": "Kuta Beach",
-      "reason": "Onshore SE, small"
+      "reason": "Onshore SE"
     },
     {
       "name": "Tanjung Aan",
@@ -316,71 +316,71 @@
     },
     {
       "name": "Selong Belanak",
-      "reason": "Too small, beginner beach"
+      "reason": "Closeouts, beginner beach"
     },
     {
       "name": "Mawun",
-      "reason": "Shorebreak, cross-on"
+      "reason": "Heavy shorebreak"
     }
   ],
   "tomorrow": {
+    "date": "2026-10-20",
     "best": "Ekas Outside",
     "swell": {
-      "m": 2.1,
+      "m": 2.2,
       "s": 15,
-      "dir": "SW"
+      "dir": "SSW"
     },
     "wind": {
       "dir": "SE",
-      "kt": 4
+      "kt": 3
     },
-    "outlook": "Swell doubles, light SE dawn: Ekas Outside early.",
-    "date": "2026-10-19",
+    "outlook": "Glassy dawn, 2.2 m swell: Ekas Outside first light.",
     "tide": {
       "low": [
-        "08:48",
-        "19:28"
+        "10:47",
+        "23:13"
       ],
       "high": [
-        "01:33",
-        "15:03"
+        "02:21",
+        "19:24"
       ]
     },
     "recommendation": {
       "spot": "Ekas Outside",
-      "when": "06:00–09:00",
-      "text": "Swell lifts to 2.1 m at 15 s with light SE cross-off at dawn. Wind builds past 10 kt by 10:00, so go early."
+      "when": "06:00–09:30",
+      "text": "Near-zero wind at dawn on 2.2 m at 15 s. Showers and S wind after midday. Plan B: Mawi at first light."
     },
     "hours": [
       {
         "t": "06:00",
         "swell": {
-          "m": 1.8,
+          "m": 2.2,
           "s": 15,
-          "dir": "SW"
+          "dir": "SSW"
         },
         "wind": {
           "dir": "SE",
-          "kt": 4
+          "kt": 1
         },
         "tide": {
-          "m": 1.31,
+          "m": 1.53,
           "trend": "falling"
         }
       },
       {
         "t": "08:00",
         "swell": {
-          "m": 2.1,
-          "s": 15,
-          "dir": "SW"
+          "m": 2.2,
+          "s": 14,
+          "dir": "SSW"
         },
         "wind": {
           "dir": "SE",
-          "kt": 8
+          "kt": 4
         },
         "tide": {
-          "m": 0.99,
+          "m": 1.27,
           "trend": "falling"
         }
       },
@@ -388,80 +388,80 @@
         "t": "10:00",
         "swell": {
           "m": 2.2,
-          "s": 15,
+          "s": 14,
           "dir": "SW"
         },
         "wind": {
           "dir": "SSE",
-          "kt": 10
+          "kt": 6
         },
         "tide": {
-          "m": 1.0,
-          "trend": "rising"
+          "m": 1.11,
+          "trend": "falling"
         }
       },
       {
         "t": "12:00",
         "swell": {
           "m": 2.2,
-          "s": 15,
+          "s": 14,
           "dir": "SW"
         },
         "wind": {
-          "dir": "SSE",
-          "kt": 11
+          "dir": "S",
+          "kt": 8
         },
         "tide": {
-          "m": 1.22,
+          "m": 1.11,
           "trend": "rising"
         }
       },
       {
         "t": "14:00",
         "swell": {
-          "m": 2.3,
-          "s": 16,
-          "dir": "SW"
+          "m": 2.1,
+          "s": 14,
+          "dir": "SSW"
         },
         "wind": {
-          "dir": "SSE",
-          "kt": 11
+          "dir": "S",
+          "kt": 8
         },
         "tide": {
-          "m": 1.44,
+          "m": 1.23,
           "trend": "rising"
         }
       },
       {
         "t": "16:00",
         "swell": {
-          "m": 2.4,
-          "s": 16,
+          "m": 2.0,
+          "s": 14,
           "dir": "SSW"
         },
         "wind": {
-          "dir": "SSE",
-          "kt": 8
+          "dir": "S",
+          "kt": 7
         },
         "tide": {
-          "m": 1.45,
-          "trend": "falling"
+          "m": 1.39,
+          "trend": "rising"
         }
       },
       {
         "t": "18:00",
         "swell": {
-          "m": 2.4,
-          "s": 16,
+          "m": 2.0,
+          "s": 14,
           "dir": "SSW"
         },
         "wind": {
-          "dir": "SE",
-          "kt": 7
+          "dir": "S",
+          "kt": 8
         },
         "tide": {
-          "m": 1.36,
-          "trend": "falling"
+          "m": 1.52,
+          "trend": "rising"
         }
       }
     ],
@@ -470,16 +470,16 @@
         "name": "Ekas Outside",
         "verdict": "go",
         "rating": 4,
-        "window": "06:00–09:00",
+        "window": "06:00–09:30",
         "scooter": 35,
         "swell": {
-          "m": 2.0,
+          "m": 2.2,
           "s": 15,
-          "dir": "SW"
+          "dir": "SSW"
         },
         "wind": {
           "dir": "SE",
-          "kt": 6
+          "kt": 3
         },
         "chips": [
           "Reef",
@@ -487,32 +487,32 @@
           "Mid tide",
           "Boat"
         ],
-        "tip": "Go at first light, before SE wind builds.",
+        "tip": "Near glassy dawn on solid swell: best session of the week.",
         "ratings": [
           4,
           4,
           3,
           3,
-          3,
-          3,
-          3
+          2,
+          2,
+          2
         ],
-        "advice": "Be on the boat by 06:00, sunrise 05:48. Swell builds to 2.1 m at 15 s with light SE cross-off. Wind reaches 10 kt by 10:00, quality fades."
+        "advice": "Leave Kuta 05:15, boat out by 06:00. Rated 4 until 08:00 with almost no wind. S wind and showers likely after 12:00, so be done by 10:00."
       },
       {
         "name": "Mawi",
-        "verdict": "fair",
-        "rating": 3,
-        "window": "06:00–08:00",
+        "verdict": "go",
+        "rating": 3.5,
+        "window": "06:00–09:00",
         "scooter": 30,
         "swell": {
-          "m": 2.0,
+          "m": 2.2,
           "s": 15,
-          "dir": "SW"
+          "dir": "SSW"
         },
         "wind": {
           "dir": "SE",
-          "kt": 6
+          "kt": 3
         },
         "chips": [
           "Reef",
@@ -520,32 +520,32 @@
           "Mid tide",
           "Busy"
         ],
-        "tip": "Rated 4 at dawn, 3 after; expect a crowd.",
+        "tip": "Clean dawn, 2.2 m: big and busy, respect the rips.",
         "ratings": [
           4,
           3,
           3,
           3,
           3,
-          3,
-          3
+          2,
+          2
         ],
-        "advice": "Best early: Surf-Forecast rates dawn 4, then 3 as SE wind rises past 10 kt. Swell 2.0 m at 15 s fills in. Low tide 08:48, watch the reef."
+        "advice": "Dawn patrol while wind stays under 5 kt. Tide falls toward 10:47 low at 1.09 m, fine for the reef. Leave by 10:00 as S wind and showers arrive."
       },
       {
         "name": "Ekas Inside",
         "verdict": "fair",
         "rating": 3,
-        "window": "06:00–10:00",
+        "window": "06:00–09:00",
         "scooter": 35,
         "swell": {
-          "m": 2.0,
+          "m": 2.2,
           "s": 15,
-          "dir": "SW"
+          "dir": "SSW"
         },
         "wind": {
           "dir": "SE",
-          "kt": 6
+          "kt": 3
         },
         "chips": [
           "Reef",
@@ -553,32 +553,32 @@
           "Mid tide",
           "Boat"
         ],
-        "tip": "Steady rating 3 all day, lighter wind.",
+        "tip": "Easier option on the big swell; good early only.",
         "ratings": [
+          4,
           3,
-          3,
-          3,
-          3,
-          3,
-          3,
-          3
+          2,
+          2,
+          1,
+          1,
+          1
         ],
-        "advice": "Backup if Ekas Outside is crowded: rated 3 all day with light ESE to SE wind. Swell near 2 m at 15 s. Best before 10:00 while wind stays under 10 kt."
+        "advice": "Rated 4 at dawn then fades to 2 by late morning. Share the boat with Outside and switch if it is too big."
       },
       {
         "name": "Gerupuk Inside",
         "verdict": "skip",
-        "rating": 1,
+        "rating": 1.5,
         "window": "06:00–08:00",
         "scooter": 20,
         "swell": {
-          "m": 2.0,
+          "m": 2.2,
           "s": 15,
-          "dir": "SW"
+          "dir": "SSW"
         },
         "wind": {
           "dir": "SE",
-          "kt": 6
+          "kt": 3
         },
         "chips": [
           "Reef",
@@ -586,17 +586,17 @@
           "High tide",
           "Boat"
         ],
-        "tip": "Onshore SE even at dawn; skip the boat.",
+        "tip": "Only glassy at first light, then cross-on.",
         "ratings": [
           2,
           1,
           1,
-          1,
+          0,
           0,
           0,
           0
         ],
-        "advice": "Surf-Forecast rates it 2 at dawn, then 1 to 0 as onshore SE reaches 10 kt. Swell 2.0 m at 15 s is wasted. Choose Ekas Outside."
+        "advice": "Light wind at dawn may give a short clean window, but Surf-Forecast rates it 1 to 2. Ekas is a much better trip."
       },
       {
         "name": "Are Guling",
@@ -605,13 +605,13 @@
         "window": "06:00–08:00",
         "scooter": 25,
         "swell": {
-          "m": 2.0,
+          "m": 2.2,
           "s": 15,
-          "dir": "SW"
+          "dir": "SSW"
         },
         "wind": {
           "dir": "SE",
-          "kt": 6
+          "kt": 3
         },
         "chips": [
           "Reef",
@@ -619,28 +619,54 @@
           "Mid tide",
           "Boat"
         ],
-        "tip": "Cross-on all day; rated 1 at best.",
+        "tip": "Cross-on most of the day; skip.",
         "ratings": [
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1
+          0,
+          0,
+          0,
+          0
         ],
-        "advice": "Cross-on SE all day, Surf-Forecast rates it 1 from dawn to dusk. Not worth the boat with Ekas and Mawi cross-off nearby."
+        "advice": "Rated 1 or less, cross-on SE then S wind. Not worth the ride."
+      }
+    ],
+    "skip": [
+      {
+        "name": "Kuta Beach",
+        "reason": "Onshore S"
+      },
+      {
+        "name": "Tanjung Aan",
+        "reason": "Exposed to S"
+      },
+      {
+        "name": "Seger",
+        "reason": "Exposed to S"
+      },
+      {
+        "name": "Selong Belanak",
+        "reason": "Closeouts, beginner beach"
+      },
+      {
+        "name": "Mawun",
+        "reason": "Heavy shorebreak"
       }
     ]
   },
   "sources": [
     {
-      "name": "Surf-Forecast Mawi",
-      "url": "https://www.surf-forecast.com/breaks/Mawi/forecasts/latest"
+      "name": "Surf-Forecast Ekas Outside",
+      "url": "https://www.surf-forecast.com/breaks/Ekas-Outside/forecasts/latest"
     },
     {
-      "name": "Surf-Forecast Ekas-Outside",
-      "url": "https://www.surf-forecast.com/breaks/Ekas-Outside/forecasts/latest"
+      "name": "Surf-Forecast Ekas Inside",
+      "url": "https://www.surf-forecast.com/breaks/Ekas-Inside/forecasts/latest"
+    },
+    {
+      "name": "Surf-Forecast Mawi",
+      "url": "https://www.surf-forecast.com/breaks/Mawi/forecasts/latest"
     },
     {
       "name": "Surf-Forecast Gerupuk",
@@ -649,6 +675,10 @@
     {
       "name": "Surf-Forecast Air Guling",
       "url": "https://www.surf-forecast.com/breaks/Air-Guling/forecasts/latest"
+    },
+    {
+      "name": "Surf-Forecast Kuta Bay",
+      "url": "https://www.surf-forecast.com/breaks/Kuta-Bay-Lombok/forecasts/latest"
     },
     {
       "name": "Open-Meteo Marine",
@@ -660,43 +690,43 @@
     }
   ],
   "top": {
-    "spot": "Mawi",
-    "window": "16:00–18:00",
-    "rating": 3
+    "spot": "Ekas Outside",
+    "window": "06:30–09:30",
+    "rating": 4
   },
   "swell": {
-    "m": 1.5,
-    "s": 16,
+    "m": 2.2,
+    "s": 15,
     "dir": "SW"
   },
   "wind": {
-    "dir": "SSE",
-    "kt": 8
+    "dir": "SE",
+    "kt": 7
   },
   "spots": [
     {
-      "name": "Mawi",
-      "rating": 3,
+      "name": "Ekas Outside",
+      "rating": 4,
       "verdict": "go"
     },
     {
-      "name": "Ekas Outside",
-      "rating": 1.5,
-      "verdict": "fair"
+      "name": "Mawi",
+      "rating": 3.5,
+      "verdict": "go"
     },
     {
       "name": "Ekas Inside",
-      "rating": 1,
-      "verdict": "skip"
+      "rating": 3,
+      "verdict": "fair"
     },
     {
       "name": "Gerupuk Inside",
-      "rating": 0.5,
+      "rating": 1.5,
       "verdict": "skip"
     },
     {
       "name": "Are Guling",
-      "rating": 0.5,
+      "rating": 1,
       "verdict": "skip"
     }
   ],
