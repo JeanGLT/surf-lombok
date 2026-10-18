@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-18",
-  "updated": "2026-10-18T10:15:00+08:00",
-  "headline": "Morning stayed small; SW swell builds for a late Mawi session as wind eases.",
+  "updated": "2026-10-18T14:10:00+08:00",
+  "headline": "Midday blown out; SW swell builds to 1.5 m for a late Mawi session.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "13:51"
     ]
   },
-  "water": 27.6,
+  "water": 27.7,
   "recommendation": {
     "spot": "Mawi",
     "when": "16:00–18:00",
-    "text": "Swell builds to 1.5 m at 16 s while SE drops to 8 kt, cross-off. Showers likely. If it fails, Ekas Outside Monday dawn."
+    "text": "Swell builds to 1.5 m at 16 s as SE eases to 8 kt, cross-off. Showers possible. If it fails, Ekas Outside Monday dawn."
   },
   "hours": [
     {
@@ -156,7 +156,7 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Late session as the swell builds and SE drops off.",
+      "tip": "Go late: swell builds while SE wind fades.",
       "ratings": [
         2,
         2,
@@ -166,7 +166,7 @@
         3,
         3
       ],
-      "advice": "Paddle out around 16:00 as wind eases to 8 kt and the 16 s swell fills in. Leave by 18:00, sunset 18:09. Showers likely, expect a crowd."
+      "advice": "Paddle out around 16:00 as wind drops to 8 kt and the 16 s swell fills in. Leave by 18:00, sunset 18:09. Showers possible, expect a crowd."
     },
     {
       "name": "Ekas Outside",
@@ -332,7 +332,7 @@
     },
     "wind": {
       "dir": "SE",
-      "kt": 5
+      "kt": 4
     },
     "outlook": "Swell doubles, light SE dawn: Ekas Outside early."
   },
