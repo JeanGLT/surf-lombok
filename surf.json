@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-19",
-  "updated": "2026-10-19T10:08:35+08:00",
-  "headline": "Breezy midday, but 2.4 m SSW swell and easing wind: Mawi at sunset.",
+  "updated": "2026-10-19T14:09:11+08:00",
+  "headline": "SSE wind fades late on a 2.4 m SSW swell: Mawi sunset session.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "15:03"
     ]
   },
-  "water": 27.7,
+  "water": 28.0,
   "recommendation": {
     "spot": "Mawi",
     "when": "16:00–18:00",
-    "text": "Swell peaks at 2.4 m and 16 s while SSE wind eases to 7 to 8 kt. No boat needed. Plan B: Ekas Inside."
+    "text": "Swell peaks at 2.4 m and 16 s while SSE wind drops to 7 to 8 kt. Showers possible. Plan B: Ekas Inside."
   },
   "hours": [
     {
@@ -156,7 +156,7 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Swell peaks late as wind eases: sunset session, mind the rips.",
+      "tip": "Wind eases after 16:00 on peak swell: sunset session, mind rips.",
       "ratings": [
         4,
         3,
@@ -166,7 +166,7 @@
         4,
         4
       ],
-      "advice": "Paddle out around 16:00 as wind drops under 8 kt. 2.4 m at 16 s is heavy, strong rip in the channel. Tide falls gently from the 15:03 high, reef stays covered."
+      "advice": "Paddle out around 16:00 as wind drops toward 8 kt, gusts still near 20. 2.4 m at 16 s is heavy with a strong channel rip. Be in by 18:00."
     },
     {
       "name": "Ekas Outside",
@@ -199,7 +199,7 @@
         3,
         3
       ],
-      "advice": "Surf-Forecast rates it 3 all afternoon with SSE 10 to 13 kt. Book the boat back by 17:45, sunset is 18:07. Advanced only on 2.4 m sets."
+      "advice": "Surf-Forecast rates it 3 this afternoon, cross-offshore SSE. Book the boat back by 17:45, sunset is 18:07. Advanced only on 2.4 m sets."
     },
     {
       "name": "Ekas Inside",
