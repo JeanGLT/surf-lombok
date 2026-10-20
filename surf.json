@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-20",
-  "updated": "2026-10-20T10:08:23+08:00",
-  "headline": "Morning glass is gone: 2.1 m SW lingers for a late Mawi session, showers likely.",
+  "updated": "2026-10-20T14:04:02+08:00",
+  "headline": "Heavy showers this afternoon, but 2.1 m SW still good for a late Mawi session.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "19:24"
     ]
   },
-  "water": 28.2,
+  "water": 28.8,
   "recommendation": {
     "spot": "Mawi",
     "when": "16:00–18:00",
-    "text": "2.1 m at 14 s, rising tide and SSE wind back to cross-offshore. Rain likely 13:00 to 17:00. Plan B: Ekas Outside or rest."
+    "text": "2.1 m at 14 s, rising tide, SSE wind cross-offshore by 17:00. Rain very likely until 17:00. Plan B: Ekas Outside or rest."
   },
   "hours": [
     {
@@ -199,7 +199,7 @@
         3,
         3
       ],
-      "advice": "Rated 3 through the afternoon and the only spot cross-offshore all day. Go after the 11:58 low as the tide fills. Gusts near 18 kt, rain likely."
+      "advice": "Rated 3 through the afternoon and the only spot cross-offshore all day. Go now as the tide fills from the 11:58 low. Gusts near 18 kt, heavy showers."
     },
     {
       "name": "Ekas Inside",
