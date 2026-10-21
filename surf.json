@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-21",
-  "updated": "2026-10-21T10:07:51+08:00",
-  "headline": "Dawn is done: Mawi late session on 1.7 m SSW, rising tide.",
+  "updated": "2026-10-21T14:02:09+08:00",
+  "headline": "Afternoon call: Mawi from 16:00 on 1.7 m SSW, rising tide.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -17,7 +17,7 @@
   "recommendation": {
     "spot": "Mawi",
     "when": "16:00–18:00",
-    "text": "Morning window gone. Mawi stays cross-offshore, rated 3, 1.7 m at 13 s on the rising tide. Plan B: Ekas Outside late."
+    "text": "Only late session left. Mawi stays cross-offshore, rated 3, 1.7 m at 13 s on the rising tide. Plan B: Ekas Outside 16:30."
   },
   "hours": [
     {
@@ -492,8 +492,8 @@
           3,
           3,
           3,
-          2,
           3,
+          4,
           4
         ],
         "advice": "Rated 4 at 05:00 and again from 17:00 as a new SSW swell fills in on the rising tide. Expect bigger sets late; crowd builds fast."
