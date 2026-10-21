@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "date": "2026-10-21",
-  "updated": "2026-10-21T14:02:09+08:00",
+  "updated": "2026-10-21T21:54:28+08:00",
   "headline": "Afternoon call: Mawi from 16:00 on 1.7 m SSW, rising tide.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
@@ -17,7 +17,7 @@
   "recommendation": {
     "spot": "Mawi",
     "when": "16:00–18:00",
-    "text": "Only late session left. Mawi stays cross-offshore, rated 3, 1.7 m at 13 s on the rising tide. Plan B: Ekas Outside 16:30."
+    "text": "Only late session left. Mawi stays cross-offshore, rated 3, 1.7 m at 13 s on the rising tide."
   },
   "hours": [
     {
@@ -168,72 +168,6 @@
       "advice": "Surf-Forecast keeps it at 3 and cross-offshore all afternoon. Paddle out around 16:00 as the tide rises, surf until sunset at 18:09. Crowd builds late."
     },
     {
-      "name": "Ekas Outside",
-      "verdict": "fair",
-      "rating": 2,
-      "window": "16:30–18:00",
-      "scooter": 35,
-      "swell": {
-        "m": 1.6,
-        "s": 13,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "SSE",
-        "kt": 6
-      },
-      "chips": [
-        "Reef",
-        "Right",
-        "Mid tide",
-        "Boat"
-      ],
-      "tip": "Cross-shore at 14:00; recovers slightly before dark.",
-      "ratings": [
-        3,
-        3,
-        2,
-        1,
-        0,
-        2,
-        2
-      ],
-      "advice": "Rated 0 at 14:00, back to 2 by 17:00 on the rising tide. Only worth it if Mawi is packed; book the boat back before dark."
-    },
-    {
-      "name": "Ekas Inside",
-      "verdict": "fair",
-      "rating": 2,
-      "window": "16:30–18:00",
-      "scooter": 35,
-      "swell": {
-        "m": 1.6,
-        "s": 13,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "S",
-        "kt": 8
-      },
-      "chips": [
-        "Reef",
-        "Left",
-        "Mid tide",
-        "Boat"
-      ],
-      "tip": "Softer backup on the same Ekas boat.",
-      "ratings": [
-        3,
-        3,
-        2,
-        1,
-        0,
-        2,
-        2
-      ],
-      "advice": "Same pattern as Outside: poor midday, rated 2 late afternoon. Fine if Outside feels too heavy."
-    },
-    {
       "name": "Gerupuk Inside",
       "verdict": "skip",
       "rating": 1,
@@ -348,7 +282,7 @@
     "recommendation": {
       "spot": "Mawi",
       "when": "16:30–18:00",
-      "text": "New long-period SSW swell builds to 2.4 m at 18 s on the rising tide, cross-offshore. Dawn option: Ekas Outside 06:00–09:30."
+      "text": "New long-period SSW swell builds to 2.4 m at 18 s on the rising tide, cross-offshore. Dawn option: Mawi 06:00–08:00."
     },
     "hours": [
       {
@@ -499,44 +433,10 @@
         "advice": "Rated 4 at 05:00 and again from 17:00 as a new SSW swell fills in on the rising tide. Expect bigger sets late; crowd builds fast."
       },
       {
-        "name": "Ekas Outside",
-        "verdict": "go",
-        "rating": 4,
-        "window": "06:00–09:30",
-        "scooter": 35,
-        "swell": {
-          "m": 1.6,
-          "s": 12,
-          "dir": "SSW"
-        },
-        "wind": {
-          "dir": "SSE",
-          "kt": 2
-        },
-        "chips": [
-          "Reef",
-          "Right",
-          "Mid tide",
-          "Boat"
-        ],
-        "tip": "Best dawn option, light cross-offshore wind.",
-        "ratings": [
-          4,
-          4,
-          3,
-          3,
-          2,
-          3,
-          3
-        ],
-        "advice": "Rated 4 from 02:00 to 08:00 near the 07:22 high. Boat out at first light, back by 10:00 before wind and low tide."
-      },
-      {
-        "name": "Ekas Inside",
+        "name": "Mawun",
         "verdict": "fair",
-        "rating": 3,
-        "window": "06:00–09:00",
-        "scooter": 35,
+        "rating": 2,
+        "window": "06:00–08:00",
         "swell": {
           "m": 1.6,
           "s": 12,
@@ -544,25 +444,23 @@
         },
         "wind": {
           "dir": "SSE",
-          "kt": 2
+          "kt": 5
         },
         "chips": [
-          "Reef",
-          "Left",
-          "Mid tide",
-          "Boat"
+          "Beach",
+          "Peaks"
         ],
-        "tip": "Softer backup sharing the Ekas boat.",
+        "tip": "Dawn only; cross-on wind ruins it by 10:00.",
         "ratings": [
           3,
-          3,
           2,
-          2,
-          2,
-          3,
-          3
+          1,
+          1,
+          0,
+          0,
+          0
         ],
-        "advice": "Rated 3 at dawn and again late afternoon. Go if Outside is too crowded or heavy."
+        "advice": "Surf-Forecast rates it 3 at 05:00 and 2 at 08:00 on 1.6 m SSW, then 0 as SE builds. Heavy shorebreak, quick early session only."
       },
       {
         "name": "Gerupuk Inside",
@@ -595,7 +493,7 @@
           0,
           0
         ],
-        "advice": "Rated 2 at 05:00 then 1 or 0 with cross-onshore wind. Choose Ekas or Mawi."
+        "advice": "Rated 2 at 05:00 then 1 or 0 with cross-onshore wind. Choose Mawi instead."
       },
       {
         "name": "Are Guling",
@@ -629,6 +527,36 @@
           0
         ],
         "advice": "Rated 2 at dawn, then 0 from 14:00 with onshore S wind. Skip."
+      },
+      {
+        "name": "Tanjung Aan",
+        "verdict": "skip",
+        "rating": 1,
+        "window": "06:00–08:00",
+        "swell": {
+          "m": 1.6,
+          "s": 12,
+          "dir": "SSW"
+        },
+        "wind": {
+          "dir": "SSE",
+          "kt": 5
+        },
+        "chips": [
+          "Beach",
+          "Peaks"
+        ],
+        "tip": "Exposed to S wind; weak even at dawn.",
+        "ratings": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "advice": "Rated 2 at dawn on 1.6 m SSW with cross-on SSE, then 0 by afternoon. Mawi is the better call tomorrow."
       }
     ],
     "skip": [
@@ -637,20 +565,12 @@
         "reason": "Onshore S"
       },
       {
-        "name": "Tanjung Aan",
-        "reason": "Exposed to S"
-      },
-      {
         "name": "Seger",
         "reason": "Exposed to S"
       },
       {
         "name": "Selong Belanak",
         "reason": "Closeouts, beginner beach"
-      },
-      {
-        "name": "Mawun",
-        "reason": "Heavy shorebreak"
       }
     ]
   },
@@ -658,14 +578,6 @@
     {
       "name": "Surf-Forecast Mawi",
       "url": "https://www.surf-forecast.com/breaks/Mawi/forecasts/latest"
-    },
-    {
-      "name": "Surf-Forecast Ekas Outside",
-      "url": "https://www.surf-forecast.com/breaks/Ekas-Outside/forecasts/latest"
-    },
-    {
-      "name": "Surf-Forecast Ekas Inside",
-      "url": "https://www.surf-forecast.com/breaks/Ekas-Inside/forecasts/latest"
     },
     {
       "name": "Surf-Forecast Gerupuk",
@@ -686,6 +598,14 @@
     {
       "name": "Open-Meteo Weather",
       "url": "https://open-meteo.com/en/docs"
+    },
+    {
+      "name": "Surf-Forecast Mawun",
+      "url": "https://www.surf-forecast.com/breaks/Mawun/forecasts/latest"
+    },
+    {
+      "name": "Surf-Forecast Tanjung Aan",
+      "url": "https://www.surf-forecast.com/breaks/Tanjung-Aan/forecasts/latest"
     }
   ],
   "top": {
@@ -707,16 +627,6 @@
       "name": "Mawi",
       "rating": 3,
       "verdict": "go"
-    },
-    {
-      "name": "Ekas Outside",
-      "rating": 2,
-      "verdict": "fair"
-    },
-    {
-      "name": "Ekas Inside",
-      "rating": 2,
-      "verdict": "fair"
     },
     {
       "name": "Gerupuk Inside",
