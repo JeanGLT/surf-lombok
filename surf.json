@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-22",
-  "updated": "2026-10-22T10:07:31+08:00",
-  "headline": "Onshore by midday; Mawi fires again late as the 18 s swell hits.",
+  "updated": "2026-10-22T14:06:40+08:00",
+  "headline": "Onshore everywhere now; only Mawi is worth the late session as 18 s swell builds.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "20:16"
     ]
   },
-  "water": 28.6,
+  "water": 29.0,
   "recommendation": {
     "spot": "Mawi",
     "when": "16:00–18:00",
-    "text": "Cross-offshore and rated 4 as 2.4 m SSW at 18 s builds on the rising tide. If too crowded, rest for tomorrow's big swell."
+    "text": "Cross-offshore, rated 4 from 17:00 as 2.4 m SSW at 18 s builds on the rising tide. Too crowded? Rest for tomorrow."
   },
   "hours": [
     {
@@ -94,7 +94,7 @@
       },
       "wind": {
         "dir": "S",
-        "kt": 10
+        "kt": 11
       },
       "tide": {
         "m": 0.9,
@@ -166,25 +166,25 @@
         4,
         4
       ],
-      "advice": "Only spot still working today: rated 3 midday, back to 4 from 17:00 as 2.4 m at 18 s arrives. Paddle out 16:00, out by sunset 18:09."
+      "advice": "Only spot still working: rated 3 now, 4 from 17:00 as 2.4 m at 18 s arrives. Paddle out 16:00, out by sunset 18:09."
     }
   ],
   "skip": [
     {
       "name": "Are Guling",
-      "reason": "Onshore S wind, rated 0 this afternoon"
+      "reason": "Onshore S wind, rated 0 rest of today"
     },
     {
       "name": "Gerupuk Inside",
-      "reason": "Cross-onshore, rated 0 after midday"
+      "reason": "Cross-onshore, rated 0 rest of today"
     },
     {
       "name": "Mawun",
-      "reason": "Onshore, rated 0 this afternoon"
+      "reason": "Onshore, rated 0 rest of today"
     },
     {
       "name": "Tanjung Aan",
-      "reason": "Onshore, rated 0 this afternoon"
+      "reason": "Onshore, rated 0 rest of today"
     },
     {
       "name": "Kuta Beach",
