@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-23",
-  "updated": "2026-10-23T10:06:00+08:00",
-  "headline": "Still 3 m SSW at 17 s: Mawi fires late morning and again at sunset.",
+  "updated": "2026-10-23T14:01:41+08:00",
+  "headline": "Still 3 m SSW at 17 s: Mawi lights up again for sunset.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "20:38"
     ]
   },
-  "water": 28.3,
+  "water": 28.6,
   "recommendation": {
     "spot": "Mawi",
-    "when": "10:30–13:00",
-    "text": "Rated 5 at 11:00 with 3 m SSW at 17 s, cross-offshore. Missed it? Back on 16:00–18:00; too heavy, Gerupuk Inside late."
+    "when": "15:30–18:00",
+    "text": "Rated 5 from 16:00 with 3 m SSW at 17 s and easing cross-offshore wind. Too heavy? Gerupuk Inside on the rising tide."
   },
   "hours": [
     {
@@ -139,7 +139,7 @@
       "name": "Mawi",
       "verdict": "go",
       "rating": 5,
-      "window": "10:30–13:00",
+      "window": "15:30–18:00",
       "scooter": 30,
       "swell": {
         "m": 3.0,
@@ -147,8 +147,8 @@
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 8
+        "dir": "SSE",
+        "kt": 9
       },
       "chips": [
         "Reef",
@@ -156,7 +156,7 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Still 3 m at 17 s, cross-offshore SSE; advanced only.",
+      "tip": "3 m at 17 s, wind easing cross-offshore for sunset.",
       "ratings": [
         5,
         4,
@@ -166,7 +166,7 @@
         5,
         5
       ],
-      "advice": "Rated 5 at 11:00 and again 16:00 to 18:00. Paddle out late morning, leave when the 14:00 S wind hits; heavy sets, bring a step-up."
+      "advice": "Rated 4 now in cross S wind, back to 5 from 16:00 as wind turns SSE. Paddle out 15:30 on the rising tide, out by dark; step-up board."
     },
     {
       "name": "Gerupuk Inside",
@@ -675,7 +675,7 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "10:30–13:00",
+    "window": "15:30–18:00",
     "rating": 5
   },
   "swell": {
@@ -684,8 +684,8 @@
     "dir": "SSW"
   },
   "wind": {
-    "dir": "SE",
-    "kt": 8
+    "dir": "SSE",
+    "kt": 12
   },
   "spots": [
     {
