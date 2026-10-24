@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-24",
-  "updated": "2026-10-24T10:02:41+08:00",
-  "headline": "Still 2.5 m SSW at 16 s: Mawi holds 4, best again from 16:00.",
+  "updated": "2026-10-24T14:06:39+08:00",
+  "headline": "2.5 m SSW at 16 s still pumping: Mawi back to 4 from 16:00.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "21:01"
     ]
   },
-  "water": 28.5,
+  "water": 28.8,
   "recommendation": {
     "spot": "Mawi",
     "when": "16:00–18:00",
-    "text": "Rated 4 late afternoon as wind eases to 7 kt on the rising tide. Can go now until noon too. Packed? Gerupuk Inside around 14:00."
+    "text": "Rated 4 from 16:00 as wind eases to 7 kt on the rising tide. Packed? Gerupuk Inside now, rated 2."
   },
   "hours": [
     {
@@ -166,7 +166,7 @@
         4,
         4
       ],
-      "advice": "Rated 4 now until noon, dip to 3 at 14:00 in 9-10 kt S wind. Best left: 16:00 on the rising tide, out by sunset 18:09."
+      "advice": "Rated 3 now in 10 kt S wind, back to 4 from 16:00 on the rising tide. Paddle out 16:00, out by sunset 18:09."
     },
     {
       "name": "Gerupuk Inside",
@@ -199,13 +199,13 @@
         1,
         1
       ],
-      "advice": "Rated 1 late morning, 2 around 14:00 when wind swings S. Cross-onshore again by 17:00. Easier plan B if Mawi is too heavy."
+      "advice": "Rated 2 right now while wind sits S. Cross-onshore again by 17:00. Go now if Mawi feels too heavy."
     },
     {
       "name": "Mawun",
       "verdict": "fair",
-      "rating": 2,
-      "window": "10:00–12:00",
+      "rating": 1,
+      "window": "16:00–18:00",
       "scooter": 15,
       "swell": {
         "m": 2.5,
@@ -214,7 +214,7 @@
       },
       "wind": {
         "dir": "SSE",
-        "kt": 8
+        "kt": 7
       },
       "chips": [
         "Beach",
@@ -222,7 +222,7 @@
         "Mid tide",
         "Quiet"
       ],
-      "tip": "Holds 2 until noon; heavy shorebreak on sets.",
+      "tip": "Morning window gone; late look only, heavy shorebreak.",
       "ratings": [
         2,
         2,
@@ -232,7 +232,7 @@
         1,
         1
       ],
-      "advice": "Rated 2 through late morning, 0 at 14:00 onshore. Go now or skip; expect closeouts on the bigger sets."
+      "advice": "Onshore 0 now, 1 after 16:00 as wind eases. Only a backup; expect closeouts on the bigger sets."
     },
     {
       "name": "Are Guling",
@@ -700,7 +700,7 @@
     },
     {
       "name": "Mawun",
-      "rating": 2,
+      "rating": 1,
       "verdict": "fair"
     },
     {
