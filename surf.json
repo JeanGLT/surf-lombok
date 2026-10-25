@@ -1,31 +1,31 @@
 {
   "schema": 2,
-  "date": "2026-10-25",
-  "updated": "2026-10-25T14:09:26+08:00",
-  "headline": "Afternoon call: Mawi holds 2.4 m at 15 s, rated 3 until dark.",
+  "date": "2026-10-26",
+  "updated": "2026-10-26T06:06:35+08:00",
+  "headline": "Mawi at dawn: 2.2 m at 14 s with light cross-offshore wind.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
-      "03:22",
-      "15:17"
+      "03:53",
+      "15:46"
     ],
     "high": [
-      "09:28",
-      "21:27"
+      "10:02",
+      "21:56"
     ]
   },
   "water": 28.5,
   "recommendation": {
     "spot": "Mawi",
-    "when": "16:00–18:00",
-    "text": "Only spot rated 3, SSE wind cross-offshore, tide rising off the 15:17 low. Too late? Rest and hit Mawi at dawn tomorrow."
+    "when": "06:00–09:00",
+    "text": "Rated 4 at dawn, light SE wind, rising tide to the 10:02 high. Missed it? Mawi rates 4 again around 14:00."
   },
   "hours": [
     {
       "t": "06:00",
       "swell": {
-        "m": 2.5,
-        "s": 16,
+        "m": 2.2,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
@@ -33,15 +33,15 @@
         "kt": 4
       },
       "tide": {
-        "m": 1.15,
+        "m": 0.75,
         "trend": "rising"
       }
     },
     {
       "t": "08:00",
       "swell": {
-        "m": 2.5,
-        "s": 16,
+        "m": 2.2,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
@@ -49,79 +49,47 @@
         "kt": 6
       },
       "tide": {
-        "m": 2.03,
+        "m": 1.83,
         "trend": "rising"
       }
     },
     {
       "t": "10:00",
       "swell": {
-        "m": 2.5,
-        "s": 16,
+        "m": 2.1,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 8
+        "kt": 7
       },
       "tide": {
-        "m": 2.24,
-        "trend": "falling"
+        "m": 2.37,
+        "trend": "rising"
       }
     },
     {
       "t": "12:00",
       "swell": {
-        "m": 2.5,
-        "s": 16,
+        "m": 2.1,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
         "dir": "SSE",
-        "kt": 10
+        "kt": 8
       },
       "tide": {
-        "m": 1.6,
+        "m": 1.88,
         "trend": "falling"
       }
     },
     {
       "t": "14:00",
       "swell": {
-        "m": 2.4,
-        "s": 15,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "SSE",
-        "kt": 9
-      },
-      "tide": {
-        "m": 0.78,
-        "trend": "falling"
-      }
-    },
-    {
-      "t": "16:00",
-      "swell": {
-        "m": 2.4,
-        "s": 15,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "SSE",
-        "kt": 9
-      },
-      "tide": {
-        "m": 0.65,
-        "trend": "rising"
-      }
-    },
-    {
-      "t": "18:00",
-      "swell": {
-        "m": 2.4,
-        "s": 15,
+        "m": 2.1,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
@@ -129,7 +97,39 @@
         "kt": 8
       },
       "tide": {
-        "m": 1.44,
+        "m": 0.91,
+        "trend": "falling"
+      }
+    },
+    {
+      "t": "16:00",
+      "swell": {
+        "m": 2.1,
+        "s": 14,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SSE",
+        "kt": 8
+      },
+      "tide": {
+        "m": 0.52,
+        "trend": "rising"
+      }
+    },
+    {
+      "t": "18:00",
+      "swell": {
+        "m": 2.1,
+        "s": 14,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SSE",
+        "kt": 7
+      },
+      "tide": {
+        "m": 1.19,
         "trend": "rising"
       }
     }
@@ -138,17 +138,17 @@
     {
       "name": "Mawi",
       "verdict": "go",
-      "rating": 3,
-      "window": "16:00–18:00",
+      "rating": 4,
+      "window": "06:00–09:00",
       "scooter": 30,
       "swell": {
-        "m": 2.4,
-        "s": 15,
+        "m": 2.2,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SSE",
-        "kt": 9
+        "dir": "SE",
+        "kt": 4
       },
       "chips": [
         "Reef",
@@ -156,32 +156,65 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Still 2.4 m at 15 s, SSE wind cross-offshore here.",
+      "tip": "2.2 m at 14 s, light SE wind cross-offshore at dawn.",
       "ratings": [
-        5,
         4,
         3,
         3,
         3,
+        4,
         3,
         3
       ],
-      "advice": "Rated 3 until sunset at 18:09. Paddle out around 16:00 as the tide rises off the 15:17 low. Heavy sets, experienced only."
+      "advice": "Rated 4 at dawn on the rising tide to the 10:02 high, 3 mid-morning, 4 again around 14:00. Heavy sets, experienced surfers only."
+    },
+    {
+      "name": "Are Guling",
+      "verdict": "fair",
+      "rating": 2,
+      "window": "06:00–08:00",
+      "scooter": 25,
+      "swell": {
+        "m": 2.2,
+        "s": 14,
+        "dir": "SSW"
+      },
+      "wind": {
+        "dir": "SE",
+        "kt": 4
+      },
+      "chips": [
+        "Reef",
+        "Right",
+        "Mid tide",
+        "Boat"
+      ],
+      "tip": "Dawn session before the SE wind fills in.",
+      "ratings": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "advice": "Rated 2 at dawn and again from 14:00 to dark, 1 in between. Big sets can close out the reef."
     },
     {
       "name": "Mawun",
       "verdict": "fair",
-      "rating": 1,
-      "window": "16:30–18:00",
+      "rating": 2,
+      "window": "06:00–08:00",
       "scooter": 15,
       "swell": {
-        "m": 2.4,
-        "s": 15,
+        "m": 2.2,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SSE",
-        "kt": 9
+        "dir": "SE",
+        "kt": 4
       },
       "chips": [
         "Beach",
@@ -189,32 +222,32 @@
         "Mid tide",
         "Quiet"
       ],
-      "tip": "Closer backup, but cross-onshore and closing out.",
+      "tip": "Closest backup to Mawi, early only.",
       "ratings": [
         2,
         1,
         1,
         1,
-        1,
+        2,
         1,
         1
       ],
-      "advice": "Rated 1 until dark in cross-onshore SSE wind. Only worth it late if you skip the Mawi drive; expect heavy shorebreak."
+      "advice": "Rated 2 at dawn and around 14:00, 1 otherwise in cross-onshore wind. Expect heavy shorebreak at this size."
     },
     {
       "name": "Tanjung Aan",
-      "verdict": "skip",
-      "rating": 1,
-      "window": "16:30–18:00",
+      "verdict": "fair",
+      "rating": 2,
+      "window": "06:00–07:30",
       "scooter": 10,
       "swell": {
-        "m": 2.4,
-        "s": 15,
+        "m": 2.2,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SSE",
-        "kt": 9
+        "dir": "SE",
+        "kt": 4
       },
       "chips": [
         "Reef",
@@ -222,7 +255,7 @@
         "Mid tide",
         "Quiet"
       ],
-      "tip": "Wind-affected all day, short late session at best.",
+      "tip": "Quick dawn paddle, 10 minutes from Kuta.",
       "ratings": [
         2,
         1,
@@ -232,55 +265,22 @@
         1,
         1
       ],
-      "advice": "Rated 1 until dark, onshore around 14:00. Quick late paddle only if you are already nearby."
-    },
-    {
-      "name": "Are Guling",
-      "verdict": "skip",
-      "rating": 1,
-      "window": "16:30–18:00",
-      "scooter": 25,
-      "swell": {
-        "m": 2.4,
-        "s": 15,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "SSE",
-        "kt": 9
-      },
-      "chips": [
-        "Reef",
-        "Right",
-        "Mid tide",
-        "Boat"
-      ],
-      "tip": "Dawn was the only window; wind on it now.",
-      "ratings": [
-        2,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "advice": "Rated 1 until dark, onshore right now. Save it for tomorrow's dawn."
+      "advice": "Rated 2 at first light, 1 for the rest of the day in cross-onshore wind. Get out by 08:00."
     },
     {
       "name": "Gerupuk Inside",
-      "verdict": "skip",
-      "rating": 1,
-      "window": "16:30–18:00",
+      "verdict": "fair",
+      "rating": 2,
+      "window": "06:00–07:30",
       "scooter": 20,
       "swell": {
-        "m": 2.4,
-        "s": 15,
+        "m": 2.2,
+        "s": 14,
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SSE",
-        "kt": 9
+        "dir": "SE",
+        "kt": 4
       },
       "chips": [
         "Reef",
@@ -288,17 +288,17 @@
         "Mid tide",
         "Boat"
       ],
-      "tip": "Cross-onshore SSE wind, choppy until dark.",
+      "tip": "Dawn only, choppy once the wind turns on.",
       "ratings": [
         2,
         1,
         1,
-        0,
-        0,
+        1,
+        1,
         1,
         1
       ],
-      "advice": "Rated 0 now, 1 by 17:00. Not worth a boat fee this afternoon; go tomorrow at dawn."
+      "advice": "Rated 2 at dawn, 1 from 08:00 as wind goes onshore. Only worth the boat fee if you go at first light."
     }
   ],
   "skip": [
@@ -316,39 +316,39 @@
     }
   ],
   "tomorrow": {
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "best": "Mawi",
     "swell": {
-      "m": 2.3,
-      "s": 14,
+      "m": 2.0,
+      "s": 13,
       "dir": "SSW"
     },
     "wind": {
       "dir": "ESE",
       "kt": 3
     },
-    "outlook": "Swell easing to 2.2 m, glassy rising-tide dawn.",
+    "outlook": "Swell easing to 2 m, glassy dawn, Mawi rated 4.",
     "tide": {
       "low": [
-        "03:53",
-        "15:46"
+        "04:26",
+        "16:16"
       ],
       "high": [
-        "10:02",
-        "21:56"
+        "10:36",
+        "22:26"
       ]
     },
     "recommendation": {
       "spot": "Mawi",
       "when": "06:00–10:00",
-      "text": "Rated 4 from dawn in near-calm wind, rising tide toward the 10:02 high. Backup: Mawun or Tanjung Aan, rated 2."
+      "text": "Rated 4 from dawn in near-calm wind on the rising tide. Backup: Mawun or Are Guling, rated 3 at dawn."
     },
     "hours": [
       {
         "t": "06:00",
         "swell": {
-          "m": 2.3,
-          "s": 14,
+          "m": 2.0,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
@@ -356,15 +356,31 @@
           "kt": 3
         },
         "tide": {
-          "m": 0.75,
+          "m": 0.35,
           "trend": "rising"
         }
       },
       {
         "t": "08:00",
         "swell": {
-          "m": 2.3,
-          "s": 14,
+          "m": 2.0,
+          "s": 13,
+          "dir": "SSW"
+        },
+        "wind": {
+          "dir": "SE",
+          "kt": 4
+        },
+        "tide": {
+          "m": 1.48,
+          "trend": "rising"
+        }
+      },
+      {
+        "t": "10:00",
+        "swell": {
+          "m": 1.9,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
@@ -372,87 +388,71 @@
           "kt": 5
         },
         "tide": {
-          "m": 1.83,
-          "trend": "rising"
-        }
-      },
-      {
-        "t": "10:00",
-        "swell": {
-          "m": 2.2,
-          "s": 14,
-          "dir": "SSW"
-        },
-        "wind": {
-          "dir": "SE",
-          "kt": 7
-        },
-        "tide": {
-          "m": 2.37,
+          "m": 2.34,
           "trend": "rising"
         }
       },
       {
         "t": "12:00",
         "swell": {
-          "m": 2.2,
-          "s": 14,
+          "m": 1.9,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
           "dir": "SSE",
-          "kt": 7
+          "kt": 8
         },
         "tide": {
-          "m": 1.88,
+          "m": 2.12,
           "trend": "falling"
         }
       },
       {
         "t": "14:00",
         "swell": {
-          "m": 2.1,
-          "s": 14,
+          "m": 1.8,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
-          "dir": "SSE",
-          "kt": 7
+          "dir": "ESE",
+          "kt": 2
         },
         "tide": {
-          "m": 0.91,
+          "m": 1.14,
           "trend": "falling"
         }
       },
       {
         "t": "16:00",
         "swell": {
-          "m": 2.2,
-          "s": 14,
+          "m": 1.7,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
-          "dir": "SE",
-          "kt": 7
+          "dir": "SSE",
+          "kt": 4
         },
         "tide": {
-          "m": 0.52,
-          "trend": "rising"
+          "m": 0.48,
+          "trend": "falling"
         }
       },
       {
         "t": "18:00",
         "swell": {
-          "m": 2.2,
-          "s": 14,
+          "m": 1.8,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
-          "dir": "SE",
-          "kt": 7
+          "dir": "E",
+          "kt": 3
         },
         "tide": {
-          "m": 1.19,
+          "m": 0.93,
           "trend": "rising"
         }
       }
@@ -465,8 +465,8 @@
         "window": "06:00–11:00",
         "scooter": 30,
         "swell": {
-          "m": 2.3,
-          "s": 14,
+          "m": 2.0,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
@@ -479,27 +479,60 @@
           "Mid tide",
           "Busy"
         ],
-        "tip": "2.3 m at 14 s, near-glassy dawn, rising tide.",
+        "tip": "2.0 m at 13 s, glassy dawn, rated 4 most of day.",
         "ratings": [
-          4,
           4,
           4,
           4,
           3,
           4,
+          4,
           4
         ],
-        "advice": "Rated 4 from dawn to 11:00 on the rising tide to the 10:02 high, 3 around 14:00, back to 4 at 17:00. Get there early for the crowd."
+        "advice": "Rated 4 from dawn to 11:00 on the rising tide to the 10:36 high, 3 around noon, 4 again in the afternoon. Arrive early for the crowd."
+      },
+      {
+        "name": "Are Guling",
+        "verdict": "go",
+        "rating": 3,
+        "window": "06:00–08:00",
+        "scooter": 25,
+        "swell": {
+          "m": 2.0,
+          "s": 13,
+          "dir": "SSW"
+        },
+        "wind": {
+          "dir": "ESE",
+          "kt": 3
+        },
+        "chips": [
+          "Reef",
+          "Right",
+          "Mid tide",
+          "Boat"
+        ],
+        "tip": "Rated 3 at dawn in near-calm ESE wind.",
+        "ratings": [
+          3,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1
+        ],
+        "advice": "Rated 3 at first light, 2 until 10:00, 1 around noon. Book the boat the evening before."
       },
       {
         "name": "Mawun",
-        "verdict": "fair",
-        "rating": 2,
-        "window": "06:00–09:00",
+        "verdict": "go",
+        "rating": 3,
+        "window": "06:00–08:00",
         "scooter": 15,
         "swell": {
-          "m": 2.3,
-          "s": 14,
+          "m": 2.0,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
@@ -512,50 +545,17 @@
           "Mid tide",
           "Quiet"
         ],
-        "tip": "Dawn glass, then cross-onshore until late afternoon.",
+        "tip": "Dawn glass, rated 3 before the wind.",
         "ratings": [
+          3,
           2,
           2,
           1,
-          1,
-          1,
           2,
-          2
+          1,
+          1
         ],
-        "advice": "Rated 2 at dawn and again after 16:00, 1 midday. Easy backup if Mawi is crowded."
-      },
-      {
-        "name": "Are Guling",
-        "verdict": "fair",
-        "rating": 2,
-        "window": "06:00–09:00",
-        "scooter": 25,
-        "swell": {
-          "m": 2.3,
-          "s": 14,
-          "dir": "SSW"
-        },
-        "wind": {
-          "dir": "ESE",
-          "kt": 3
-        },
-        "chips": [
-          "Reef",
-          "Right",
-          "Mid tide",
-          "Boat"
-        ],
-        "tip": "Dawn or late afternoon as wind eases.",
-        "ratings": [
-          2,
-          2,
-          1,
-          1,
-          1,
-          2,
-          2
-        ],
-        "advice": "Rated 2 at dawn and after 16:00, 1 in between. Big sets can still close out the reef."
+        "advice": "Rated 3 at dawn, 2 until 10:00, then cross-onshore. Good close option if Mawi is crowded."
       },
       {
         "name": "Tanjung Aan",
@@ -564,8 +564,8 @@
         "window": "06:00–09:00",
         "scooter": 10,
         "swell": {
-          "m": 2.3,
-          "s": 14,
+          "m": 2.0,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
@@ -578,17 +578,17 @@
           "Mid tide",
           "Quiet"
         ],
-        "tip": "Closest option; dawn session before the wind.",
+        "tip": "Closest option; early session before the wind.",
         "ratings": [
           2,
           2,
+          2,
           1,
-          1,
-          1,
+          2,
           1,
           1
         ],
-        "advice": "Rated 2 early, 1 from late morning in cross-onshore wind. Good quick session near Kuta."
+        "advice": "Rated 2 from dawn to 10:00, 1 around noon. Quick session near Kuta on the rising tide."
       },
       {
         "name": "Gerupuk Inside",
@@ -597,8 +597,8 @@
         "window": "06:00–09:00",
         "scooter": 20,
         "swell": {
-          "m": 2.3,
-          "s": 14,
+          "m": 2.0,
+          "s": 13,
           "dir": "SSW"
         },
         "wind": {
@@ -611,23 +611,23 @@
           "Mid tide",
           "Boat"
         ],
-        "tip": "Dawn on the rising tide, then cross-onshore.",
+        "tip": "Easier wave than Mawi, early on the rising tide.",
         "ratings": [
           2,
           2,
-          1,
+          2,
           1,
           1,
           1,
           1
         ],
-        "advice": "Rated 2 until about 09:00, 1 the rest of the day. Easier wave than Mawi; book the boat early."
+        "advice": "Rated 2 until about 10:00, 1 after in cross-onshore wind. Book the boat early."
       }
     ],
     "skip": [
       {
         "name": "Kuta Beach",
-        "reason": "Onshore all day"
+        "reason": "Onshore most of the day"
       },
       {
         "name": "Seger",
@@ -675,43 +675,43 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "16:00–18:00",
-    "rating": 3
+    "window": "06:00–09:00",
+    "rating": 4
   },
   "swell": {
-    "m": 2.4,
-    "s": 15,
+    "m": 2.2,
+    "s": 14,
     "dir": "SSW"
   },
   "wind": {
-    "dir": "SSE",
-    "kt": 9
+    "dir": "SE",
+    "kt": 4
   },
   "spots": [
     {
       "name": "Mawi",
-      "rating": 3,
+      "rating": 4,
       "verdict": "go"
     },
     {
+      "name": "Are Guling",
+      "rating": 2,
+      "verdict": "fair"
+    },
+    {
       "name": "Mawun",
-      "rating": 1,
+      "rating": 2,
       "verdict": "fair"
     },
     {
       "name": "Tanjung Aan",
-      "rating": 1,
-      "verdict": "skip"
-    },
-    {
-      "name": "Are Guling",
-      "rating": 1,
-      "verdict": "skip"
+      "rating": 2,
+      "verdict": "fair"
     },
     {
       "name": "Gerupuk Inside",
-      "rating": 1,
-      "verdict": "skip"
+      "rating": 2,
+      "verdict": "fair"
     }
   ],
   "reportUrl": "https://jeanglt.github.io/surf-lombok/"
