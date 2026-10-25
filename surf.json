@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-25",
-  "updated": "2026-10-25T10:05:22+08:00",
-  "headline": "Dawn peak is over: Mawi still holds 2.5 m at 16 s, rated 3.",
+  "updated": "2026-10-25T14:09:26+08:00",
+  "headline": "Afternoon call: Mawi holds 2.4 m at 15 s, rated 3 until dark.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -17,8 +17,8 @@
   "water": 28.5,
   "recommendation": {
     "spot": "Mawi",
-    "when": "10:30–12:30",
-    "text": "Only spot still rated 3, SE wind cross-offshore. Missed it? Go 16:30–18:00 on the rising tide, or rest for tomorrow dawn."
+    "when": "16:00–18:00",
+    "text": "Only spot rated 3, SSE wind cross-offshore, tide rising off the 15:17 low. Too late? Rest and hit Mawi at dawn tomorrow."
   },
   "hours": [
     {
@@ -139,16 +139,16 @@
       "name": "Mawi",
       "verdict": "go",
       "rating": 3,
-      "window": "10:30–12:30",
+      "window": "16:00–18:00",
       "scooter": 30,
       "swell": {
-        "m": 2.5,
-        "s": 16,
+        "m": 2.4,
+        "s": 15,
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 8
+        "dir": "SSE",
+        "kt": 9
       },
       "chips": [
         "Reef",
@@ -156,7 +156,7 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Still 2.5 m at 16 s, SE wind cross-offshore here.",
+      "tip": "Still 2.4 m at 15 s, SSE wind cross-offshore here.",
       "ratings": [
         5,
         4,
@@ -166,7 +166,7 @@
         3,
         3
       ],
-      "advice": "Rated 3 for the rest of the day. Go late morning on the dropping tide, or 16:30–18:00 on the rising tide. Heavy sets, experienced only."
+      "advice": "Rated 3 until sunset at 18:09. Paddle out around 16:00 as the tide rises off the 15:17 low. Heavy sets, experienced only."
     },
     {
       "name": "Mawun",
@@ -199,7 +199,7 @@
         1,
         1
       ],
-      "advice": "Rated 1 from now on in cross-onshore SSE wind. Only worth it late if you skip the Mawi drive; expect heavy shorebreak."
+      "advice": "Rated 1 until dark in cross-onshore SSE wind. Only worth it late if you skip the Mawi drive; expect heavy shorebreak."
     },
     {
       "name": "Tanjung Aan",
@@ -232,7 +232,7 @@
         1,
         1
       ],
-      "advice": "Rated 1 through the afternoon and onshore around 14:00. Quick late paddle only if you are already nearby."
+      "advice": "Rated 1 until dark, onshore around 14:00. Quick late paddle only if you are already nearby."
     },
     {
       "name": "Are Guling",
@@ -265,7 +265,7 @@
         1,
         1
       ],
-      "advice": "Rated 1 for the rest of today and onshore near 14:00. Save it for tomorrow's dawn."
+      "advice": "Rated 1 until dark, onshore right now. Save it for tomorrow's dawn."
     },
     {
       "name": "Gerupuk Inside",
@@ -298,7 +298,7 @@
         1,
         1
       ],
-      "advice": "Rated 0 to 1 for the rest of today. Not worth a boat fee this afternoon; go tomorrow at dawn."
+      "advice": "Rated 0 now, 1 by 17:00. Not worth a boat fee this afternoon; go tomorrow at dawn."
     }
   ],
   "skip": [
@@ -675,17 +675,17 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "10:30–12:30",
+    "window": "16:00–18:00",
     "rating": 3
   },
   "swell": {
-    "m": 2.5,
-    "s": 16,
+    "m": 2.4,
+    "s": 15,
     "dir": "SSW"
   },
   "wind": {
-    "dir": "SE",
-    "kt": 8
+    "dir": "SSE",
+    "kt": 9
   },
   "spots": [
     {
