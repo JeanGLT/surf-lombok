@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-26",
-  "updated": "2026-10-26T10:06:35+08:00",
-  "headline": "Afternoon call: Mawi still holds 2.1 m at 14 s, the rest is blown out.",
+  "updated": "2026-10-26T14:04:17+08:00",
+  "headline": "Late session call: Mawi holds 2.1 m at 14 s, everything else is blown out.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -17,8 +17,8 @@
   "water": 28.6,
   "recommendation": {
     "spot": "Mawi",
-    "when": "14:00–17:30",
-    "text": "Only spot still rated 3, SSE wind cross-offshore. Paddle out near the 15:46 low. Too crowded? Rest up for tomorrow's glassy dawn."
+    "when": "15:00–18:00",
+    "text": "Only spot still rated 3, SSE wind cross-offshore. Paddle out after the 15:46 low until sunset. Too crowded? Rest for tomorrow's glassy dawn."
   },
   "hours": [
     {
@@ -139,7 +139,7 @@
       "name": "Mawi",
       "verdict": "go",
       "rating": 3,
-      "window": "14:00–17:30",
+      "window": "15:00–18:00",
       "scooter": 30,
       "swell": {
         "m": 2.1,
@@ -166,7 +166,7 @@
         3,
         3
       ],
-      "advice": "Rated 3 through the afternoon. Paddle out around the 15:46 low and surf the rising tide until dark. Heavy sets, experienced surfers only."
+      "advice": "Rated 3 through the afternoon. Paddle out after the 15:46 low and surf the rising tide until sunset at 18:09. Heavy sets, experienced surfers only."
     },
     {
       "name": "Are Guling",
@@ -675,7 +675,7 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "14:00–17:30",
+    "window": "15:00–18:00",
     "rating": 3
   },
   "swell": {
