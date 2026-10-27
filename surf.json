@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-27",
-  "updated": "2026-10-27T10:01:46+08:00",
-  "headline": "Mawi still firing: 1.9 m at 13 s, light wind until dark.",
+  "updated": "2026-10-27T14:04:16+08:00",
+  "headline": "Afternoon call: Mawi holds 4 stars, 1.9 m at 13 s, wind fading.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -139,7 +139,7 @@
       "name": "Mawi",
       "verdict": "go",
       "rating": 4,
-      "window": "10:30–17:30",
+      "window": "14:00–17:30",
       "scooter": 30,
       "swell": {
         "m": 1.9,
@@ -148,7 +148,7 @@
       },
       "wind": {
         "dir": "SE",
-        "kt": 7
+        "kt": 4
       },
       "chips": [
         "Reef",
@@ -166,7 +166,7 @@
         4,
         4
       ],
-      "advice": "Rated 4 until dark. Go now on the high tide or from 14:00 as the wind drops. Heavy sets, experienced surfers only."
+      "advice": "Rated 4 until dark with wind dropping to about 4 kt. Go now, surf the push after the 16:16 low. Heavy sets, experienced only."
     },
     {
       "name": "Gerupuk Inside",
@@ -656,7 +656,7 @@
   },
   "wind": {
     "dir": "SE",
-    "kt": 7
+    "kt": 4
   },
   "spots": [
     {
