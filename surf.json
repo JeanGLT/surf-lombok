@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-28",
-  "updated": "2026-10-28T10:07:48+08:00",
-  "headline": "Dawn window gone: only Mawi still rated 2 this afternoon.",
+  "updated": "2026-10-28T14:00:52+08:00",
+  "headline": "Weak afternoon: Mawi the only fair option until 16:30.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -17,8 +17,8 @@
   "water": 28.5,
   "recommendation": {
     "spot": "Mawi",
-    "when": "13:00–16:30",
-    "text": "Only spot still rated above 0, a fair 2 on the falling mid tide. If crowded, rest and go Mawi at dawn tomorrow."
+    "when": "14:30–16:30",
+    "text": "Only spot still rated 2 this afternoon, on the falling mid tide. If crowded, rest and hit Mawi at dawn tomorrow."
   },
   "hours": [
     {
@@ -139,7 +139,7 @@
       "name": "Mawi",
       "verdict": "fair",
       "rating": 2,
-      "window": "13:00–16:30",
+      "window": "14:30–16:30",
       "scooter": 30,
       "swell": {
         "m": 1.8,
@@ -156,7 +156,7 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Rated 2 rest of day, cross-offshore SE wind.",
+      "tip": "Rated 2 until dusk, cross-offshore SE wind.",
       "ratings": [
         4,
         4,
@@ -166,7 +166,7 @@
         2,
         2
       ],
-      "advice": "Go around 13:00 as the tide drops toward mid after the 11:10 high, out by 16:30 before the 16:47 low. Heavy sets, experienced only."
+      "advice": "Paddle out around 14:30 on the falling mid tide, out by 16:30 before the 16:47 low. Heavy sets, experienced only."
     }
   ],
   "skip": [
@@ -443,7 +443,7 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "13:00–16:30",
+    "window": "14:30–16:30",
     "rating": 2
   },
   "swell": {
