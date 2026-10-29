@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-29",
-  "updated": "2026-10-29T10:08:14+08:00",
-  "headline": "Fading swell: Mawi until early afternoon, nothing else works.",
+  "updated": "2026-10-29T14:06:54+08:00",
+  "headline": "Weak afternoon: small Mawi sunset session or rest day.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "23:35"
     ]
   },
-  "water": 28.5,
+  "water": 28.8,
   "recommendation": {
     "spot": "Mawi",
-    "when": "10:30–12:30",
-    "text": "Last good window around the 11:46 high, cross-offshore. If crowded, small backup 16:30 to 18:00 or rest day."
+    "when": "16:30–18:00",
+    "text": "Only option left today, rated 1, cross-offshore near the 17:20 low. If crowded or flat, rest and surf Mawi early tomorrow."
   },
   "hours": [
     {
@@ -138,17 +138,17 @@
     {
       "name": "Mawi",
       "verdict": "fair",
-      "rating": 2,
-      "window": "10:30–12:30",
+      "rating": 1,
+      "window": "16:30–18:00",
       "scooter": 30,
       "swell": {
-        "m": 1.5,
+        "m": 1.3,
         "s": 12,
-        "dir": "S"
+        "dir": "SSW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 12
+        "kt": 13
       },
       "chips": [
         "Reef",
@@ -156,7 +156,7 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Go now around the 11:46 high, rated 2 until early afternoon.",
+      "tip": "Small sunset session only, wind easing slightly after 16:00.",
       "ratings": [
         2,
         2,
@@ -166,7 +166,7 @@
         1,
         1
       ],
-      "advice": "Surf 10:30 to 12:30 around the high tide, out when SE wind hits 13 kt. Small backup session 16:30 to 18:00, rated 1. Experienced only."
+      "advice": "Paddle out around 16:30 as the tide drops toward the 17:20 low, leave by dark. Cross-offshore SE 12 to 13 kt, weaker swell, experienced only."
     }
   ],
   "skip": [
@@ -442,22 +442,22 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "10:30–12:30",
-    "rating": 2
+    "window": "16:30–18:00",
+    "rating": 1
   },
   "swell": {
-    "m": 1.5,
+    "m": 1.3,
     "s": 12,
-    "dir": "S"
+    "dir": "SSW"
   },
   "wind": {
     "dir": "SE",
-    "kt": 12
+    "kt": 13
   },
   "spots": [
     {
       "name": "Mawi",
-      "rating": 2,
+      "rating": 1,
       "verdict": "fair"
     }
   ],
