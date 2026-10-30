@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-30",
-  "updated": "2026-10-30T10:04:57+08:00",
-  "headline": "Morning window closed, SE wind on: rest today, Mawi tomorrow morning.",
+  "updated": "2026-10-30T14:06:28+08:00",
+  "headline": "SE wind holds all afternoon: rest day, Mawi tomorrow late morning.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -17,7 +17,7 @@
   "recommendation": {
     "spot": "Mawi",
     "when": "Tomorrow 09:00–12:00",
-    "text": "Nothing worth it for the rest of today, every spot rated 1 or less. Rest and hit Mawi tomorrow late morning."
+    "text": "Rest of today stays poor, every spot rated 1 or less in SE wind. Rest and hit Mawi tomorrow late morning."
   },
   "hours": [
     {
