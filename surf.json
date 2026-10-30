@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-10-30",
-  "updated": "2026-10-30T06:09:03+08:00",
-  "headline": "Small swell, light morning wind: Mawi early or rest day.",
+  "updated": "2026-10-30T10:04:57+08:00",
+  "headline": "Morning window closed, SE wind on: rest today, Mawi tomorrow morning.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -16,8 +16,8 @@
   "water": 28.1,
   "recommendation": {
     "spot": "Mawi",
-    "when": "07:00–10:00",
-    "text": "Only spot rated above 0, cross-offshore on the rising tide around 08:00. If crowded or too small, rest day."
+    "when": "Tomorrow 09:00–12:00",
+    "text": "Nothing worth it for the rest of today, every spot rated 1 or less. Rest and hit Mawi tomorrow late morning."
   },
   "hours": [
     {
@@ -44,8 +44,8 @@
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 10
+        "dir": "ESE",
+        "kt": 9
       },
       "tide": {
         "m": 0.38,
@@ -55,13 +55,13 @@
     {
       "t": "10:00",
       "swell": {
-        "m": 1.1,
+        "m": 1.2,
         "s": 11,
         "dir": "SSW"
       },
       "wind": {
         "dir": "SE",
-        "kt": 12
+        "kt": 11
       },
       "tide": {
         "m": 1.44,
@@ -76,7 +76,7 @@
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SSE",
+        "dir": "SE",
         "kt": 11
       },
       "tide": {
@@ -109,7 +109,7 @@
       },
       "wind": {
         "dir": "SE",
-        "kt": 9
+        "kt": 10
       },
       "tide": {
         "m": 1.03,
@@ -125,7 +125,7 @@
       },
       "wind": {
         "dir": "ESE",
-        "kt": 9
+        "kt": 8
       },
       "tide": {
         "m": 0.6,
@@ -136,12 +136,12 @@
   "picks": [
     {
       "name": "Mawi",
-      "verdict": "fair",
-      "rating": 2,
-      "window": "07:00–10:00",
+      "verdict": "skip",
+      "rating": 1,
+      "window": "15:00–17:00",
       "scooter": 30,
       "swell": {
-        "m": 1.2,
+        "m": 1.1,
         "s": 11,
         "dir": "SSW"
       },
@@ -155,17 +155,17 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Best around 08:00, light ESE wind on the rising tide.",
+      "tip": "Morning window gone; afternoon only rated 1 in SE wind.",
       "ratings": [
-        1,
+        2,
         2,
         1,
-        0,
+        1,
         1,
         1,
         1
       ],
-      "advice": "Paddle out around 07:00 as the tide pushes after the 06:17 low, leave by 10:00 when SE wind tops 11 kt. Shallow reef at low tide, watch the crowd."
+      "advice": "Best part of the day is over. If you must surf, try 15:00 to 17:00 on the falling mid tide, out before the 17:56 low exposes the reef."
     }
   ],
   "skip": [
@@ -202,15 +202,15 @@
     "date": "2026-10-31",
     "best": "Mawi",
     "swell": {
-      "m": 0.8,
+      "m": 1.1,
       "s": 10,
-      "dir": "SSW"
+      "dir": "S"
     },
     "wind": {
-      "dir": "ESE",
-      "kt": 8
+      "dir": "SE",
+      "kt": 10
     },
-    "outlook": "Weaker 0.8 m, new SW pulse arrives late.",
+    "outlook": "Small mixed swell, longer SW pulse builds afternoon.",
     "tide": {
       "low": [
         "06:59",
@@ -223,8 +223,8 @@
     },
     "recommendation": {
       "spot": "Mawi",
-      "when": "07:30–10:00",
-      "text": "Weak day, Mawi rated 1 at best. Surf early before SE wind builds, or rest for Sunday's SW pulse."
+      "when": "09:00–12:00",
+      "text": "Mawi rated 2 late morning on the rising tide. If wind is up early, wait for Sunday's SW pulse."
     },
     "hours": [
       {
@@ -236,7 +236,7 @@
         },
         "wind": {
           "dir": "ESE",
-          "kt": 7
+          "kt": 8
         },
         "tide": {
           "m": 0.32,
@@ -246,13 +246,13 @@
       {
         "t": "08:00",
         "swell": {
-          "m": 0.8,
-          "s": 10,
-          "dir": "SSW"
+          "m": 0.7,
+          "s": 12,
+          "dir": "SW"
         },
         "wind": {
           "dir": "ESE",
-          "kt": 8
+          "kt": 9
         },
         "tide": {
           "m": 0.3,
@@ -262,9 +262,9 @@
       {
         "t": "10:00",
         "swell": {
-          "m": 0.8,
+          "m": 1.1,
           "s": 10,
-          "dir": "SSW"
+          "dir": "S"
         },
         "wind": {
           "dir": "SE",
@@ -278,9 +278,9 @@
       {
         "t": "12:00",
         "swell": {
-          "m": 0.8,
+          "m": 1.0,
           "s": 10,
-          "dir": "SSW"
+          "dir": "S"
         },
         "wind": {
           "dir": "SSE",
@@ -294,13 +294,13 @@
       {
         "t": "14:00",
         "swell": {
-          "m": 0.9,
+          "m": 0.8,
           "s": 10,
           "dir": "SSW"
         },
         "wind": {
           "dir": "SSE",
-          "kt": 10
+          "kt": 11
         },
         "tide": {
           "m": 1.93,
@@ -316,7 +316,7 @@
         },
         "wind": {
           "dir": "SE",
-          "kt": 8
+          "kt": 10
         },
         "tide": {
           "m": 1.33,
@@ -331,8 +331,8 @@
           "dir": "SW"
         },
         "wind": {
-          "dir": "ESE",
-          "kt": 8
+          "dir": "SE",
+          "kt": 10
         },
         "tide": {
           "m": 0.79,
@@ -344,17 +344,17 @@
       {
         "name": "Mawi",
         "verdict": "fair",
-        "rating": 1,
-        "window": "07:30–10:00",
+        "rating": 2,
+        "window": "09:00–12:00",
         "scooter": 30,
         "swell": {
-          "m": 0.8,
+          "m": 1.1,
           "s": 10,
-          "dir": "SSW"
+          "dir": "S"
         },
         "wind": {
-          "dir": "ESE",
-          "kt": 8
+          "dir": "SE",
+          "kt": 10
         },
         "chips": [
           "Reef",
@@ -362,23 +362,23 @@
           "Mid tide",
           "Busy"
         ],
-        "tip": "Small, about 0.8 m, early session only.",
+        "tip": "Rated 2 late morning on the rising tide.",
         "ratings": [
           1,
           1,
-          1,
-          1,
+          2,
+          2,
           1,
           1,
           1
         ],
-        "advice": "Small at about 0.8 m. Go after 07:30 on the rising tide past the 06:59 low, out by 10:00 as SE wind builds."
+        "advice": "Go around 09:00 as the tide rises toward the 13:06 high, leave by 12:00 when SE wind reaches 11 kt. A longer SW pulse builds late."
       }
     ],
     "skip": [
       {
         "name": "Gerupuk Inside",
-        "reason": "Too small, onshore"
+        "reason": "Onshore, rated 0"
       },
       {
         "name": "Tanjung Aan",
@@ -442,8 +442,8 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "07:00–10:00",
-    "rating": 2
+    "window": "15:00–17:00",
+    "rating": 1
   },
   "swell": {
     "m": 1.2,
@@ -452,13 +452,13 @@
   },
   "wind": {
     "dir": "SE",
-    "kt": 10
+    "kt": 11
   },
   "spots": [
     {
       "name": "Mawi",
-      "rating": 2,
-      "verdict": "fair"
+      "rating": 1,
+      "verdict": "skip"
     }
   ],
   "reportUrl": "https://jeanglt.github.io/surf-lombok/"
