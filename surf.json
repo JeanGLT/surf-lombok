@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-11-02",
-  "updated": "2026-11-02T06:08:56+08:00",
-  "headline": "Weak day with fading swell and SE wind; save energy for tomorrow's groundswell.",
+  "updated": "2026-11-02T10:03:38+08:00",
+  "headline": "Weak rest of the day: small swell, SE wind. Groundswell arrives tomorrow dawn.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -17,8 +17,8 @@
   "water": 28.1,
   "recommendation": {
     "spot": "Mawi",
-    "when": "07:00–09:30",
-    "text": "Only Mawi rates above 0, small and windy. Fine to rest today: a 16 s SSW groundswell arrives tomorrow at dawn."
+    "when": "16:00–18:00",
+    "text": "Only Mawi rates above 0, small, best late as wind eases. Resting is fine: 16 s SSW groundswell arrives tomorrow at dawn."
   },
   "hours": [
     {
@@ -30,7 +30,7 @@
       },
       "wind": {
         "dir": "ESE",
-        "kt": 9
+        "kt": 8
       },
       "tide": {
         "m": 1.25,
@@ -46,7 +46,7 @@
       },
       "wind": {
         "dir": "ESE",
-        "kt": 12
+        "kt": 10
       },
       "tide": {
         "m": 0.73,
@@ -78,7 +78,7 @@
       },
       "wind": {
         "dir": "SE",
-        "kt": 12
+        "kt": 11
       },
       "tide": {
         "m": 1.21,
@@ -126,7 +126,7 @@
       },
       "wind": {
         "dir": "SE",
-        "kt": 9
+        "kt": 10
       },
       "tide": {
         "m": 1.45,
@@ -139,16 +139,16 @@
       "name": "Mawi",
       "verdict": "fair",
       "rating": 1,
-      "window": "07:00–09:30",
+      "window": "16:00–18:00",
       "scooter": 30,
       "swell": {
         "m": 0.8,
-        "s": 13,
+        "s": 12,
         "dir": "SW"
       },
       "wind": {
-        "dir": "ESE",
-        "kt": 12
+        "dir": "SE",
+        "kt": 9
       },
       "chips": [
         "Reef",
@@ -156,7 +156,7 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Small fading SW swell; only worth it if you need a session.",
+      "tip": "Small SW swell; late session only as the wind eases.",
       "ratings": [
         1,
         1,
@@ -166,7 +166,7 @@
         1,
         1
       ],
-      "advice": "Paddle out around 07:00 on the last of the falling tide before the 08:47 low, leave by 09:30 as SE wind passes 11 kt. Small and crowded."
+      "advice": "Go around 16:00 when SE wind drops near 9 kt on the tide falling from the 15:13 high, out by sunset 18:10. Small and crowded."
     }
   ],
   "skip": [
@@ -209,7 +209,7 @@
     },
     "wind": {
       "dir": "ESE",
-      "kt": 8
+      "kt": 6
     },
     "outlook": "New SSW groundswell, light dawn wind: early Mawi.",
     "tide": {
@@ -236,7 +236,7 @@
           "dir": "SSW"
         },
         "wind": {
-          "dir": "ESE",
+          "dir": "E",
           "kt": 4
         },
         "tide": {
@@ -253,7 +253,7 @@
         },
         "wind": {
           "dir": "ESE",
-          "kt": 8
+          "kt": 6
         },
         "tide": {
           "m": 1.12,
@@ -284,7 +284,7 @@
           "dir": "SSW"
         },
         "wind": {
-          "dir": "SSE",
+          "dir": "SE",
           "kt": 9
         },
         "tide": {
@@ -300,8 +300,8 @@
           "dir": "SSW"
         },
         "wind": {
-          "dir": "SSE",
-          "kt": 9
+          "dir": "SE",
+          "kt": 8
         },
         "tide": {
           "m": 1.38,
@@ -355,7 +355,7 @@
         },
         "wind": {
           "dir": "ESE",
-          "kt": 8
+          "kt": 6
         },
         "chips": [
           "Reef",
@@ -371,7 +371,7 @@
           2,
           2,
           2,
-          2
+          3
         ],
         "advice": "Be in the water at 06:00 with light ESE wind and mid falling tide, leave around 09:00 as SE builds. Sharp shallow reef toward the 10:12 low."
       },
@@ -387,7 +387,7 @@
           "dir": "SSW"
         },
         "wind": {
-          "dir": "ESE",
+          "dir": "E",
           "kt": 4
         },
         "chips": [
@@ -472,17 +472,17 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "07:00–09:30",
+    "window": "16:00–18:00",
     "rating": 1
   },
   "swell": {
     "m": 0.8,
-    "s": 13,
+    "s": 12,
     "dir": "SW"
   },
   "wind": {
-    "dir": "ESE",
-    "kt": 12
+    "dir": "SE",
+    "kt": 9
   },
   "spots": [
     {
