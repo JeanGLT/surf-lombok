@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-11-03",
-  "updated": "2026-11-03T10:05:01+08:00",
-  "headline": "SSW groundswell building: Mawi sunset session, bigger swell tomorrow.",
+  "updated": "2026-11-03T14:02:46+08:00",
+  "headline": "Mawi sunset session tonight, bigger SSW swell tomorrow morning.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -166,7 +166,7 @@
         3,
         3
       ],
-      "advice": "Best remaining window: paddle out 16:00 on the tide rising to the 17:11 high, stay till sunset 18:10. Midday 11:00–13:00 works but SE wind is stronger."
+      "advice": "Last window today: paddle out 16:00 on the tide rising to the 17:11 high, stay till sunset 18:10. Cross-offshore SE around 10 kt, expect a crowd."
     }
   ],
   "skip": [
