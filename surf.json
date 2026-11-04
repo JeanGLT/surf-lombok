@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-11-04",
-  "updated": "2026-11-04T10:08:47+08:00",
-  "headline": "Solid SSW swell, SE wind: Mawi this afternoon on the rising tide.",
+  "updated": "2026-11-04T14:06:33+08:00",
+  "headline": "Onshore everywhere but Mawi: paddle out at 15:00 on the filling tide.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -13,7 +13,7 @@
       "18:46"
     ]
   },
-  "water": 28.2,
+  "water": 28.6,
   "recommendation": {
     "spot": "Mawi",
     "when": "15:00–18:00",
@@ -368,7 +368,7 @@
           4,
           4,
           3,
-          2,
+          3,
           3,
           3
         ],
