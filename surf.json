@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-11-05",
-  "updated": "2026-11-05T10:07:12+08:00",
-  "headline": "Mawi still 4/5 until midday: 1.7 m 14 s, everything else blown out.",
+  "updated": "2026-11-05T14:05:56+08:00",
+  "headline": "Afternoon wind on: only a fair Mawi sunset session left today.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -17,8 +17,8 @@
   "water": 28.2,
   "recommendation": {
     "spot": "Mawi",
-    "when": "10:30–12:30",
-    "text": "1.7 m 14 s SSW, cross-offshore SSE before the 13:10 low. If you miss it, back at Mawi around 17:00."
+    "when": "16:30–18:10",
+    "text": "1.7 m 13 s SSW still running, cross wind easing on the rising tide. If it looks messy, rest and hit Mawi at dawn."
   },
   "hours": [
     {
@@ -137,18 +137,18 @@
   "picks": [
     {
       "name": "Mawi",
-      "verdict": "go",
-      "rating": 4,
-      "window": "10:30–12:30",
+      "verdict": "fair",
+      "rating": 3,
+      "window": "16:30–18:10",
       "scooter": 30,
       "swell": {
         "m": 1.7,
-        "s": 14,
+        "s": 13,
         "dir": "SSW"
       },
       "wind": {
         "dir": "SSE",
-        "kt": 8
+        "kt": 9
       },
       "chips": [
         "Reef",
@@ -156,7 +156,7 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "Still 4/5 late morning: go now, out before the low.",
+      "tip": "Sunset session on the rising tide, wind easing.",
       "ratings": [
         4,
         4,
@@ -166,7 +166,7 @@
         2,
         3
       ],
-      "advice": "Leave Kuta now, surf 10:30 to 12:30 on the falling tide before the 13:10 low and S wind. Late option 17:00 on the rising tide."
+      "advice": "Midday S wind makes it cross and bumpy. Go around 16:30 as the tide rises toward the 19:41 high, surf until dark."
     }
   ],
   "skip": [
@@ -559,23 +559,23 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "10:30–12:30",
-    "rating": 4
+    "window": "16:30–18:10",
+    "rating": 3
   },
   "swell": {
     "m": 1.7,
-    "s": 14,
+    "s": 13,
     "dir": "SSW"
   },
   "wind": {
     "dir": "SSE",
-    "kt": 8
+    "kt": 9
   },
   "spots": [
     {
       "name": "Mawi",
-      "rating": 4,
-      "verdict": "go"
+      "rating": 3,
+      "verdict": "fair"
     }
   ],
   "reportUrl": "https://jeanglt.github.io/surf-lombok/"
