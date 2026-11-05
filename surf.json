@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-11-05",
-  "updated": "2026-11-05T06:04:43+08:00",
-  "headline": "Mawi firing at 4/5 this morning: 1.7 m 14 s with cross-offshore SE.",
+  "updated": "2026-11-05T10:07:12+08:00",
+  "headline": "Mawi still 4/5 until midday: 1.7 m 14 s, everything else blown out.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -17,8 +17,8 @@
   "water": 28.2,
   "recommendation": {
     "spot": "Mawi",
-    "when": "06:00–11:00",
-    "text": "1.7 m 14 s SSW, light cross-offshore SE around the 07:03 high. If packed, boat to Gerupuk Inside at first light."
+    "when": "10:30–12:30",
+    "text": "1.7 m 14 s SSW, cross-offshore SSE before the 13:10 low. If you miss it, back at Mawi around 17:00."
   },
   "hours": [
     {
@@ -29,7 +29,7 @@
         "dir": "SSW"
       },
       "wind": {
-        "dir": "E",
+        "dir": "ESE",
         "kt": 2
       },
       "tide": {
@@ -93,7 +93,7 @@
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SSE",
+        "dir": "S",
         "kt": 8
       },
       "tide": {
@@ -126,7 +126,7 @@
       },
       "wind": {
         "dir": "SSE",
-        "kt": 8
+        "kt": 9
       },
       "tide": {
         "m": 2.0,
@@ -139,7 +139,7 @@
       "name": "Mawi",
       "verdict": "go",
       "rating": 4,
-      "window": "06:00–11:00",
+      "window": "10:30–12:30",
       "scooter": 30,
       "swell": {
         "m": 1.7,
@@ -147,8 +147,8 @@
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SE",
-        "kt": 5
+        "dir": "SSE",
+        "kt": 8
       },
       "chips": [
         "Reef",
@@ -156,155 +156,39 @@
         "Mid tide",
         "Busy"
       ],
-      "tip": "1.7 m 14 s SSW with cross-offshore SE: best of the day.",
+      "tip": "Still 4/5 late morning: go now, out before the low.",
       "ratings": [
         4,
         4,
         4,
         3,
         2,
-        3,
+        2,
         3
       ],
-      "advice": "Paddle out by 06:30 around the 07:03 high, surf the falling mid tide, leave by 11:00 before the 13:10 low. Shortboard, crowded."
-    },
-    {
-      "name": "Gerupuk Inside",
-      "verdict": "fair",
-      "rating": 2,
-      "window": "06:00–08:00",
-      "scooter": 15,
-      "swell": {
-        "m": 1.6,
-        "s": 14,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "E",
-        "kt": 2
-      },
-      "chips": [
-        "Reef",
-        "Right",
-        "High tide",
-        "Boat"
-      ],
-      "tip": "Near-glassy dawn on the high tide, short boat session.",
-      "ratings": [
-        2,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0
-      ],
-      "advice": "Boat out at first light near the 07:03 high while wind stays under 5 kt, back by 08:00 before SE turns it onshore."
-    },
-    {
-      "name": "Are Guling",
-      "verdict": "fair",
-      "rating": 2,
-      "window": "06:00–08:00",
-      "scooter": 25,
-      "swell": {
-        "m": 1.6,
-        "s": 14,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "E",
-        "kt": 2
-      },
-      "chips": [
-        "Reef",
-        "Right",
-        "Mid tide",
-        "Boat"
-      ],
-      "tip": "Dawn only before the SE wind goes cross-onshore.",
-      "ratings": [
-        2,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0
-      ],
-      "advice": "Backup if Mawi is packed: go at dawn while wind is light, done by 08:00. Boat or long paddle, sharp reef."
-    },
-    {
-      "name": "Mawun",
-      "verdict": "fair",
-      "rating": 2,
-      "window": "06:00–08:00",
-      "scooter": 15,
-      "swell": {
-        "m": 1.6,
-        "s": 14,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "E",
-        "kt": 2
-      },
-      "chips": [
-        "Beach",
-        "Peaks",
-        "Mid tide",
-        "Quiet"
-      ],
-      "tip": "Sheltered bay peaks at dawn, may close out on sets.",
-      "ratings": [
-        2,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0
-      ],
-      "advice": "Quick dawn session only, out by 08:00 when wind picks up. Watch for closeouts at this size."
-    },
-    {
-      "name": "Kuta Beach",
-      "verdict": "fair",
-      "rating": 1,
-      "window": "06:00–07:30",
-      "scooter": 5,
-      "swell": {
-        "m": 1.6,
-        "s": 14,
-        "dir": "SSW"
-      },
-      "wind": {
-        "dir": "E",
-        "kt": 2
-      },
-      "chips": [
-        "Beach",
-        "Peaks",
-        "High tide",
-        "Busy"
-      ],
-      "tip": "Closest option, light wind at dawn only.",
-      "ratings": [
-        2,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "advice": "Only if you want a quick close session at first light. Onshore from mid-morning, Mawi is far better."
+      "advice": "Leave Kuta now, surf 10:30 to 12:30 on the falling tide before the 13:10 low and S wind. Late option 17:00 on the rising tide."
     }
   ],
   "skip": [
     {
+      "name": "Gerupuk Inside",
+      "reason": "Cross-onshore, rated 0"
+    },
+    {
+      "name": "Are Guling",
+      "reason": "Cross-onshore, rated 0"
+    },
+    {
+      "name": "Mawun",
+      "reason": "Onshore, rated 0"
+    },
+    {
       "name": "Tanjung Aan",
-      "reason": "Cross-onshore, rated 1"
+      "reason": "Onshore, rated 0"
+    },
+    {
+      "name": "Kuta Beach",
+      "reason": "Onshore, rated 0"
     },
     {
       "name": "Seger",
@@ -353,7 +237,7 @@
         },
         "wind": {
           "dir": "N",
-          "kt": 2
+          "kt": 1
         },
         "tide": {
           "m": 1.66,
@@ -416,8 +300,8 @@
           "dir": "SSW"
         },
         "wind": {
-          "dir": "SSW",
-          "kt": 7
+          "dir": "S",
+          "kt": 6
         },
         "tide": {
           "m": 0.81,
@@ -448,8 +332,8 @@
           "dir": "SSW"
         },
         "wind": {
-          "dir": "S",
-          "kt": 3
+          "dir": "SSE",
+          "kt": 4
         },
         "tide": {
           "m": 1.93,
@@ -570,7 +454,7 @@
         },
         "wind": {
           "dir": "N",
-          "kt": 2
+          "kt": 1
         },
         "chips": [
           "Reef",
@@ -603,7 +487,7 @@
         },
         "wind": {
           "dir": "N",
-          "kt": 2
+          "kt": 1
         },
         "chips": [
           "Beach",
@@ -675,7 +559,7 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "06:00–11:00",
+    "window": "10:30–12:30",
     "rating": 4
   },
   "swell": {
@@ -684,34 +568,14 @@
     "dir": "SSW"
   },
   "wind": {
-    "dir": "SE",
-    "kt": 5
+    "dir": "SSE",
+    "kt": 8
   },
   "spots": [
     {
       "name": "Mawi",
       "rating": 4,
       "verdict": "go"
-    },
-    {
-      "name": "Gerupuk Inside",
-      "rating": 2,
-      "verdict": "fair"
-    },
-    {
-      "name": "Are Guling",
-      "rating": 2,
-      "verdict": "fair"
-    },
-    {
-      "name": "Mawun",
-      "rating": 2,
-      "verdict": "fair"
-    },
-    {
-      "name": "Kuta Beach",
-      "rating": 1,
-      "verdict": "fair"
     }
   ],
   "reportUrl": "https://jeanglt.github.io/surf-lombok/"
