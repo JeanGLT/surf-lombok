@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-11-06",
-  "updated": "2026-11-06T10:05:24+08:00",
-  "headline": "Skip midday chop; Mawi fires 16:00–18:00 on 1.3 m 17 s SSW.",
+  "updated": "2026-11-06T14:08:14+08:00",
+  "headline": "Late light only: Mawi 16:00–18:00 on 1.3 m 17 s SSW cross-off.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "20:21"
     ]
   },
-  "water": 28.8,
+  "water": 29.4,
   "recommendation": {
     "spot": "Mawi",
     "when": "16:00–18:00",
-    "text": "Long 17 s SSW, cross-off after the 14:01 low. Midday is only fair; save energy for late."
+    "text": "Long 17 s SSW, cross-off after the 14:01 low. Morning is gone; this is the window left."
   },
   "hours": [
     {
@@ -166,7 +166,7 @@
         4,
         4
       ],
-      "advice": "Skip the choppy midday. Be at Mawi from 16:00 on the rising tide after the 14:01 low; holds to sunset."
+      "advice": "Morning is gone. Be at Mawi from 16:00 on the rising tide after the 14:01 low; holds to sunset."
     },
     {
       "name": "Gerupuk Inside",
