@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-11-07",
-  "updated": "2026-11-07T10:10:04+08:00",
-  "headline": "Still go: Mawi cross-off on 1.8 m 16 s SSW.",
+  "updated": "2026-11-07T14:04:54+08:00",
+  "headline": "Late session: Mawi cross-off on 1.9 m 15 s SSW.",
   "location": "Kuta / Pujut, South Lombok",
   "tide": {
     "low": [
@@ -14,11 +14,11 @@
       "20:54"
     ]
   },
-  "water": 29.4,
+  "water": 30.1,
   "recommendation": {
     "spot": "Mawi",
-    "when": "10:30–13:00",
-    "text": "Cross-off now on 1.8 m 16 s SSW. Softens after 14:00; late rising tide is plan B."
+    "when": "15:30–18:00",
+    "text": "Cross-off late on 1.9 m 15 s SSW with the rising tide. If packed, Tanjung Aan after 16:30."
   },
   "hours": [
     {
@@ -138,25 +138,25 @@
     {
       "name": "Mawi",
       "verdict": "go",
-      "rating": 4,
-      "window": "10:30–13:00",
+      "rating": 3,
+      "window": "15:30–18:00",
       "scooter": 30,
       "swell": {
-        "m": 1.8,
-        "s": 16,
+        "m": 1.9,
+        "s": 15,
         "dir": "SSW"
       },
       "wind": {
-        "dir": "SSW",
-        "kt": 5
+        "dir": "S",
+        "kt": 6
       },
       "chips": [
         "Reef",
         "Left",
-        "Falling",
+        "Low to mid",
         "Busy"
       ],
-      "tip": "1.8 m 16 s SSW cross-off: best left today.",
+      "tip": "1.9 m 15 s SSW, cross-off late: best option left.",
       "ratings": [
         4,
         3,
@@ -166,7 +166,7 @@
         3,
         3
       ],
-      "advice": "Go now through early afternoon while wind is cross-off. Softens after 14:00; late rising tide also workable."
+      "advice": "Paddle out from 15:30 on the rising tide after the 14:40 low. Wind cross-off but 10-15 kt; leave by sunset 18:12."
     },
     {
       "name": "Gerupuk Inside",
@@ -189,7 +189,7 @@
         "Rising",
         "Boat"
       ],
-      "tip": "Onshore now; late rights only as wind eases.",
+      "tip": "Cross-on now; late rights only as wind eases.",
       "ratings": [
         3,
         3,
@@ -199,7 +199,7 @@
         2,
         2
       ],
-      "advice": "Skip midday cross-on. Boat out after 16:30 on the rising tide if Mawi is packed. Done by sunset."
+      "advice": "Boat out after 16:30 on the rising tide if Mawi is packed. Expect bumpy faces. Done by sunset."
     },
     {
       "name": "Tanjung Aan",
@@ -222,7 +222,7 @@
         "Rising",
         "Quiet"
       ],
-      "tip": "Close late option once onshore eases.",
+      "tip": "Closest late option once onshore eases.",
       "ratings": [
         3,
         3,
@@ -288,7 +288,7 @@
         "Rising",
         "Boat"
       ],
-      "tip": "Boat only late; onshore through midday.",
+      "tip": "Boat only late; onshore through the afternoon.",
       "ratings": [
         3,
         3,
@@ -687,22 +687,22 @@
   ],
   "top": {
     "spot": "Mawi",
-    "window": "10:30–13:00",
-    "rating": 4
+    "window": "15:30–18:00",
+    "rating": 3
   },
   "swell": {
-    "m": 1.8,
-    "s": 16,
+    "m": 1.9,
+    "s": 15,
     "dir": "SSW"
   },
   "wind": {
-    "dir": "SSW",
-    "kt": 5
+    "dir": "S",
+    "kt": 6
   },
   "spots": [
     {
       "name": "Mawi",
-      "rating": 4,
+      "rating": 3,
       "verdict": "go"
     },
     {
